@@ -1,0 +1,2094 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="Epicor" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="RestApi">
+        <EntitySet Name="Customers" EntityType="Erp.Customer" />
+        <EntitySet Name="CustomCrdPools" EntityType="Erp.CustomCrdPool" />
+        <EntitySet Name="CustBillToes" EntityType="Erp.CustBillTo" />
+        <EntitySet Name="CustBanks" EntityType="Erp.CustBank" />
+        <EntitySet Name="CustChilds" EntityType="Erp.CustChild" />
+        <EntitySet Name="CustDfltDocTypes" EntityType="Erp.CustDfltDocType" />
+        <EntitySet Name="CustICs" EntityType="Erp.CustIC" />
+        <EntitySet Name="CustLabExpRates" EntityType="Erp.CustLabExpRate" />
+        <EntitySet Name="CustMandates" EntityType="Erp.CustMandate" />
+        <EntitySet Name="CustomerDocs" EntityType="Erp.CustomerDoc" />
+        <EntitySet Name="CustRestrictions" EntityType="Erp.CustRestriction" />
+        <EntitySet Name="CustUPSEmails" EntityType="Erp.CustUPSEmail" />
+        <EntitySet Name="CustomerDiscPriceLsts" EntityType="Erp.CustomerDiscPriceLst" />
+        <EntitySet Name="CustomerFSPriceLists" EntityType="Erp.CustomerFSPriceList" />
+        <EntitySet Name="GlbCustCreds" EntityType="Erp.GlbCustCred" />
+        <EntitySet Name="NAMembers" EntityType="Erp.NAMember" />
+        <EntitySet Name="PECustWhldHists" EntityType="Erp.PECustWhldHist" />
+        <EntitySet Name="ShipToes" EntityType="Erp.ShipTo" />
+        <EntitySet Name="ShipToRestrictions" EntityType="Erp.ShipToRestriction" />
+        <EntitySet Name="ShipToLabExpRates" EntityType="Erp.ShipToLabExpRate" />
+        <EntitySet Name="CustomerDocsSHes" EntityType="Erp.CustomerDocsSH" />
+        <EntitySet Name="ShipToDiscPriceLsts" EntityType="Erp.ShipToDiscPriceLst" />
+        <EntitySet Name="ShipToMFBills" EntityType="Erp.ShipToMFBill" />
+        <EntitySet Name="ShipToPriceLsts" EntityType="Erp.ShipToPriceLst" />
+        <EntitySet Name="ShipToUPSEmls" EntityType="Erp.ShipToUPSEml" />
+        <EntitySet Name="ShipToAttches" EntityType="Erp.ShipToAttch" />
+        <EntitySet Name="CustMFBills" EntityType="Erp.CustMFBill" />
+        <EntitySet Name="MangCusts" EntityType="Erp.MangCust" />
+        <EntitySet Name="ShipToSrches" EntityType="Erp.ShipToSrch" />
+        <EntitySet Name="CustomerPriceLsts" EntityType="Erp.CustomerPriceLst" />
+        <EntitySet Name="EntityGLCs" EntityType="Erp.EntityGLC" />
+        <EntitySet Name="TaxExempts" EntityType="Erp.TaxExempt" />
+        <EntitySet Name="CustomerAttches" EntityType="Erp.CustomerAttch" />
+        <EntitySet Name="Partners" EntityType="Erp.Partner" />
+        <EntitySet Name="List" EntityType="Erp.CustomerListItem" />
+        <FunctionImport Name="GetCustomerGlobalFields" />
+        <FunctionImport Name="GetShipToGlobalFields" />
+        <FunctionImport Name="GetCustBillToGlobalFields" />
+        <FunctionImport Name="AllowCustomerDetailUpdate" />
+        <FunctionImport Name="ChangeCustDfltInvoiceType" />
+        <FunctionImport Name="ChangeCustomerChargeCode" />
+        <FunctionImport Name="ChangeCustomerFinCharges" />
+        <FunctionImport Name="ChangeCustomerReminderGroup" />
+        <FunctionImport Name="ChangeDeferredRev" />
+        <FunctionImport Name="ChangeAGIDDocTypeCode" />
+        <FunctionImport Name="ChangeListCode" />
+        <FunctionImport Name="ChangeMandateReference" />
+        <FunctionImport Name="ModifySearchIDs" />
+        <FunctionImport Name="ChangeRACode" />
+        <FunctionImport Name="CheckCreditHold" />
+        <FunctionImport Name="CheckDupCustomer" />
+        <FunctionImport Name="CheckEFFieldLength" />
+        <FunctionImport Name="CheckRUC" />
+        <FunctionImport Name="CheckVATFormat" />
+        <FunctionImport Name="ChgBTCountry" />
+        <FunctionImport Name="ChgCountry" />
+        <FunctionImport Name="ChgGlobalCust" />
+        <FunctionImport Name="ChgICTrader" />
+        <FunctionImport Name="DeleteBTAddress" />
+        <FunctionImport Name="ETCAfterAddrVal" />
+        <FunctionImport Name="ETCValidateAddress" />
+        <FunctionImport Name="GenerateMandateReference" />
+        <FunctionImport Name="GetAddrElementList" />
+        <FunctionImport Name="GetAllShipTo" />
+        <FunctionImport Name="GetAltShipTo" />
+        <FunctionImport Name="GetBankAccountList" />
+        <FunctionImport Name="GetBillDayList" />
+        <FunctionImport Name="GetBillToRefs" />
+        <FunctionImport Name="GetByCustID" />
+        <FunctionImport Name="GetCompanyDataForMandate" />
+        <FunctionImport Name="GetCustBillToForLink" />
+        <FunctionImport Name="GetCustomer" />
+        <FunctionImport Name="GetCustomerDataForMandate" />
+        <FunctionImport Name="GetCustomerForLink" />
+        <FunctionImport Name="GetCustomerTerritory" />
+        <FunctionImport Name="GetDisabledFields" />
+        <FunctionImport Name="GetGlbCustomerList" />
+        <FunctionImport Name="GetListCustom" />
+        <FunctionImport Name="GetListFromSelectedKeys" />
+        <FunctionImport Name="GetNewAltShipTo" />
+        <FunctionImport Name="GetParentCustInfo" />
+        <FunctionImport Name="GetShipTo" />
+        <FunctionImport Name="GetShipToForLink" />
+        <FunctionImport Name="GetShipToTerritory" />
+        <FunctionImport Name="GlbCustomersExist" />
+        <FunctionImport Name="LinkGlbCustBillTo" />
+        <FunctionImport Name="LinkGlbCustomer" />
+        <FunctionImport Name="LinkGlbShipTo" />
+        <FunctionImport Name="MoveOnePosition" />
+        <FunctionImport Name="MoveOnePositionDisc" />
+        <FunctionImport Name="OnChangeAltShipTo" />
+        <FunctionImport Name="OnChangeCreditCardOrder" />
+        <FunctionImport Name="OnChangeCustBankPayMethod" />
+        <FunctionImport Name="OnChangeCustICPrimary" />
+        <FunctionImport Name="OnChangeCustomerTaxRegion" />
+        <FunctionImport Name="OnChangeofAltBT" />
+        <FunctionImport Name="OnChangeofBankAccount" />
+        <FunctionImport Name="OnChangeofCustomerAddr" />
+        <FunctionImport Name="OnChangeofShipToAddr" />
+        <FunctionImport Name="OnChangeShipToTaxRegion" />
+        <FunctionImport Name="OnChangeVendorID" />
+        <FunctionImport Name="OnMandateBankAccountChanging" />
+        <FunctionImport Name="OnMandateDateChanging" />
+        <FunctionImport Name="OnMandateSignedDateChanging" />
+        <FunctionImport Name="OnMandateStatusChanging" />
+        <FunctionImport Name="PreLinkGlbCustBillTo" />
+        <FunctionImport Name="PreLinkGlbCustomer" />
+        <FunctionImport Name="PreLinkGlbShipTo" />
+        <FunctionImport Name="ResetShipToIntl" />
+        <FunctionImport Name="SetUPSQVEnable" />
+        <FunctionImport Name="ShipToETCAfterAddrVal" />
+        <FunctionImport Name="ShipToETCValAddr" />
+        <FunctionImport Name="ShipToTerrSelectChange" />
+        <FunctionImport Name="SkipGlbCustomer" />
+        <FunctionImport Name="UnlinkGlbCustomer" />
+        <FunctionImport Name="UpdateCreditTotals" />
+        <FunctionImport Name="UpdateGlobalLimits" />
+        <FunctionImport Name="ValidateCountry" />
+        <FunctionImport Name="ValidateNAParentCreditPrc" />
+        <FunctionImport Name="ValidateNACreditSharedPrc" />
+        <FunctionImport Name="ValidateGlbNAParentCreditPrc" />
+        <FunctionImport Name="ValidateGlbNACreditSharedPrc" />
+        <FunctionImport Name="ValidatePayBTFlag" />
+        <FunctionImport Name="GetTerms" />
+        <FunctionImport Name="IsLocal" />
+        <FunctionImport Name="GetCodeDescList" />
+        <FunctionImport Name="StorePartner" />
+        <FunctionImport Name="GetCustomerCountryISOCode" />
+        <FunctionImport Name="GetExternalCRMIntegrationIsEnabled" />
+        <FunctionImport Name="CheckCustCntWithExternalCRMEnabled" />
+        <FunctionImport Name="SetOrdersCreditOverride" />
+        <FunctionImport Name="ChangeMXPurchaseType" />
+        <FunctionImport Name="GetNewCustomer" />
+        <FunctionImport Name="GetNewCustomerAttch" />
+        <FunctionImport Name="GetNewPartner" />
+        <FunctionImport Name="GetNewCustBillTo" />
+        <FunctionImport Name="GetNewCustBank" />
+        <FunctionImport Name="GetNewCustChild" />
+        <FunctionImport Name="GetNewCustDfltDocType" />
+        <FunctionImport Name="GetNewCustIC" />
+        <FunctionImport Name="GetNewCustLabExpRate" />
+        <FunctionImport Name="GetNewCustMandate" />
+        <FunctionImport Name="GetNewCustomerDocs" />
+        <FunctionImport Name="GetNewCustRestriction" />
+        <FunctionImport Name="GetNewCustUPSEmail" />
+        <FunctionImport Name="GetNewCustomerDiscPriceLst" />
+        <FunctionImport Name="GetNewCustomerFSPriceList" />
+        <FunctionImport Name="GetNewGlbCustCred" />
+        <FunctionImport Name="GetNewShipTo" />
+        <FunctionImport Name="GetNewShipToAttch" />
+        <FunctionImport Name="GetNewShipToRestriction" />
+        <FunctionImport Name="GetNewShipToLabExpRate" />
+        <FunctionImport Name="GetNewCustomerDocsSH" />
+        <FunctionImport Name="GetNewShipToDiscPriceLst" />
+        <FunctionImport Name="GetNewShipToMFBill" />
+        <FunctionImport Name="GetNewShipToPriceLst" />
+        <FunctionImport Name="GetNewShipToUPSEml" />
+        <FunctionImport Name="GetNewCustMFBill" />
+        <FunctionImport Name="GetNewMangCust" />
+        <FunctionImport Name="GetNewCustomerPriceLst" />
+        <FunctionImport Name="GetNewEntityGLC" />
+        <FunctionImport Name="GetNewTaxExempt" />
+        <FunctionImport Name="DeleteByID" />
+        <FunctionImport Name="GetByID" />
+        <FunctionImport Name="GetList" />
+        <FunctionImport Name="GetRows" />
+        <FunctionImport Name="GetBySysRowID" />
+        <FunctionImport Name="GetBySysRowIDs" />
+        <FunctionImport Name="Update" />
+        <FunctionImport Name="UpdateExt" />
+        <AssociationSet Name="Erp_Customer_CustomCrdPools_Erp_CustomCrdPool_CustomersSet" Association="Erp.Erp_Customer_CustomCrdPools_Erp_CustomCrdPool_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomCrdPools" EntitySet="CustomCrdPools" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustBillToes_Erp_CustBillTo_CustomersSet" Association="Erp.Erp_Customer_CustBillToes_Erp_CustBillTo_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustBillToes" EntitySet="CustBillToes" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustBanks_Erp_CustBank_CustomersSet" Association="Erp.Erp_Customer_CustBanks_Erp_CustBank_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustBanks" EntitySet="CustBanks" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustChilds_Erp_CustChild_CustomersSet" Association="Erp.Erp_Customer_CustChilds_Erp_CustChild_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustChilds" EntitySet="CustChilds" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustDfltDocTypes_Erp_CustDfltDocType_CustomersSet" Association="Erp.Erp_Customer_CustDfltDocTypes_Erp_CustDfltDocType_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustDfltDocTypes" EntitySet="CustDfltDocTypes" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustICs_Erp_CustIC_CustomersSet" Association="Erp.Erp_Customer_CustICs_Erp_CustIC_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustICs" EntitySet="CustICs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustLabExpRates_Erp_CustLabExpRate_CustomersSet" Association="Erp.Erp_Customer_CustLabExpRates_Erp_CustLabExpRate_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustLabExpRates" EntitySet="CustLabExpRates" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustMandates_Erp_CustMandate_CustomersSet" Association="Erp.Erp_Customer_CustMandates_Erp_CustMandate_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustMandates" EntitySet="CustMandates" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustomerDocs_Erp_CustomerDoc_CustomersSet" Association="Erp.Erp_Customer_CustomerDocs_Erp_CustomerDoc_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomerDocs" EntitySet="CustomerDocs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustRestrictions_Erp_CustRestriction_CustomersSet" Association="Erp.Erp_Customer_CustRestrictions_Erp_CustRestriction_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustRestrictions" EntitySet="CustRestrictions" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustUPSEmails_Erp_CustUPSEmail_CustomersSet" Association="Erp.Erp_Customer_CustUPSEmails_Erp_CustUPSEmail_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustUPSEmails" EntitySet="CustUPSEmails" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustomerDiscPriceLsts_Erp_CustomerDiscPriceLst_CustomersSet" Association="Erp.Erp_Customer_CustomerDiscPriceLsts_Erp_CustomerDiscPriceLst_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomerDiscPriceLsts" EntitySet="CustomerDiscPriceLsts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustomerFSPriceLists_Erp_CustomerFSPriceList_CustomersSet" Association="Erp.Erp_Customer_CustomerFSPriceLists_Erp_CustomerFSPriceList_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomerFSPriceLists" EntitySet="CustomerFSPriceLists" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_GlbCustCred_Customers_Erp_Customer_GlbCustCredsSet" Association="Erp.Erp_GlbCustCred_Customers_Erp_Customer_GlbCustCreds">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="GlbCustCreds" EntitySet="GlbCustCreds" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_NAMember_Customers_Erp_Customer_NAMembersSet" Association="Erp.Erp_NAMember_Customers_Erp_Customer_NAMembers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="NAMembers" EntitySet="NAMembers" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PECustWhldHist_Customers_Erp_Customer_PECustWhldHistsSet" Association="Erp.Erp_PECustWhldHist_Customers_Erp_Customer_PECustWhldHists">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="PECustWhldHists" EntitySet="PECustWhldHists" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_Customers_Erp_Customer_ShipToesSet" Association="Erp.Erp_ShipTo_Customers_Erp_Customer_ShipToes">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="ShipToes" EntitySet="ShipToes" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustMFBills_Erp_CustMFBill_CustomersSet" Association="Erp.Erp_Customer_CustMFBills_Erp_CustMFBill_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustMFBills" EntitySet="CustMFBills" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_MangCust_Customers_Erp_Customer_MangCustsSet" Association="Erp.Erp_MangCust_Customers_Erp_Customer_MangCusts">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="MangCusts" EntitySet="MangCusts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipToSrch_Customers_Erp_Customer_ShipToSrchesSet" Association="Erp.Erp_ShipToSrch_Customers_Erp_Customer_ShipToSrches">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="ShipToSrches" EntitySet="ShipToSrches" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustomerPriceLsts_Erp_CustomerPriceLst_CustomersSet" Association="Erp.Erp_Customer_CustomerPriceLsts_Erp_CustomerPriceLst_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomerPriceLsts" EntitySet="CustomerPriceLsts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_EntityGLC_Customers_Erp_Customer_EntityGLCsSet" Association="Erp.Erp_EntityGLC_Customers_Erp_Customer_EntityGLCs">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="EntityGLCs" EntitySet="EntityGLCs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_TaxExempt_Customers_Erp_Customer_TaxExemptsSet" Association="Erp.Erp_TaxExempt_Customers_Erp_Customer_TaxExempts">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="TaxExempts" EntitySet="TaxExempts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Customer_CustomerAttches_Erp_CustomerAttch_CustomersSet" Association="Erp.Erp_Customer_CustomerAttches_Erp_CustomerAttch_Customers">
+          <End Role="Customers" EntitySet="Customers" />
+          <End Role="CustomerAttches" EntitySet="CustomerAttches" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToRestrictions_Erp_ShipToRestriction_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToRestrictions_Erp_ShipToRestriction_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToRestrictions" EntitySet="ShipToRestrictions" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToLabExpRates_Erp_ShipToLabExpRate_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToLabExpRates_Erp_ShipToLabExpRate_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToLabExpRates" EntitySet="ShipToLabExpRates" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_CustomerDocsSHes_Erp_CustomerDocsSH_ShipToesSet" Association="Erp.Erp_ShipTo_CustomerDocsSHes_Erp_CustomerDocsSH_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="CustomerDocsSHes" EntitySet="CustomerDocsSHes" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToDiscPriceLsts_Erp_ShipToDiscPriceLst_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToDiscPriceLsts_Erp_ShipToDiscPriceLst_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToDiscPriceLsts" EntitySet="ShipToDiscPriceLsts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToMFBills_Erp_ShipToMFBill_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToMFBills_Erp_ShipToMFBill_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToMFBills" EntitySet="ShipToMFBills" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToPriceLsts_Erp_ShipToPriceLst_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToPriceLsts_Erp_ShipToPriceLst_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToPriceLsts" EntitySet="ShipToPriceLsts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToUPSEmls_Erp_ShipToUPSEml_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToUPSEmls_Erp_ShipToUPSEml_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToUPSEmls" EntitySet="ShipToUPSEmls" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_ShipTo_ShipToAttches_Erp_ShipToAttch_ShipToesSet" Association="Erp.Erp_ShipTo_ShipToAttches_Erp_ShipToAttch_ShipToes">
+          <End Role="ShipToes" EntitySet="ShipToes" />
+          <End Role="ShipToAttches" EntitySet="ShipToAttches" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+    <Schema Namespace="Erp" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Customer">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustID" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Address1" Type="Edm.String" />
+        <Property Name="Address2" Type="Edm.String" />
+        <Property Name="Address3" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="Zip" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <Property Name="ResaleID" Type="Edm.String" />
+        <Property Name="SalesRepCode" Type="Edm.String" />
+        <Property Name="TerritoryID" Type="Edm.String" />
+        <Property Name="ShipToNum" Type="Edm.String" />
+        <Property Name="TermsCode" Type="Edm.String" />
+        <Property Name="ShipViaCode" Type="Edm.String" />
+        <Property Name="PrintStatements" Type="Edm.Boolean" />
+        <Property Name="PrintLabels" Type="Edm.Boolean" />
+        <Property Name="PrintAck" Type="Edm.Boolean" />
+        <Property Name="FinCharges" Type="Edm.Boolean" />
+        <Property Name="CreditHold" Type="Edm.Boolean" />
+        <Property Name="GroupCode" Type="Edm.String" />
+        <Property Name="DiscountPercent" Type="Edm.Decimal" />
+        <Property Name="PrimPCon" Type="Edm.Int32" />
+        <Property Name="PrimBCon" Type="Edm.Int32" />
+        <Property Name="PrimSCon" Type="Edm.Int32" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="EstDate" Type="Edm.DateTime" />
+        <Property Name="FaxNum" Type="Edm.String" />
+        <Property Name="PhoneNum" Type="Edm.String" />
+        <Property Name="TaxExempt" Type="Edm.String" />
+        <Property Name="MarkUpID" Type="Edm.String" />
+        <Property Name="BillDay" Type="Edm.Int32" />
+        <Property Name="OneInvPerPS" Type="Edm.Boolean" />
+        <Property Name="DefaultFOB" Type="Edm.String" />
+        <Property Name="CreditIncludeOrders" Type="Edm.Boolean" />
+        <Property Name="CreditReviewDate" Type="Edm.DateTime" />
+        <Property Name="CreditHoldDate" Type="Edm.DateTime" />
+        <Property Name="CreditHoldSource" Type="Edm.String" />
+        <Property Name="CreditClearUserID" Type="Edm.String" />
+        <Property Name="CreditClearDate" Type="Edm.DateTime" />
+        <Property Name="CreditClearTime" Type="Edm.String" />
+        <Property Name="EDICode" Type="Edm.String" />
+        <Property Name="CurrencyCode" Type="Edm.String" />
+        <Property Name="CountryNum" Type="Edm.Int32" />
+        <Property Name="LangNameID" Type="Edm.String" />
+        <Property Name="BorderCrossing" Type="Edm.String" />
+        <Property Name="FormatStr" Type="Edm.String" />
+        <Property Name="BTName" Type="Edm.String" />
+        <Property Name="BTAddress1" Type="Edm.String" />
+        <Property Name="BTAddress2" Type="Edm.String" />
+        <Property Name="BTAddress3" Type="Edm.String" />
+        <Property Name="BTCity" Type="Edm.String" />
+        <Property Name="BTState" Type="Edm.String" />
+        <Property Name="BTZip" Type="Edm.String" />
+        <Property Name="BTCountryNum" Type="Edm.Int32" />
+        <Property Name="BTCountry" Type="Edm.String" />
+        <Property Name="BTPhoneNum" Type="Edm.String" />
+        <Property Name="BTFaxNum" Type="Edm.String" />
+        <Property Name="BTFormatStr" Type="Edm.String" />
+        <Property Name="ParentCustNum" Type="Edm.Int32" />
+        <Property Name="TaxRegionCode" Type="Edm.String" />
+        <Property Name="ICCust" Type="Edm.Boolean" />
+        <Property Name="ContBillDay" Type="Edm.Int32" />
+        <Property Name="EMailAddress" Type="Edm.String" />
+        <Property Name="ShippingQualifier" Type="Edm.String" />
+        <Property Name="AllocPriorityCode" Type="Edm.String" />
+        <Property Name="ReservePriorityCode" Type="Edm.String" />
+        <Property Name="LinkPortNum" Type="Edm.Int32" />
+        <Property Name="WebCustomer" Type="Edm.Boolean" />
+        <Property Name="CustomerType" Type="Edm.String" />
+        <Property Name="NoContact" Type="Edm.Boolean" />
+        <Property Name="TerritoryLock" Type="Edm.Boolean" />
+        <Property Name="CustURL" Type="Edm.String" />
+        <Property Name="PendingTerritoryID" Type="Edm.String" />
+        <Property Name="ExtID" Type="Edm.String" />
+        <Property Name="ConsolidateSO" Type="Edm.Boolean" />
+        <Property Name="BillFrequency" Type="Edm.String" />
+        <Property Name="CreditIncludePI" Type="Edm.Boolean" />
+        <Property Name="GlobalCust" Type="Edm.Boolean" />
+        <Property Name="ICTrader" Type="Edm.Boolean" />
+        <Property Name="TaxAuthorityCode" Type="Edm.String" />
+        <Property Name="ExternalDeliveryNote" Type="Edm.Boolean" />
+        <Property Name="GlobalCredIncOrd" Type="Edm.Boolean" />
+        <Property Name="GlobalCredIncPI" Type="Edm.Boolean" />
+        <Property Name="GlobalCurrencyCode" Type="Edm.String" />
+        <Property Name="ExternalID" Type="Edm.String" />
+        <Property Name="GlobalCreditHold" Type="Edm.String" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="CheckDuplicatePO" Type="Edm.Boolean" />
+        <Property Name="CreditLimit" Type="Edm.Decimal" />
+        <Property Name="CustPILimit" Type="Edm.Decimal" />
+        <Property Name="GlobalCreditLimit" Type="Edm.Decimal" />
+        <Property Name="GlobalPILimit" Type="Edm.Decimal" />
+        <Property Name="DocGlobalCreditLimit" Type="Edm.Decimal" />
+        <Property Name="DocGlobalPILimit" Type="Edm.Decimal" />
+        <Property Name="RfqAttachAllow" Type="Edm.Boolean" />
+        <Property Name="DiscountQualifier" Type="Edm.String" />
+        <Property Name="AllowAltBillTo" Type="Edm.Boolean" />
+        <Property Name="DemandDeliveryDays" Type="Edm.Int32" />
+        <Property Name="DemandDateType" Type="Edm.String" />
+        <Property Name="DemandAddLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandAddAction" Type="Edm.String" />
+        <Property Name="DemandChangeLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandChangeAction" Type="Edm.String" />
+        <Property Name="DemandCancelLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandCancelAction" Type="Edm.String" />
+        <Property Name="DemandNewLineLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandNewLineAction" Type="Edm.String" />
+        <Property Name="DemandQtyChangeLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandQtyChangeAction" Type="Edm.String" />
+        <Property Name="DemandChangeDateLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandChangeDateAction" Type="Edm.String" />
+        <Property Name="TradingPartnerName" Type="Edm.String" />
+        <Property Name="ResDelivery" Type="Edm.Boolean" />
+        <Property Name="SatDelivery" Type="Edm.Boolean" />
+        <Property Name="SatPickup" Type="Edm.Boolean" />
+        <Property Name="Hazmat" Type="Edm.Boolean" />
+        <Property Name="DocOnly" Type="Edm.Boolean" />
+        <Property Name="RefNotes" Type="Edm.String" />
+        <Property Name="ApplyChrg" Type="Edm.Boolean" />
+        <Property Name="ChrgAmount" Type="Edm.Decimal" />
+        <Property Name="COD" Type="Edm.Boolean" />
+        <Property Name="CODFreight" Type="Edm.Boolean" />
+        <Property Name="CODCheck" Type="Edm.Boolean" />
+        <Property Name="CODAmount" Type="Edm.Decimal" />
+        <Property Name="GroundType" Type="Edm.String" />
+        <Property Name="NotifyFlag" Type="Edm.Boolean" />
+        <Property Name="NotifyEMail" Type="Edm.String" />
+        <Property Name="DeclaredIns" Type="Edm.Boolean" />
+        <Property Name="DeclaredAmt" Type="Edm.Decimal" />
+        <Property Name="PeriodicityCode" Type="Edm.Int32" />
+        <Property Name="ServSignature" Type="Edm.Boolean" />
+        <Property Name="ServAlert" Type="Edm.Boolean" />
+        <Property Name="ServHomeDel" Type="Edm.Boolean" />
+        <Property Name="DeliveryType" Type="Edm.String" />
+        <Property Name="ServDeliveryDate" Type="Edm.DateTime" />
+        <Property Name="ServPhone" Type="Edm.String" />
+        <Property Name="ServInstruct" Type="Edm.String" />
+        <Property Name="ServRelease" Type="Edm.Boolean" />
+        <Property Name="ServAuthNum" Type="Edm.String" />
+        <Property Name="ServRef1" Type="Edm.String" />
+        <Property Name="ServRef2" Type="Edm.String" />
+        <Property Name="ServRef3" Type="Edm.String" />
+        <Property Name="ServRef4" Type="Edm.String" />
+        <Property Name="ServRef5" Type="Edm.String" />
+        <Property Name="EarlyBuffer" Type="Edm.Int32" />
+        <Property Name="LateBuffer" Type="Edm.Int32" />
+        <Property Name="DemandUnitPriceDiff" Type="Edm.Boolean" />
+        <Property Name="DemandUnitPriceDiffAction" Type="Edm.String" />
+        <Property Name="ExcFromVal" Type="Edm.Boolean" />
+        <Property Name="AddressVal" Type="Edm.Boolean" />
+        <Property Name="RebateVendorNum" Type="Edm.Int32" />
+        <Property Name="RebateForm" Type="Edm.String" />
+        <Property Name="CreditCardOrder" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForPart" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForPartAction" Type="Edm.String" />
+        <Property Name="ChangedBy" Type="Edm.String" />
+        <Property Name="ChangeDate" Type="Edm.DateTime" />
+        <Property Name="ChangeTime" Type="Edm.Int32" />
+        <Property Name="ChargeCode" Type="Edm.String" />
+        <Property Name="IndividualPackIDs" Type="Edm.Boolean" />
+        <Property Name="IntrntlShip" Type="Edm.Boolean" />
+        <Property Name="CertOfOrigin" Type="Edm.Boolean" />
+        <Property Name="CommercialInvoice" Type="Edm.Boolean" />
+        <Property Name="ShipExprtDeclartn" Type="Edm.Boolean" />
+        <Property Name="LetterOfInstr" Type="Edm.Boolean" />
+        <Property Name="FFID" Type="Edm.String" />
+        <Property Name="FFCompName" Type="Edm.String" />
+        <Property Name="FFAddress1" Type="Edm.String" />
+        <Property Name="FFAddress2" Type="Edm.String" />
+        <Property Name="FFAddress3" Type="Edm.String" />
+        <Property Name="FFCity" Type="Edm.String" />
+        <Property Name="FFState" Type="Edm.String" />
+        <Property Name="FFZip" Type="Edm.String" />
+        <Property Name="FFCountry" Type="Edm.String" />
+        <Property Name="FFCountryNum" Type="Edm.Int32" />
+        <Property Name="FFPhoneNum" Type="Edm.String" />
+        <Property Name="NonStdPkg" Type="Edm.Boolean" />
+        <Property Name="DeliveryConf" Type="Edm.Int32" />
+        <Property Name="AddlHdlgFlag" Type="Edm.Boolean" />
+        <Property Name="UPSQuantumView" Type="Edm.Boolean" />
+        <Property Name="UPSQVShipFromName" Type="Edm.String" />
+        <Property Name="UPSQVMemo" Type="Edm.String" />
+        <Property Name="UPSQVEmailType" Type="Edm.String" />
+        <Property Name="FFContact" Type="Edm.String" />
+        <Property Name="ETCAddrChg" Type="Edm.Boolean" />
+        <Property Name="TaxRoundRule" Type="Edm.Int32" />
+        <Property Name="TaxMethod" Type="Edm.String" />
+        <Property Name="ValidPayer" Type="Edm.Boolean" />
+        <Property Name="ValidSoldTo" Type="Edm.Boolean" />
+        <Property Name="ValidShipTo" Type="Edm.Boolean" />
+        <Property Name="OverrideRlsClass" Type="Edm.Boolean" />
+        <Property Name="AcrossNatAcc" Type="Edm.Boolean" />
+        <Property Name="NAParentCreditIsUsed" Type="Edm.Boolean" />
+        <Property Name="NACreditIsShare" Type="Edm.Boolean" />
+        <Property Name="NACreditPreferenceList" Type="Edm.String" />
+        <Property Name="NAParentCreditPrc" Type="Edm.Decimal" />
+        <Property Name="NACreditSharedPrc" Type="Edm.Decimal" />
+        <Property Name="AllowOTS" Type="Edm.Boolean" />
+        <Property Name="ThirdPLCust" Type="Edm.Boolean" />
+        <Property Name="ManagedVendID" Type="Edm.String" />
+        <Property Name="ManagedVendNum" Type="Edm.Int32" />
+        <Property Name="NARlsClassCode" Type="Edm.String" />
+        <Property Name="DirectDebiting" Type="Edm.Boolean" />
+        <Property Name="ReminderCode" Type="Edm.String" />
+        <Property Name="GlbNAParentCreditIsUsed" Type="Edm.Boolean" />
+        <Property Name="GlbNACreditIsShare" Type="Edm.Boolean" />
+        <Property Name="GlbNAParentCreditPrc" Type="Edm.Decimal" />
+        <Property Name="GlbNACreditSharedPrc" Type="Edm.Decimal" />
+        <Property Name="AllowShipTo3" Type="Edm.Boolean" />
+        <Property Name="OTSSaveAs" Type="Edm.String" />
+        <Property Name="CustPartOpts" Type="Edm.String" />
+        <Property Name="HasBank" Type="Edm.Boolean" />
+        <Property Name="PMUID" Type="Edm.Int32" />
+        <Property Name="DemandCheckForRev" Type="Edm.Boolean" />
+        <Property Name="OrderHoldForReview" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForRevAction" Type="Edm.String" />
+        <Property Name="ShipToTerrList" Type="Edm.String" />
+        <Property Name="AcctRefNumber" Type="Edm.String" />
+        <Property Name="ARInvoiceITCode" Type="Edm.String" />
+        <Property Name="CreditMemoITCode" Type="Edm.String" />
+        <Property Name="MiscCashRecITCode" Type="Edm.String" />
+        <Property Name="LegalName" Type="Edm.String" />
+        <Property Name="ARInvoiceAdjITCode" Type="Edm.String" />
+        <Property Name="TaxRegReason" Type="Edm.String" />
+        <Property Name="InvPerPackLine" Type="Edm.Boolean" />
+        <Property Name="OrgRegCode" Type="Edm.String" />
+        <Property Name="DemandCloseRejSkd" Type="Edm.Boolean" />
+        <Property Name="OurBankCode" Type="Edm.String" />
+        <Property Name="DemandCloseNoMatch" Type="Edm.Boolean" />
+        <Property Name="DmdCheckPartialShip" Type="Edm.Boolean" />
+        <Property Name="DmdCheckShipAction" Type="Edm.String" />
+        <Property Name="DemandCheckCUMM" Type="Edm.Boolean" />
+        <Property Name="DemandCheckCUMMAction" Type="Edm.String" />
+        <Property Name="DemandPricing" Type="Edm.String" />
+        <Property Name="PriceTolerance" Type="Edm.Decimal" />
+        <Property Name="PreferredBank" Type="Edm.String" />
+        <Property Name="CheckDateCapPromise" Type="Edm.Boolean" />
+        <Property Name="CheckConfirmCapPromise" Type="Edm.Boolean" />
+        <Property Name="CheckUpdateCapPromise" Type="Edm.Boolean" />
+        <Property Name="DemandCapPromiseDate" Type="Edm.String" />
+        <Property Name="DemandCapPromiseAction" Type="Edm.String" />
+        <Property Name="DemandCapPromiseUpdate" Type="Edm.String" />
+        <Property Name="PeriodicBilling" Type="Edm.Boolean" />
+        <Property Name="DueDateCriteria" Type="Edm.String" />
+        <Property Name="PBTerms" Type="Edm.Int32" />
+        <Property Name="ERSOrder" Type="Edm.Boolean" />
+        <Property Name="DemandSplitSched" Type="Edm.Boolean" />
+        <Property Name="OTSmartString" Type="Edm.Boolean" />
+        <Property Name="DeferredRev" Type="Edm.Boolean" />
+        <Property Name="RACode" Type="Edm.String" />
+        <Property Name="DemandCheckConfig" Type="Edm.Boolean" />
+        <Property Name="DemandCheckCfgAction" Type="Edm.String" />
+        <Property Name="AllowAsAltRemitTo" Type="Edm.Boolean" />
+        <Property Name="FederalID" Type="Edm.String" />
+        <Property Name="WIApplication" Type="Edm.String" />
+        <Property Name="WICustomer" Type="Edm.String" />
+        <Property Name="WIShippingCosts" Type="Edm.Boolean" />
+        <Property Name="LOQBookPCFinishing" Type="Edm.Boolean" />
+        <Property Name="LOQBookPCPaper" Type="Edm.Boolean" />
+        <Property Name="LOQBookPCPress" Type="Edm.Boolean" />
+        <Property Name="LOQBookPCPlates" Type="Edm.Boolean" />
+        <Property Name="Variations" Type="Edm.Boolean" />
+        <Property Name="OversPct" Type="Edm.Decimal" />
+        <Property Name="UndersPct" Type="Edm.Decimal" />
+        <Property Name="DefaultLOQstyle" Type="Edm.String" />
+        <Property Name="DefaultOrderAcknowledgement" Type="Edm.String" />
+        <Property Name="DefaultPackSlip" Type="Edm.String" />
+        <Property Name="DefaultOversPricing" Type="Edm.String" />
+        <Property Name="LOQPrepressStyle" Type="Edm.String" />
+        <Property Name="CSR" Type="Edm.String" />
+        <Property Name="LOQBookCaFinishing" Type="Edm.Boolean" />
+        <Property Name="LOQBookCapaper" Type="Edm.Boolean" />
+        <Property Name="LOQBookCaPress" Type="Edm.Boolean" />
+        <Property Name="LOQBookCatPlates" Type="Edm.Boolean" />
+        <Property Name="LOQVariations" Type="Edm.Boolean" />
+        <Property Name="DefaultInvoicestyle" Type="Edm.String" />
+        <Property Name="AEPLOQType" Type="Edm.String" />
+        <Property Name="BusinessCust" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="THBranchID" Type="Edm.String" />
+        <Property Name="CustPricingSchema" Type="Edm.String" />
+        <Property Name="ParamCode" Type="Edm.String" />
+        <Property Name="AGAFIPResponsibilityCode" Type="Edm.String" />
+        <Property Name="AGBillToProvinceCode" Type="Edm.String" />
+        <Property Name="AGGrossIncomeTaxID" Type="Edm.String" />
+        <Property Name="AGIDDocTypeCode" Type="Edm.String" />
+        <Property Name="AGIDDocumentNumber" Type="Edm.String" />
+        <Property Name="AGProvinceCode" Type="Edm.String" />
+        <Property Name="AGUseGoodDefaultMark" Type="Edm.Boolean" />
+        <Property Name="Collections" Type="Edm.Boolean" />
+        <Property Name="CollectionsDate" Type="Edm.DateTime" />
+        <Property Name="DateCollectionPosted" Type="Edm.DateTime" />
+        <Property Name="MXMunicipio" Type="Edm.String" />
+        <Property Name="PEIdentityDocType" Type="Edm.String" />
+        <Property Name="PEDocumentID" Type="Edm.String" />
+        <Property Name="PEGoodsContributor" Type="Edm.Boolean" />
+        <Property Name="PEWithholdAgent" Type="Edm.Boolean" />
+        <Property Name="PECollectionAgent" Type="Edm.Boolean" />
+        <Property Name="PENotFound" Type="Edm.Boolean" />
+        <Property Name="PENoAddress" Type="Edm.Boolean" />
+        <Property Name="EntityUseCode" Type="Edm.String" />
+        <Property Name="InvcOrderCmpDflt" Type="Edm.Boolean" />
+        <Property Name="EInvoice" Type="Edm.Boolean" />
+        <Property Name="RegistrationCode" Type="Edm.String" />
+        <Property Name="EAddress" Type="Edm.String" />
+        <Property Name="DemandCheckForRunOutPart" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForRunOutPartAction" Type="Edm.String" />
+        <Property Name="EInvCompanyIDAttr" Type="Edm.String" />
+        <Property Name="INCSTNumber" Type="Edm.String" />
+        <Property Name="INPANNumber" Type="Edm.String" />
+        <Property Name="COOneTimeID" Type="Edm.String" />
+        <Property Name="COIsOneTimeCust" Type="Edm.Boolean" />
+        <Property Name="DEOrgType" Type="Edm.String" />
+        <Property Name="PEGuaranteeName" Type="Edm.String" />
+        <Property Name="PEGuaranteeAddress1" Type="Edm.String" />
+        <Property Name="PEGuaranteeAddress2" Type="Edm.String" />
+        <Property Name="PEGuaranteeAddress3" Type="Edm.String" />
+        <Property Name="PEGuaranteeCity" Type="Edm.String" />
+        <Property Name="PEGuaranteeState" Type="Edm.String" />
+        <Property Name="PEGuaranteeZip" Type="Edm.String" />
+        <Property Name="PEGuaranteeCountry" Type="Edm.String" />
+        <Property Name="PEGuaranteePhoneNum" Type="Edm.String" />
+        <Property Name="PEGuaranteeTaxID" Type="Edm.String" />
+        <Property Name="OurSupplierCode" Type="Edm.String" />
+        <Property Name="ECCType" Type="Edm.String" />
+        <Property Name="MYIndustryCode" Type="Edm.String" />
+        <Property Name="SyncToExternalCRM" Type="Edm.Boolean" />
+        <Property Name="ExternalCRMCustomerID" Type="Edm.String" />
+        <Property Name="ExternalCRMCustomerType" Type="Edm.String" />
+        <Property Name="ExternalCRMLastSync" Type="Edm.DateTime" />
+        <Property Name="ExternalCRMSyncRequired" Type="Edm.Boolean" />
+        <Property Name="Ownership" Type="Edm.String" />
+        <Property Name="Industry" Type="Edm.String" />
+        <Property Name="AnnualRevenue" Type="Edm.Decimal" />
+        <Property Name="NumberOfEmployees" Type="Edm.Int32" />
+        <Property Name="TickerLocation" Type="Edm.String" />
+        <Property Name="TickerSymbol" Type="Edm.String" />
+        <Property Name="Rating" Type="Edm.String" />
+        <Property Name="TWGUIRegNum" Type="Edm.String" />
+        <Property Name="MXAccountNumber" Type="Edm.String" />
+        <Property Name="ConsolidateLinesPerPart" Type="Edm.Boolean" />
+        <Property Name="TWTaxPayerType" Type="Edm.Int32" />
+        <Property Name="TWDeductGUIFormatCode" Type="Edm.String" />
+        <Property Name="MXCURP" Type="Edm.String" />
+        <Property Name="PEAddressID" Type="Edm.String" />
+        <Property Name="PEPerceptionRegime" Type="Edm.String" />
+        <Property Name="TaxEntityType" Type="Edm.String" />
+        <Property Name="INGSTComplianceRate" Type="Edm.Int32" />
+        <Property Name="INTaxRegistrationID" Type="Edm.String" />
+        <Property Name="MXPurchaseType" Type="Edm.String" />
+        <Property Name="SendToFSA" Type="Edm.Boolean" />
+        <Property Name="MXGeneralPublic" Type="Edm.Boolean" />
+        <Property Name="ACATCommCare" Type="Edm.Boolean" />
+        <Property Name="ACATOtherCare" Type="Edm.Boolean" />
+        <Property Name="ACATRespCareType" Type="Edm.String" />
+        <Property Name="ACATRespCareTypeDesc" Type="Edm.String" />
+        <Property Name="AddrList" Type="Edm.String" />
+        <Property Name="AdvancedLaborRate" Type="Edm.Boolean" />
+        <Property Name="ApplyHoldToOrders" Type="Edm.Boolean" />
+        <Property Name="AttrCodeList" Type="Edm.String" />
+        <Property Name="BaseCurrCode" Type="Edm.String" />
+        <Property Name="BillDayDesc" Type="Edm.String" />
+        <Property Name="BillFreqDescription" Type="Edm.String" />
+        <Property Name="BTAddrList" Type="Edm.String" />
+        <Property Name="BTLegalName" Type="Edm.String" />
+        <Property Name="BusinessCatList" Type="Edm.String" />
+        <Property Name="ChargeCodeDesc" Type="Edm.String" />
+        <Property Name="COASegReferences" Type="Edm.String" />
+        <Property Name="CustTypeDescription" Type="Edm.String" />
+        <Property Name="DiscQualDescription" Type="Edm.String" />
+        <Property Name="DspBTFormatStr" Type="Edm.String" />
+        <Property Name="DspFormatStr" Type="Edm.String" />
+        <Property Name="DspRlsClass" Type="Edm.String" />
+        <Property Name="ECCPaymentCodes" Type="Edm.String" />
+        <Property Name="ECCPaymentDesc" Type="Edm.String" />
+        <Property Name="ECCPaymentList" Type="Edm.String" />
+        <Property Name="ECCPaymentXDesc" Type="Edm.String" />
+        <Property Name="ECCShipViaList" Type="Edm.String" />
+        <Property Name="EnableGlobalCust" Type="Edm.Boolean" />
+        <Property Name="EnableGlobalLock" Type="Edm.Boolean" />
+        <Property Name="ExtCoExist" Type="Edm.Boolean" />
+        <Property Name="FxdGlbOrdCredit" Type="Edm.Decimal" />
+        <Property Name="FxdGlbPICredit" Type="Edm.Decimal" />
+        <Property Name="FxdOrderCredit" Type="Edm.Decimal" />
+        <Property Name="FxdPICredit" Type="Edm.Decimal" />
+        <Property Name="FxdTotOrders" Type="Edm.Decimal" />
+        <Property Name="FxdTotPI" Type="Edm.Decimal" />
+        <Property Name="GlbFlag" Type="Edm.Boolean" />
+        <Property Name="GlbLink" Type="Edm.String" />
+        <Property Name="GlbNAChildCrdAvail" Type="Edm.Decimal" />
+        <Property Name="GlbNAOwnCreditAvail" Type="Edm.Decimal" />
+        <Property Name="GlbNAOwnCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="GlbNAParentCrdAvail" Type="Edm.Decimal" />
+        <Property Name="GlbNAParentsCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="GlbNAPoolCrdAvail" Type="Edm.Decimal" />
+        <Property Name="GlbNAPoolCreditUsed" Type="Edm.Decimal" />
+        <Property Name="GlbNASharedCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="IntegrationFlag" Type="Edm.Boolean" />
+        <Property Name="IntRunChangeCountry" Type="Edm.Boolean" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="LLLBAnnualHomeCap" Type="Edm.Decimal" />
+        <Property Name="LLLBAnnualPartPenCap" Type="Edm.Decimal" />
+        <Property Name="LLLBAnnualResiCap" Type="Edm.Decimal" />
+        <Property Name="LLLBAnnualSelfFndCap" Type="Edm.Decimal" />
+        <Property Name="LLLBAsAtDate" Type="Edm.DateTime" />
+        <Property Name="LLLBAssetAssess" Type="Edm.Boolean" />
+        <Property Name="LLLBLifeTimeCap" Type="Edm.Decimal" />
+        <Property Name="LLLBMeansTestAmt" Type="Edm.Decimal" />
+        <Property Name="LLLBMeansTestFeeAmt" Type="Edm.Decimal" />
+        <Property Name="LLLBPrevEntryDate" Type="Edm.DateTime" />
+        <Property Name="NAChildCrdAvail" Type="Edm.Decimal" />
+        <Property Name="NACreditCust" Type="Edm.Boolean" />
+        <Property Name="NACreditUpdated" Type="Edm.Boolean" />
+        <Property Name="NAOwnCreditAvail" Type="Edm.Decimal" />
+        <Property Name="NAOwnCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="NAParentCrdAvail" Type="Edm.Decimal" />
+        <Property Name="NAParentsCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="NAPoolCrdAvail" Type="Edm.Decimal" />
+        <Property Name="NAPoolCreditUsed" Type="Edm.Decimal" />
+        <Property Name="NASharedCreditUsedDsp" Type="Edm.Decimal" />
+        <Property Name="NATotalCreditAvail" Type="Edm.Decimal" />
+        <Property Name="NATotalCreditUsed" Type="Edm.Decimal" />
+        <Property Name="ParentCustID" Type="Edm.String" />
+        <Property Name="ParentName" Type="Edm.String" />
+        <Property Name="PeriodicityDesc" Type="Edm.String" />
+        <Property Name="PeriodicityList" Type="Edm.String" />
+        <Property Name="PIFlag" Type="Edm.Boolean" />
+        <Property Name="ReminderGroupDesc" Type="Edm.String" />
+        <Property Name="SearchIDs" Type="Edm.String" />
+        <Property Name="SendShipment" Type="Edm.Boolean" />
+        <Property Name="ShippingQualifierDesc" Type="Edm.String" />
+        <Property Name="TotGlbInvoiceCredit" Type="Edm.Decimal" />
+        <Property Name="TotGlbOpenCredit" Type="Edm.Decimal" />
+        <Property Name="TotGlbOrderCredit" Type="Edm.Decimal" />
+        <Property Name="TotGlbPICredit" Type="Edm.Decimal" />
+        <Property Name="TotInvoiceCredit" Type="Edm.Decimal" />
+        <Property Name="TotLCCredit" Type="Edm.Decimal" />
+        <Property Name="TotLCCumInvoices" Type="Edm.Decimal" />
+        <Property Name="TotLCInvoiceBal" Type="Edm.Decimal" />
+        <Property Name="TotLCOpenOrders" Type="Edm.Decimal" />
+        <Property Name="TotLCUsed" Type="Edm.Decimal" />
+        <Property Name="TotOpenCredit" Type="Edm.Decimal" />
+        <Property Name="TotOpenInvoices" Type="Edm.Decimal" />
+        <Property Name="TotOpenInvoicesLC" Type="Edm.Decimal" />
+        <Property Name="TotOpenLC" Type="Edm.Decimal" />
+        <Property Name="TotOpenOrderLC" Type="Edm.Decimal" />
+        <Property Name="TotOpenOrders" Type="Edm.Decimal" />
+        <Property Name="TotOpenPI" Type="Edm.Decimal" />
+        <Property Name="TotOrderCredit" Type="Edm.Decimal" />
+        <Property Name="TotPICredit" Type="Edm.Decimal" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="AGAFIPResponsibilityDescription" Type="Edm.String" />
+        <Property Name="AGBillToProvinceDescription" Type="Edm.String" />
+        <Property Name="AGIDDocTypeCUITMark" Type="Edm.Boolean" />
+        <Property Name="AGIDDocTypeDescription" Type="Edm.String" />
+        <Property Name="AGProvinceDescription" Type="Edm.String" />
+        <Property Name="CompanySendToFSA" Type="Edm.Boolean" />
+        <Property Name="CurrencyCurrName" Type="Edm.String" />
+        <Property Name="CurrencyCurrencyID" Type="Edm.String" />
+        <Property Name="CurrencyCurrSymbol" Type="Edm.String" />
+        <Property Name="CurrencyCurrDesc" Type="Edm.String" />
+        <Property Name="CurrencyDocumentDesc" Type="Edm.String" />
+        <Property Name="CustGrupGroupDesc" Type="Edm.String" />
+        <Property Name="DeliveryTypeDescription" Type="Edm.String" />
+        <Property Name="FOBDescription" Type="Edm.String" />
+        <Property Name="GlobalCurrencyCurrSymbol" Type="Edm.String" />
+        <Property Name="GlobalCurrencyCurrDesc" Type="Edm.String" />
+        <Property Name="GlobalCurrencyDocumentDesc" Type="Edm.String" />
+        <Property Name="GlobalCurrencyCurrencyID" Type="Edm.String" />
+        <Property Name="GlobalCurrencyCurrName" Type="Edm.String" />
+        <Property Name="LanguageDescription" Type="Edm.String" />
+        <Property Name="MarkUpDescription" Type="Edm.String" />
+        <Property Name="MXPurchaseTypeCodeDesc" Type="Edm.String" />
+        <Property Name="PayMethodSummarizePerCustomer" Type="Edm.Boolean" />
+        <Property Name="PayMethodType" Type="Edm.Int32" />
+        <Property Name="PayMethodName" Type="Edm.String" />
+        <Property Name="PreferredBankBankName" Type="Edm.String" />
+        <Property Name="PreferredBankDescription" Type="Edm.String" />
+        <Property Name="RASchedCdRADesc" Type="Edm.String" />
+        <Property Name="ReservePriDescription" Type="Edm.String" />
+        <Property Name="SalesRepName" Type="Edm.String" />
+        <Property Name="ShipViaWebDesc" Type="Edm.String" />
+        <Property Name="ShipViaDescription" Type="Edm.String" />
+        <Property Name="TATaxAuthorityDescription" Type="Edm.String" />
+        <Property Name="TaxRegionDescription" Type="Edm.String" />
+        <Property Name="TermsDescription" Type="Edm.String" />
+        <Property Name="TerritoryTerritoryDesc" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox10" Type="Edm.Boolean" />
+        <Property Name="ShortChar01" Type="Edm.String" />
+        <Property Name="ShortChar04" Type="Edm.String" />
+        <Property Name="ShortChar05" Type="Edm.String" />
+        <Property Name="ShortChar06" Type="Edm.String" />
+        <Property Name="ShortChar07" Type="Edm.String" />
+        <Property Name="ShortChar08" Type="Edm.String" />
+        <Property Name="ShortChar09" Type="Edm.String" />
+        <Property Name="ShortChar10" Type="Edm.String" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+        <NavigationProperty Name="CustomCrdPools" Relationship="Erp.Erp_Customer_CustomCrdPools_Erp_CustomCrdPool_Customers" ToRole="CustomCrdPools" FromRole="Customers" />
+        <NavigationProperty Name="CustBillToes" Relationship="Erp.Erp_Customer_CustBillToes_Erp_CustBillTo_Customers" ToRole="CustBillToes" FromRole="Customers" />
+        <NavigationProperty Name="CustBanks" Relationship="Erp.Erp_Customer_CustBanks_Erp_CustBank_Customers" ToRole="CustBanks" FromRole="Customers" />
+        <NavigationProperty Name="CustChilds" Relationship="Erp.Erp_Customer_CustChilds_Erp_CustChild_Customers" ToRole="CustChilds" FromRole="Customers" />
+        <NavigationProperty Name="CustDfltDocTypes" Relationship="Erp.Erp_Customer_CustDfltDocTypes_Erp_CustDfltDocType_Customers" ToRole="CustDfltDocTypes" FromRole="Customers" />
+        <NavigationProperty Name="CustICs" Relationship="Erp.Erp_Customer_CustICs_Erp_CustIC_Customers" ToRole="CustICs" FromRole="Customers" />
+        <NavigationProperty Name="CustLabExpRates" Relationship="Erp.Erp_Customer_CustLabExpRates_Erp_CustLabExpRate_Customers" ToRole="CustLabExpRates" FromRole="Customers" />
+        <NavigationProperty Name="CustMandates" Relationship="Erp.Erp_Customer_CustMandates_Erp_CustMandate_Customers" ToRole="CustMandates" FromRole="Customers" />
+        <NavigationProperty Name="CustomerDocs" Relationship="Erp.Erp_Customer_CustomerDocs_Erp_CustomerDoc_Customers" ToRole="CustomerDocs" FromRole="Customers" />
+        <NavigationProperty Name="CustRestrictions" Relationship="Erp.Erp_Customer_CustRestrictions_Erp_CustRestriction_Customers" ToRole="CustRestrictions" FromRole="Customers" />
+        <NavigationProperty Name="CustUPSEmails" Relationship="Erp.Erp_Customer_CustUPSEmails_Erp_CustUPSEmail_Customers" ToRole="CustUPSEmails" FromRole="Customers" />
+        <NavigationProperty Name="CustomerDiscPriceLsts" Relationship="Erp.Erp_Customer_CustomerDiscPriceLsts_Erp_CustomerDiscPriceLst_Customers" ToRole="CustomerDiscPriceLsts" FromRole="Customers" />
+        <NavigationProperty Name="CustomerFSPriceLists" Relationship="Erp.Erp_Customer_CustomerFSPriceLists_Erp_CustomerFSPriceList_Customers" ToRole="CustomerFSPriceLists" FromRole="Customers" />
+        <NavigationProperty Name="GlbCustCreds" Relationship="Erp.Erp_GlbCustCred_Customers_Erp_Customer_GlbCustCreds" ToRole="GlbCustCreds" FromRole="Customers" />
+        <NavigationProperty Name="NAMembers" Relationship="Erp.Erp_NAMember_Customers_Erp_Customer_NAMembers" ToRole="NAMembers" FromRole="Customers" />
+        <NavigationProperty Name="PECustWhldHists" Relationship="Erp.Erp_PECustWhldHist_Customers_Erp_Customer_PECustWhldHists" ToRole="PECustWhldHists" FromRole="Customers" />
+        <NavigationProperty Name="ShipToes" Relationship="Erp.Erp_ShipTo_Customers_Erp_Customer_ShipToes" ToRole="ShipToes" FromRole="Customers" />
+        <NavigationProperty Name="CustMFBills" Relationship="Erp.Erp_Customer_CustMFBills_Erp_CustMFBill_Customers" ToRole="CustMFBills" FromRole="Customers" />
+        <NavigationProperty Name="MangCusts" Relationship="Erp.Erp_MangCust_Customers_Erp_Customer_MangCusts" ToRole="MangCusts" FromRole="Customers" />
+        <NavigationProperty Name="ShipToSrches" Relationship="Erp.Erp_ShipToSrch_Customers_Erp_Customer_ShipToSrches" ToRole="ShipToSrches" FromRole="Customers" />
+        <NavigationProperty Name="CustomerPriceLsts" Relationship="Erp.Erp_Customer_CustomerPriceLsts_Erp_CustomerPriceLst_Customers" ToRole="CustomerPriceLsts" FromRole="Customers" />
+        <NavigationProperty Name="EntityGLCs" Relationship="Erp.Erp_EntityGLC_Customers_Erp_Customer_EntityGLCs" ToRole="EntityGLCs" FromRole="Customers" />
+        <NavigationProperty Name="TaxExempts" Relationship="Erp.Erp_TaxExempt_Customers_Erp_Customer_TaxExempts" ToRole="TaxExempts" FromRole="Customers" />
+        <NavigationProperty Name="CustomerAttches" Relationship="Erp.Erp_Customer_CustomerAttches_Erp_CustomerAttch_Customers" ToRole="CustomerAttches" FromRole="Customers" />
+      </EntityType>
+      <EntityType Name="CustomCrdPool">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="CrdPoolCode" Type="Edm.String" />
+        <Property Name="CreditUsed" Type="Edm.Decimal" />
+        <Property Name="CreditAvailable" Type="Edm.Decimal" />
+        <Property Name="GlobalNA" Type="Edm.Boolean" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustBillTo">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="BTCustNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="BTCustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DefaultBillTo" Type="Edm.Boolean" />
+        <Property Name="InvoiceAddress" Type="Edm.Boolean" />
+        <Property Name="ChangedBy" Type="Edm.String" />
+        <Property Name="ChangeDate" Type="Edm.DateTime" />
+        <Property Name="ChangeTime" Type="Edm.Int32" />
+        <Property Name="TaxRegReason" Type="Edm.String" />
+        <Property Name="OrgRegCode" Type="Edm.String" />
+        <Property Name="OurBankCode" Type="Edm.String" />
+        <Property Name="BTLegalName" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="FSACustomerNotSent" Type="Edm.Boolean" />
+        <Property Name="BTAddress1" Type="Edm.String" />
+        <Property Name="BTAddress2" Type="Edm.String" />
+        <Property Name="BTAddress3" Type="Edm.String" />
+        <Property Name="BTAddrList" Type="Edm.String" />
+        <Property Name="BTCity" Type="Edm.String" />
+        <Property Name="BTConPrc" Type="Edm.Int32" />
+        <Property Name="BTContactName" Type="Edm.String" />
+        <Property Name="BTCountry" Type="Edm.String" />
+        <Property Name="BTCreditHold" Type="Edm.Boolean" />
+        <Property Name="BTCustID" Type="Edm.String" />
+        <Property Name="BTCustomerName" Type="Edm.String" />
+        <Property Name="BTFaxNum" Type="Edm.String" />
+        <Property Name="BTPhoneNum" Type="Edm.String" />
+        <Property Name="BTState" Type="Edm.String" />
+        <Property Name="BTZip" Type="Edm.String" />
+        <Property Name="CustID" Type="Edm.String" />
+        <Property Name="CustomerName" Type="Edm.String" />
+        <Property Name="GlbFlag" Type="Edm.Boolean" />
+        <Property Name="GlbLink" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustBank">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="BankID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="BankID" Type="Edm.String" Nullable="false" />
+        <Property Name="BankName" Type="Edm.String" />
+        <Property Name="BankAcctNumber" Type="Edm.String" />
+        <Property Name="BankIdentifier" Type="Edm.String" />
+        <Property Name="PrimaryBank" Type="Edm.Boolean" />
+        <Property Name="NameOnAccount" Type="Edm.String" />
+        <Property Name="Address1" Type="Edm.String" />
+        <Property Name="Address2" Type="Edm.String" />
+        <Property Name="Address3" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="PostalCode" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.Int32" />
+        <Property Name="BankBranchCode" Type="Edm.String" />
+        <Property Name="IBANCode" Type="Edm.String" />
+        <Property Name="PMUID" Type="Edm.Int32" />
+        <Property Name="LegalName" Type="Edm.String" />
+        <Property Name="AgreeRef" Type="Edm.String" />
+        <Property Name="CorrespAccount" Type="Edm.String" />
+        <Property Name="AgreeExpDate" Type="Edm.DateTime" />
+        <Property Name="LocalBIC" Type="Edm.String" />
+        <Property Name="BankPersonCode" Type="Edm.String" />
+        <Property Name="AllowAsAltRemitToBank" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="TransPersonName" Type="Edm.String" />
+        <Property Name="TransPersonName2" Type="Edm.String" />
+        <Property Name="TransPersonName3" Type="Edm.String" />
+        <Property Name="TransPersonName4" Type="Edm.String" />
+        <Property Name="TransPersonName5" Type="Edm.String" />
+        <Property Name="MXRFC" Type="Edm.String" />
+        <Property Name="BankRegionType" Type="Edm.String" />
+        <Property Name="CountryName" Type="Edm.String" />
+        <Property Name="MXSATCode" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="BankBranchCodeDescBankBranchCode" Type="Edm.String" />
+        <Property Name="BankBranchCodeDescDescription" Type="Edm.String" />
+        <Property Name="CustNumCustID" Type="Edm.String" />
+        <Property Name="CustNumBTName" Type="Edm.String" />
+        <Property Name="CustNumName" Type="Edm.String" />
+        <Property Name="PayMethodSummarizePerCustomer" Type="Edm.Boolean" />
+        <Property Name="PayMethodType" Type="Edm.Int32" />
+        <Property Name="PayMethodName" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustChild">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustID" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="ParentName" Type="Edm.String" />
+        <Property Name="ParentCustNum" Type="Edm.Int32" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox10" Type="Edm.Boolean" />
+        <Property Name="ShortChar01" Type="Edm.String" />
+        <Property Name="ShortChar04" Type="Edm.String" />
+        <Property Name="ShortChar05" Type="Edm.String" />
+        <Property Name="ShortChar06" Type="Edm.String" />
+        <Property Name="ShortChar07" Type="Edm.String" />
+        <Property Name="ShortChar08" Type="Edm.String" />
+        <Property Name="ShortChar09" Type="Edm.String" />
+        <Property Name="ShortChar10" Type="Edm.String" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustDfltDocType">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="InvoiceType" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="InvoiceType" Type="Edm.String" Nullable="false" />
+        <Property Name="TranDocTypeID" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="InvcTypeTranDoc" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="TranDocTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustIC">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="ICTypeID" />
+          <PropertyRef Name="ICCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="ICTypeID" Type="Edm.String" Nullable="false" />
+        <Property Name="ICCode" Type="Edm.String" Nullable="false" />
+        <Property Name="Primary" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustomerBTName" Type="Edm.String" />
+        <Property Name="CustomerName" Type="Edm.String" />
+        <Property Name="CustomerCustID" Type="Edm.String" />
+        <Property Name="ICCodeDescription" Type="Edm.String" />
+        <Property Name="ICTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustLabExpRate">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ExpenseCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ExpenseCode" Type="Edm.String" Nullable="false" />
+        <Property Name="RateType" Type="Edm.Int32" />
+        <Property Name="RateMultiplier" Type="Edm.Decimal" />
+        <Property Name="FixedRate" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustomerName" Type="Edm.String" />
+        <Property Name="CustomerBTName" Type="Edm.String" />
+        <Property Name="CustomerCustID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustMandate">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="MandateType" />
+          <PropertyRef Name="MandateReference" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="MandateType" Type="Edm.String" Nullable="false" />
+        <Property Name="MandateReference" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="BankAcctID" Type="Edm.String" />
+        <Property Name="CreditorID" Type="Edm.String" />
+        <Property Name="ValidFrom" Type="Edm.DateTime" />
+        <Property Name="ValidTo" Type="Edm.DateTime" />
+        <Property Name="CreditorName" Type="Edm.String" />
+        <Property Name="CreditorAddress1" Type="Edm.String" />
+        <Property Name="CreditorAddress2" Type="Edm.String" />
+        <Property Name="CreditorAddress3" Type="Edm.String" />
+        <Property Name="CreditorCity" Type="Edm.String" />
+        <Property Name="CreditorZip" Type="Edm.String" />
+        <Property Name="CreditorCountryNum" Type="Edm.Int32" />
+        <Property Name="CreditorRefPartyName" Type="Edm.String" />
+        <Property Name="CreditorRefPartyID" Type="Edm.String" />
+        <Property Name="DebtorName" Type="Edm.String" />
+        <Property Name="DebtorAddress1" Type="Edm.String" />
+        <Property Name="DebtorAddress2" Type="Edm.String" />
+        <Property Name="DebtorAddress3" Type="Edm.String" />
+        <Property Name="DebtorCity" Type="Edm.String" />
+        <Property Name="DebtorZip" Type="Edm.String" />
+        <Property Name="DebtorCountryNum" Type="Edm.Int32" />
+        <Property Name="DebtorRefPartyName" Type="Edm.String" />
+        <Property Name="DebtorRefPartyID" Type="Edm.String" />
+        <Property Name="SignedPlace" Type="Edm.String" />
+        <Property Name="SignedBy" Type="Edm.String" />
+        <Property Name="SignedDate" Type="Edm.DateTime" />
+        <Property Name="UndContractID" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" />
+        <Property Name="CreatedDate" Type="Edm.DateTime" />
+        <Property Name="PrintedBy" Type="Edm.String" />
+        <Property Name="PrintedDate" Type="Edm.DateTime" />
+        <Property Name="FirstUseDate" Type="Edm.DateTime" />
+        <Property Name="LastUseDate" Type="Edm.DateTime" />
+        <Property Name="PaymentType" Type="Edm.String" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="MandateStatus" Type="Edm.String" />
+        <Property Name="BankAcctDescription" Type="Edm.String" />
+        <Property Name="BankAcctBankName" Type="Edm.String" />
+        <Property Name="BankAcctLegalName" Type="Edm.String" />
+        <Property Name="BankAcctIBANCode" Type="Edm.String" />
+        <Property Name="BankAcctBankIdentifier" Type="Edm.String" />
+        <Property Name="CustBankIBANCode" Type="Edm.String" />
+        <Property Name="CustBankBankIdentifier" Type="Edm.String" />
+        <Property Name="MandateCanBeDeleted" Type="Edm.Boolean" />
+        <Property Name="MandateReferenceExt" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerDoc">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="DocumentName" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="DocumentName" Type="Edm.String" Nullable="false" />
+        <Property Name="DocumentType" Type="Edm.String" />
+        <Property Name="AltTradingPartnerName" Type="Edm.String" />
+        <Property Name="TestRecord" Type="Edm.Boolean" />
+        <Property Name="UseCustomerDefaults" Type="Edm.Boolean" />
+        <Property Name="CheckForPart" Type="Edm.Boolean" />
+        <Property Name="UseCustPart" Type="Edm.Boolean" />
+        <Property Name="OutBoundDocReq" Type="Edm.Boolean" />
+        <Property Name="MapID" Type="Edm.String" />
+        <Property Name="AcceptType" Type="Edm.String" />
+        <Property Name="DocDirection" Type="Edm.String" />
+        <Property Name="OutboundDocName" Type="Edm.String" />
+        <Property Name="DeleteCurrentReleases" Type="Edm.Boolean" />
+        <Property Name="UsePartUPC" Type="Edm.Boolean" />
+        <Property Name="OutboundManual" Type="Edm.Boolean" />
+        <Property Name="OutboundAutomatic" Type="Edm.Boolean" />
+        <Property Name="EDIPartValidation" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="PartOptionAvailList" Type="Edm.String" />
+        <Property Name="PartOptionSelList" Type="Edm.String" />
+        <Property Name="PartOptionSelectedList" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustomerBTName" Type="Edm.String" />
+        <Property Name="CustomerName" Type="Edm.String" />
+        <Property Name="CustomerCustID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustRestriction">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="RestrictionTypeID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="RestrictionTypeID" Type="Edm.String" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustNumCustID" Type="Edm.String" />
+        <Property Name="CustNumBTName" Type="Edm.String" />
+        <Property Name="CustNumName" Type="Edm.String" />
+        <Property Name="RestrictionTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustUPSEmail">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="UPSQVSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="UPSQVSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EmailAddress" Type="Edm.String" />
+        <Property Name="ShipmentNotify" Type="Edm.Boolean" />
+        <Property Name="FailureNotify" Type="Edm.Boolean" />
+        <Property Name="DeliveryNotify" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="EnableQuantumView" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerDiscPriceLst">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="SeqNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PriceListListDescription" Type="Edm.String" />
+        <Property Name="PriceListEndDate" Type="Edm.DateTime" />
+        <Property Name="PriceListStartDate" Type="Edm.DateTime" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerFSPriceList">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="SeqNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PriceListListDescription" Type="Edm.String" />
+        <Property Name="PriceListEndDate" Type="Edm.DateTime" />
+        <Property Name="PriceListStartDate" Type="Edm.DateTime" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="GlbCustCred">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ExtCompany" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ExtCompany" Type="Edm.String" Nullable="false" />
+        <Property Name="ExtCompName" Type="Edm.String" />
+        <Property Name="UpdateDate" Type="Edm.DateTime" />
+        <Property Name="DocARTotal" Type="Edm.Decimal" />
+        <Property Name="DocSOTotal" Type="Edm.Decimal" />
+        <Property Name="DocPITotal" Type="Edm.Decimal" />
+        <Property Name="ARTotal" Type="Edm.Decimal" />
+        <Property Name="SOTotal" Type="Edm.Decimal" />
+        <Property Name="PITotal" Type="Edm.Decimal" />
+        <Property Name="ErrorMsg" Type="Edm.String" />
+        <Property Name="GlbCustNum" Type="Edm.Int32" />
+        <Property Name="ParentCustNum" Type="Edm.Int32" />
+        <Property Name="GlobalCurrencyCode" Type="Edm.String" />
+        <Property Name="TotalInvoices" Type="Edm.Int32" />
+        <Property Name="TotalOrders" Type="Edm.Int32" />
+        <Property Name="TotalPayIns" Type="Edm.Int32" />
+        <Property Name="NAParentsCreditUsed" Type="Edm.Decimal" />
+        <Property Name="NASharedCreditUsed" Type="Edm.Decimal" />
+        <Property Name="NAOwnCreditUsed" Type="Edm.Decimal" />
+        <Property Name="GlbNAParentsCreditUsed" Type="Edm.Decimal" />
+        <Property Name="GlbNASharedCreditUsed" Type="Edm.Decimal" />
+        <Property Name="NAPoolCreditUsed" Type="Edm.Decimal" />
+        <Property Name="GlbNAPoolCreditUsed" Type="Edm.Decimal" />
+        <Property Name="GlbNAOwnCreditUsed" Type="Edm.Decimal" />
+        <Property Name="NAExceedLimit" Type="Edm.Decimal" />
+        <Property Name="GlbNAExceedLimit" Type="Edm.Decimal" />
+        <Property Name="ARLOCTotal" Type="Edm.Decimal" />
+        <Property Name="DocARLOCTotal" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="CurrencyCode" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="NAMember">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="RlsClassCode" Type="Edm.String" />
+        <Property Name="TopCustNum" Type="Edm.Int32" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="TopCustID" Type="Edm.String" />
+        <Property Name="Tiered" Type="Edm.Boolean" />
+        <Property Name="TopCustName" Type="Edm.String" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PECustWhldHist">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="RecordSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="RecordSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="CreateDate" Type="Edm.DateTime" />
+        <Property Name="UserID" Type="Edm.String" />
+        <Property Name="GoodContributor" Type="Edm.Boolean" />
+        <Property Name="WithholdingAgent" Type="Edm.Boolean" />
+        <Property Name="CollectionAgent" Type="Edm.Boolean" />
+        <Property Name="NotFound" Type="Edm.Boolean" />
+        <Property Name="NoAddress" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipTo">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="Address1" Type="Edm.String" />
+        <Property Name="Address2" Type="Edm.String" />
+        <Property Name="Address3" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="ZIP" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <Property Name="ResaleID" Type="Edm.String" />
+        <Property Name="SalesRepCode" Type="Edm.String" />
+        <Property Name="TerritoryID" Type="Edm.String" />
+        <Property Name="ShipViaCode" Type="Edm.String" />
+        <Property Name="PrimSCon" Type="Edm.Int32" />
+        <Property Name="FaxNum" Type="Edm.String" />
+        <Property Name="PhoneNum" Type="Edm.String" />
+        <Property Name="TaxExempt" Type="Edm.String" />
+        <Property Name="EDIShipNum" Type="Edm.String" />
+        <Property Name="CountryNum" Type="Edm.Int32" />
+        <Property Name="LangNameID" Type="Edm.String" />
+        <Property Name="BorderCrossing" Type="Edm.String" />
+        <Property Name="FormatStr" Type="Edm.String" />
+        <Property Name="TaxRegionCode" Type="Edm.String" />
+        <Property Name="EMailAddress" Type="Edm.String" />
+        <Property Name="TerritorySelect" Type="Edm.String" />
+        <Property Name="PendingTerritoryID" Type="Edm.String" />
+        <Property Name="CreatedByEDI" Type="Edm.Boolean" />
+        <Property Name="ExternalID" Type="Edm.String" />
+        <Property Name="TaxAuthorityCode" Type="Edm.String" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="EDICode" Type="Edm.String" />
+        <Property Name="DemandDeliveryDays" Type="Edm.Int32" />
+        <Property Name="DemandDateType" Type="Edm.String" />
+        <Property Name="DemandAddLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandAddAction" Type="Edm.String" />
+        <Property Name="DemandChangeLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandChangeAction" Type="Edm.String" />
+        <Property Name="DemandCancelLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandCancelAction" Type="Edm.String" />
+        <Property Name="DemandNewLineLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandNewLineAction" Type="Edm.String" />
+        <Property Name="DemandQtyChangeLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandQtyChangeAction" Type="Edm.String" />
+        <Property Name="DemandChangeDateLeadTime" Type="Edm.Int32" />
+        <Property Name="DemandChangeDateAction" Type="Edm.String" />
+        <Property Name="TradingPartnerName" Type="Edm.String" />
+        <Property Name="ResDelivery" Type="Edm.Boolean" />
+        <Property Name="SatDelivery" Type="Edm.Boolean" />
+        <Property Name="SatPickup" Type="Edm.Boolean" />
+        <Property Name="Hazmat" Type="Edm.Boolean" />
+        <Property Name="DocOnly" Type="Edm.Boolean" />
+        <Property Name="RefNotes" Type="Edm.String" />
+        <Property Name="ApplyChrg" Type="Edm.Boolean" />
+        <Property Name="ChrgAmount" Type="Edm.Decimal" />
+        <Property Name="COD" Type="Edm.Boolean" />
+        <Property Name="CODFreight" Type="Edm.Boolean" />
+        <Property Name="CODCheck" Type="Edm.Boolean" />
+        <Property Name="CODAmount" Type="Edm.Decimal" />
+        <Property Name="GroundType" Type="Edm.String" />
+        <Property Name="NotifyFlag" Type="Edm.Boolean" />
+        <Property Name="NotifyEMail" Type="Edm.String" />
+        <Property Name="DeclaredIns" Type="Edm.Boolean" />
+        <Property Name="DeclaredAmt" Type="Edm.Decimal" />
+        <Property Name="PeriodicityCode" Type="Edm.Int32" />
+        <Property Name="ServSignature" Type="Edm.Boolean" />
+        <Property Name="ServAlert" Type="Edm.Boolean" />
+        <Property Name="ServHomeDel" Type="Edm.Boolean" />
+        <Property Name="DeliveryType" Type="Edm.String" />
+        <Property Name="ServDeliveryDate" Type="Edm.DateTime" />
+        <Property Name="ServPhone" Type="Edm.String" />
+        <Property Name="ServInstruct" Type="Edm.String" />
+        <Property Name="ServRelease" Type="Edm.Boolean" />
+        <Property Name="ServAuthNum" Type="Edm.String" />
+        <Property Name="ServRef1" Type="Edm.String" />
+        <Property Name="CommercialInvoice" Type="Edm.Boolean" />
+        <Property Name="ServRef2" Type="Edm.String" />
+        <Property Name="ShipExprtDeclartn" Type="Edm.Boolean" />
+        <Property Name="ServRef3" Type="Edm.String" />
+        <Property Name="CertOfOrigin" Type="Edm.Boolean" />
+        <Property Name="ServRef4" Type="Edm.String" />
+        <Property Name="LetterOfInstr" Type="Edm.Boolean" />
+        <Property Name="ServRef5" Type="Edm.String" />
+        <Property Name="HazardousShipment" Type="Edm.Boolean" />
+        <Property Name="OverrideCarrier" Type="Edm.Boolean" />
+        <Property Name="IntrntlShip" Type="Edm.Boolean" />
+        <Property Name="OverrideService" Type="Edm.Boolean" />
+        <Property Name="DemandUseCustomerValues" Type="Edm.Boolean" />
+        <Property Name="TaxRegReason" Type="Edm.String" />
+        <Property Name="EarlyBuffer" Type="Edm.Int32" />
+        <Property Name="OrgRegCode" Type="Edm.String" />
+        <Property Name="LateBuffer" Type="Edm.Int32" />
+        <Property Name="DemandUnitPriceDiff" Type="Edm.Boolean" />
+        <Property Name="DemandUnitPriceDiffAction" Type="Edm.String" />
+        <Property Name="ExcFromVal" Type="Edm.Boolean" />
+        <Property Name="AddressVal" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForPart" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForPartAction" Type="Edm.String" />
+        <Property Name="FFID" Type="Edm.String" />
+        <Property Name="FFAddress1" Type="Edm.String" />
+        <Property Name="FFAddress2" Type="Edm.String" />
+        <Property Name="FFCity" Type="Edm.String" />
+        <Property Name="FFState" Type="Edm.String" />
+        <Property Name="FFZip" Type="Edm.String" />
+        <Property Name="FFCountry" Type="Edm.String" />
+        <Property Name="FFContact" Type="Edm.String" />
+        <Property Name="FFCompName" Type="Edm.String" />
+        <Property Name="FFPhoneNum" Type="Edm.String" />
+        <Property Name="ChangedBy" Type="Edm.String" />
+        <Property Name="ChangeDate" Type="Edm.DateTime" />
+        <Property Name="ChangeTime" Type="Edm.Int32" />
+        <Property Name="IndividualPackIDs" Type="Edm.Boolean" />
+        <Property Name="FFCountryNum" Type="Edm.Int32" />
+        <Property Name="NonStdPkg" Type="Edm.Boolean" />
+        <Property Name="DeliveryConf" Type="Edm.Int32" />
+        <Property Name="AddlHdlgFlag" Type="Edm.Boolean" />
+        <Property Name="UPSQuantumView" Type="Edm.Boolean" />
+        <Property Name="UPSQVShipFromName" Type="Edm.String" />
+        <Property Name="UPSQVMemo" Type="Edm.String" />
+        <Property Name="FFAddress3" Type="Edm.String" />
+        <Property Name="ETCAddrChg" Type="Edm.Boolean" />
+        <Property Name="IsAlternate" Type="Edm.Boolean" />
+        <Property Name="MasterCustNum" Type="Edm.Int32" />
+        <Property Name="MasterShipToNum" Type="Edm.String" />
+        <Property Name="DemandCheckForRev" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForRevAction" Type="Edm.String" />
+        <Property Name="DemandCheckPartialShip" Type="Edm.Boolean" />
+        <Property Name="DemandCheckShipAction" Type="Edm.String" />
+        <Property Name="DemandCloseRejSkd" Type="Edm.Boolean" />
+        <Property Name="DemandPricing" Type="Edm.String" />
+        <Property Name="PriceTolerance" Type="Edm.Decimal" />
+        <Property Name="CheckDateCapPromise" Type="Edm.Boolean" />
+        <Property Name="CheckConfirmCapPromise" Type="Edm.Boolean" />
+        <Property Name="CheckUpdateCapPromise" Type="Edm.Boolean" />
+        <Property Name="DemandCapPromiseDate" Type="Edm.String" />
+        <Property Name="DemandCapPromiseAction" Type="Edm.String" />
+        <Property Name="DemandCapPromiseUpdate" Type="Edm.String" />
+        <Property Name="OTSmartString" Type="Edm.Boolean" />
+        <Property Name="LegalName" Type="Edm.String" />
+        <Property Name="DemandCheckConfig" Type="Edm.Boolean" />
+        <Property Name="DemandCheckCfgAction" Type="Edm.String" />
+        <Property Name="WIWebShipTo" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="AGApartment" Type="Edm.String" />
+        <Property Name="AGExtraStreetNumber" Type="Edm.String" />
+        <Property Name="AGFloor" Type="Edm.String" />
+        <Property Name="AGGrossIncomeTaxID" Type="Edm.String" />
+        <Property Name="AGLocationCode" Type="Edm.String" />
+        <Property Name="AGNeighborhood" Type="Edm.String" />
+        <Property Name="AGProvinceCode" Type="Edm.String" />
+        <Property Name="AGStreet" Type="Edm.String" />
+        <Property Name="AGStreetNumber" Type="Edm.String" />
+        <Property Name="EntityUseCode" Type="Edm.String" />
+        <Property Name="DemandCheckForRunOutPart" Type="Edm.Boolean" />
+        <Property Name="DemandCheckForRunOutPartAction" Type="Edm.String" />
+        <Property Name="INExciseRegNumber" Type="Edm.String" />
+        <Property Name="INVATNumber" Type="Edm.String" />
+        <Property Name="INSTRegistration" Type="Edm.String" />
+        <Property Name="MXCURP" Type="Edm.String" />
+        <Property Name="MXMunicipio" Type="Edm.String" />
+        <Property Name="MXFederalID" Type="Edm.String" />
+        <Property Name="INTaxRegistrationID" Type="Edm.String" />
+        <Property Name="PeriodicityList" Type="Edm.String" />
+        <Property Name="PrimaryShipTo" Type="Edm.Boolean" />
+        <Property Name="TerritorySelectDescription" Type="Edm.String" />
+        <Property Name="TerrSelectFlag" Type="Edm.String" />
+        <Property Name="AddrList" Type="Edm.String" />
+        <Property Name="COASegReferences" Type="Edm.String" />
+        <Property Name="ContactName" Type="Edm.String" />
+        <Property Name="DspFormatStr" Type="Edm.String" />
+        <Property Name="GlbFlag" Type="Edm.Boolean" />
+        <Property Name="GlbLink" Type="Edm.String" />
+        <Property Name="IntegrationFlag" Type="Edm.Boolean" />
+        <Property Name="PeriodicityDesc" Type="Edm.String" />
+        <Property Name="IntRunChangeCountry" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="AGLocationDescription" Type="Edm.String" />
+        <Property Name="AGProvinceDescription" Type="Edm.String" />
+        <Property Name="CustNumName" Type="Edm.String" />
+        <Property Name="CustNumCustID" Type="Edm.String" />
+        <Property Name="CustNumBTName" Type="Edm.String" />
+        <Property Name="DeliveryTypeDescription" Type="Edm.String" />
+        <Property Name="LanguageDescription" Type="Edm.String" />
+        <Property Name="MasterCustIDBTName" Type="Edm.String" />
+        <Property Name="MasterCustIDCustID" Type="Edm.String" />
+        <Property Name="MasterCustIDName" Type="Edm.String" />
+        <Property Name="SalesRepName" Type="Edm.String" />
+        <Property Name="ShipViaWebDesc" Type="Edm.String" />
+        <Property Name="ShipViaDescription" Type="Edm.String" />
+        <Property Name="TATaxAuthorityDescription" Type="Edm.String" />
+        <Property Name="TaxRegionDescription" Type="Edm.String" />
+        <Property Name="TerritoryTerritoryDesc" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="ShipToRestrictions" Relationship="Erp.Erp_ShipTo_ShipToRestrictions_Erp_ShipToRestriction_ShipToes" ToRole="ShipToRestrictions" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToLabExpRates" Relationship="Erp.Erp_ShipTo_ShipToLabExpRates_Erp_ShipToLabExpRate_ShipToes" ToRole="ShipToLabExpRates" FromRole="ShipToes" />
+        <NavigationProperty Name="CustomerDocsSHes" Relationship="Erp.Erp_ShipTo_CustomerDocsSHes_Erp_CustomerDocsSH_ShipToes" ToRole="CustomerDocsSHes" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToDiscPriceLsts" Relationship="Erp.Erp_ShipTo_ShipToDiscPriceLsts_Erp_ShipToDiscPriceLst_ShipToes" ToRole="ShipToDiscPriceLsts" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToMFBills" Relationship="Erp.Erp_ShipTo_ShipToMFBills_Erp_ShipToMFBill_ShipToes" ToRole="ShipToMFBills" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToPriceLsts" Relationship="Erp.Erp_ShipTo_ShipToPriceLsts_Erp_ShipToPriceLst_ShipToes" ToRole="ShipToPriceLsts" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToUPSEmls" Relationship="Erp.Erp_ShipTo_ShipToUPSEmls_Erp_ShipToUPSEml_ShipToes" ToRole="ShipToUPSEmls" FromRole="ShipToes" />
+        <NavigationProperty Name="ShipToAttches" Relationship="Erp.Erp_ShipTo_ShipToAttches_Erp_ShipToAttch_ShipToes" ToRole="ShipToAttches" FromRole="ShipToes" />
+      </EntityType>
+      <EntityType Name="ShipToRestriction">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="RestrictionTypeID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RestrictionTypeID" Type="Edm.String" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustNumName" Type="Edm.String" />
+        <Property Name="CustNumCustID" Type="Edm.String" />
+        <Property Name="CustNumBTName" Type="Edm.String" />
+        <Property Name="RestrictionTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToLabExpRate">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="ExpenseCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="ExpenseCode" Type="Edm.String" Nullable="false" />
+        <Property Name="RateType" Type="Edm.Int32" />
+        <Property Name="RateMultiplier" Type="Edm.Decimal" />
+        <Property Name="FixedRate" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="ShipToShipToNum" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerDocsSH">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="DocumentName" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="DocumentName" Type="Edm.String" Nullable="false" />
+        <Property Name="DocumentType" Type="Edm.String" />
+        <Property Name="AltTradingPartnerName" Type="Edm.String" />
+        <Property Name="TestRecord" Type="Edm.Boolean" />
+        <Property Name="UseCustomerDefaults" Type="Edm.Boolean" />
+        <Property Name="CheckForPart" Type="Edm.Boolean" />
+        <Property Name="UseCustPart" Type="Edm.Boolean" />
+        <Property Name="OutBoundDocReq" Type="Edm.Boolean" />
+        <Property Name="MapID" Type="Edm.String" />
+        <Property Name="AcceptType" Type="Edm.String" />
+        <Property Name="DocDirection" Type="Edm.String" />
+        <Property Name="OutboundDocName" Type="Edm.String" />
+        <Property Name="DeleteCurrentReleases" Type="Edm.Boolean" />
+        <Property Name="UsePartUPC" Type="Edm.Boolean" />
+        <Property Name="OutboundManual" Type="Edm.Boolean" />
+        <Property Name="OutboundAutomatic" Type="Edm.Boolean" />
+        <Property Name="EDIPartValidation" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="PartOptionAvailList" Type="Edm.String" />
+        <Property Name="PartOptionSelList" Type="Edm.String" />
+        <Property Name="PartOptionSelectedList" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToDiscPriceLst">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="SeqNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PriceListStartDate" Type="Edm.DateTime" />
+        <Property Name="PriceListEndDate" Type="Edm.DateTime" />
+        <Property Name="PriceListListDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToMFBill">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="PayBTFlag" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="PayBTFlag" Type="Edm.String" Nullable="false" />
+        <Property Name="PayTypeDesc" Type="Edm.String" />
+        <Property Name="PayAccount" Type="Edm.String" />
+        <Property Name="PayBTAddress1" Type="Edm.String" />
+        <Property Name="PayBTAddress2" Type="Edm.String" />
+        <Property Name="PayBTAddress3" Type="Edm.String" />
+        <Property Name="PayBTCity" Type="Edm.String" />
+        <Property Name="PayBTState" Type="Edm.String" />
+        <Property Name="PayBTZip" Type="Edm.String" />
+        <Property Name="PayBTCountry" Type="Edm.String" />
+        <Property Name="PayBTCountryNum" Type="Edm.Int32" />
+        <Property Name="PayBTPhone" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToPriceLst">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="SeqNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PriceListListDescription" Type="Edm.String" />
+        <Property Name="PriceListStartDate" Type="Edm.DateTime" />
+        <Property Name="PriceListEndDate" Type="Edm.DateTime" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToUPSEml">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="UPSQVSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="UPSQVSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="EmailAddress" Type="Edm.String" />
+        <Property Name="ShipmentNotify" Type="Edm.Boolean" />
+        <Property Name="FailureNotify" Type="Edm.Boolean" />
+        <Property Name="DeliveryNotify" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="EnableQuantumView" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustMFBill">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="PayBTFlag" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PayBTFlag" Type="Edm.String" Nullable="false" />
+        <Property Name="PayTypeDesc" Type="Edm.String" />
+        <Property Name="PayAccount" Type="Edm.String" />
+        <Property Name="PayBTAddress1" Type="Edm.String" />
+        <Property Name="PayBTAddress2" Type="Edm.String" />
+        <Property Name="PayBTAddress3" Type="Edm.String" />
+        <Property Name="PayBTCity" Type="Edm.String" />
+        <Property Name="PayBTState" Type="Edm.String" />
+        <Property Name="PayBTZip" Type="Edm.String" />
+        <Property Name="PayBTCountry" Type="Edm.String" />
+        <Property Name="PayBTCountryNum" Type="Edm.Int32" />
+        <Property Name="PayBTPhone" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="MangCust">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="VendorNum" />
+        </Key>
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="VendorNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CustNumCustID" Type="Edm.String" />
+        <Property Name="CustNumBTName" Type="Edm.String" />
+        <Property Name="CustNumName" Type="Edm.String" />
+        <Property Name="VendorNumCity" Type="Edm.String" />
+        <Property Name="VendorNumTermsCode" Type="Edm.String" />
+        <Property Name="VendorNumCurrencyCode" Type="Edm.String" />
+        <Property Name="VendorNumAddress2" Type="Edm.String" />
+        <Property Name="VendorNumName" Type="Edm.String" />
+        <Property Name="VendorNumCountry" Type="Edm.String" />
+        <Property Name="VendorNumAddress3" Type="Edm.String" />
+        <Property Name="VendorNumDefaultFOB" Type="Edm.String" />
+        <Property Name="VendorNumAddress1" Type="Edm.String" />
+        <Property Name="VendorNumVendorID" Type="Edm.String" />
+        <Property Name="VendorNumZIP" Type="Edm.String" />
+        <Property Name="VendorNumState" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="ShipToSrch">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="ShipToID" Type="Edm.String" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerPriceLst">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="ShipToNum" />
+          <PropertyRef Name="SeqNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ShipToNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ListCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PriceListListDescription" Type="Edm.String" />
+        <Property Name="PriceListEndDate" Type="Edm.DateTime" />
+        <Property Name="PriceListStartDate" Type="Edm.DateTime" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="EntityGLC">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="RelatedToFile" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="Key3" />
+          <PropertyRef Name="Key4" />
+          <PropertyRef Name="Key5" />
+          <PropertyRef Name="Key6" />
+          <PropertyRef Name="GLControlType" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="RelatedToFile" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="Key3" Type="Edm.String" Nullable="false" />
+        <Property Name="Key4" Type="Edm.String" Nullable="false" />
+        <Property Name="Key5" Type="Edm.String" Nullable="false" />
+        <Property Name="Key6" Type="Edm.String" Nullable="false" />
+        <Property Name="GLControlType" Type="Edm.String" Nullable="false" />
+        <Property Name="GLControlCode" Type="Edm.String" />
+        <Property Name="BusinessEntity" Type="Edm.String" />
+        <Property Name="ExtCompanyID" Type="Edm.String" />
+        <Property Name="IsExternalCompany" Type="Edm.Boolean" />
+        <Property Name="GlobalEntityGLC" Type="Edm.Boolean" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BankAcctID" Type="Edm.String" />
+        <Property Name="BankFeeID" Type="Edm.String" />
+        <Property Name="CallCode" Type="Edm.String" />
+        <Property Name="ChargeCode" Type="Edm.String" />
+        <Property Name="ClassCode" Type="Edm.String" />
+        <Property Name="ClassID" Type="Edm.String" />
+        <Property Name="ContractCode" Type="Edm.String" />
+        <Property Name="CurrencyCode" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="DeductionID" Type="Edm.String" />
+        <Property Name="EmpID" Type="Edm.String" />
+        <Property Name="ExpenseCode" Type="Edm.String" />
+        <Property Name="ExtSystemID" Type="Edm.String" />
+        <Property Name="FromPlant" Type="Edm.String" />
+        <Property Name="GroupCode" Type="Edm.String" />
+        <Property Name="GroupID" Type="Edm.String" />
+        <Property Name="HeadNum" Type="Edm.Int32" />
+        <Property Name="InvoiceNum" Type="Edm.String" />
+        <Property Name="JCDept" Type="Edm.String" />
+        <Property Name="MiscCode" Type="Edm.String" />
+        <Property Name="PartNum" Type="Edm.String" />
+        <Property Name="PayTypeID" Type="Edm.String" />
+        <Property Name="PerConName" Type="Edm.String" />
+        <Property Name="PIStatus" Type="Edm.String" />
+        <Property Name="Plant" Type="Edm.String" />
+        <Property Name="ProdCode" Type="Edm.String" />
+        <Property Name="ProjectID" Type="Edm.String" />
+        <Property Name="PurchCode" Type="Edm.String" />
+        <Property Name="RateCode" Type="Edm.String" />
+        <Property Name="ReasonCode" Type="Edm.String" />
+        <Property Name="ReasonType" Type="Edm.String" />
+        <Property Name="SalesCatID" Type="Edm.String" />
+        <Property Name="Shift" Type="Edm.Int32" />
+        <Property Name="TaxCode" Type="Edm.String" />
+        <Property Name="TaxTblID" Type="Edm.String" />
+        <Property Name="ToPlant" Type="Edm.String" />
+        <Property Name="TransferMethod" Type="Edm.String" />
+        <Property Name="TypeID" Type="Edm.String" />
+        <Property Name="VendorNum" Type="Edm.Int32" />
+        <Property Name="WarehouseCode" Type="Edm.String" />
+        <Property Name="ExpenseTypeCode" Type="Edm.String" />
+        <Property Name="IsFiltered" Type="Edm.Boolean" />
+        <Property Name="OprTypeCode" Type="Edm.String" />
+        <Property Name="CashDeskID" Type="Edm.String" />
+        <Property Name="TIN" Type="Edm.String" />
+        <Property Name="ReclassCodeID" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="GLCntrlDescription" Type="Edm.String" />
+        <Property Name="GLCntrlTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="TaxExempt">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="RelatedToFile" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="TaxCode" />
+          <PropertyRef Name="RateCode" />
+          <PropertyRef Name="EffectiveFrom" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="RelatedToFile" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="TaxCode" Type="Edm.String" Nullable="false" />
+        <Property Name="RateCode" Type="Edm.String" Nullable="false" />
+        <Property Name="EffectiveFrom" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EffectiveTo" Type="Edm.DateTime" />
+        <Property Name="ExemptType" Type="Edm.Int32" />
+        <Property Name="ExemptPercent" Type="Edm.Decimal" />
+        <Property Name="TextCode" Type="Edm.String" />
+        <Property Name="ResolutionNum" Type="Edm.String" />
+        <Property Name="ResolutionDate" Type="Edm.DateTime" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="PartNum" Type="Edm.String" />
+        <Property Name="VendorNum" Type="Edm.Int32" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="SalesTaxDescription" Type="Edm.String" />
+        <Property Name="SalesTRCDescription" Type="Edm.String" />
+        <Property Name="TaxTextDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="CustNum" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="CustNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="Partner">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartnerNum" />
+          <PropertyRef Name="PartnerType" />
+          <PropertyRef Name="PartnerID" />
+          <PropertyRef Name="SearchID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartnerNum" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PartnerType" Type="Edm.Int32" Nullable="false" />
+        <Property Name="SearchID" Type="Edm.String" Nullable="false" />
+        <Property Name="IsActive" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="PartnerID" Type="Edm.String" Nullable="false" />
+        <Property Name="DspSearchID" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="CustomerListItem">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="CustID" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="Zip" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <Property Name="TerritoryID" Type="Edm.String" />
+        <Property Name="ShipToNum" Type="Edm.String" />
+        <Property Name="TermsCode" Type="Edm.String" />
+        <Property Name="TerritoryTerritoryDesc" Type="Edm.String" />
+        <Property Name="CustGrupGroupDesc" Type="Edm.String" />
+        <Property Name="CreditHold" Type="Edm.Boolean" />
+        <Property Name="GroupCode" Type="Edm.String" />
+        <Property Name="PhoneNum" Type="Edm.String" />
+        <Property Name="CountryNum" Type="Edm.Int32" />
+        <Property Name="CustomerType" Type="Edm.String" />
+        <Property Name="NoContact" Type="Edm.Boolean" />
+        <Property Name="AllowShipTo3" Type="Edm.Boolean" />
+        <Property Name="CustPartOpts" Type="Edm.String" />
+        <Property Name="HasBank" Type="Edm.Boolean" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox10" Type="Edm.Boolean" />
+        <Property Name="ShortChar01" Type="Edm.String" />
+        <Property Name="ShortChar04" Type="Edm.String" />
+        <Property Name="ShortChar05" Type="Edm.String" />
+        <Property Name="ShortChar06" Type="Edm.String" />
+        <Property Name="ShortChar07" Type="Edm.String" />
+        <Property Name="ShortChar08" Type="Edm.String" />
+        <Property Name="ShortChar09" Type="Edm.String" />
+        <Property Name="ShortChar10" Type="Edm.String" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+      </EntityType>
+      <Association Name="Erp_Customer_CustomCrdPools_Erp_CustomCrdPool_Customers">
+        <End Type="Erp.CustomCrdPool" Role="CustomCrdPools" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustBillToes_Erp_CustBillTo_Customers">
+        <End Type="Erp.CustBillTo" Role="CustBillToes" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustBanks_Erp_CustBank_Customers">
+        <End Type="Erp.CustBank" Role="CustBanks" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustChilds_Erp_CustChild_Customers">
+        <End Type="Erp.CustChild" Role="CustChilds" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustDfltDocTypes_Erp_CustDfltDocType_Customers">
+        <End Type="Erp.CustDfltDocType" Role="CustDfltDocTypes" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustICs_Erp_CustIC_Customers">
+        <End Type="Erp.CustIC" Role="CustICs" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustLabExpRates_Erp_CustLabExpRate_Customers">
+        <End Type="Erp.CustLabExpRate" Role="CustLabExpRates" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustMandates_Erp_CustMandate_Customers">
+        <End Type="Erp.CustMandate" Role="CustMandates" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustomerDocs_Erp_CustomerDoc_Customers">
+        <End Type="Erp.CustomerDoc" Role="CustomerDocs" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustRestrictions_Erp_CustRestriction_Customers">
+        <End Type="Erp.CustRestriction" Role="CustRestrictions" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustUPSEmails_Erp_CustUPSEmail_Customers">
+        <End Type="Erp.CustUPSEmail" Role="CustUPSEmails" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustomerDiscPriceLsts_Erp_CustomerDiscPriceLst_Customers">
+        <End Type="Erp.CustomerDiscPriceLst" Role="CustomerDiscPriceLsts" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Customer_CustomerFSPriceLists_Erp_CustomerFSPriceList_Customers">
+        <End Type="Erp.CustomerFSPriceList" Role="CustomerFSPriceLists" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_GlbCustCred_Customers_Erp_Customer_GlbCustCreds">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.GlbCustCred" Role="GlbCustCreds" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_NAMember_Customers_Erp_Customer_NAMembers">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.NAMember" Role="NAMembers" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_PECustWhldHist_Customers_Erp_Customer_PECustWhldHists">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.PECustWhldHist" Role="PECustWhldHists" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_ShipTo_Customers_Erp_Customer_ShipToes">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_Customer_CustMFBills_Erp_CustMFBill_Customers">
+        <End Type="Erp.CustMFBill" Role="CustMFBills" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_MangCust_Customers_Erp_Customer_MangCusts">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.MangCust" Role="MangCusts" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_ShipToSrch_Customers_Erp_Customer_ShipToSrches">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.ShipToSrch" Role="ShipToSrches" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_Customer_CustomerPriceLsts_Erp_CustomerPriceLst_Customers">
+        <End Type="Erp.CustomerPriceLst" Role="CustomerPriceLsts" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_EntityGLC_Customers_Erp_Customer_EntityGLCs">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.EntityGLC" Role="EntityGLCs" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_TaxExempt_Customers_Erp_Customer_TaxExempts">
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+        <End Type="Erp.TaxExempt" Role="TaxExempts" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_Customer_CustomerAttches_Erp_CustomerAttch_Customers">
+        <End Type="Erp.CustomerAttch" Role="CustomerAttches" Multiplicity="*" />
+        <End Type="Erp.Customer" Role="Customers" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToRestrictions_Erp_ShipToRestriction_ShipToes">
+        <End Type="Erp.ShipToRestriction" Role="ShipToRestrictions" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToLabExpRates_Erp_ShipToLabExpRate_ShipToes">
+        <End Type="Erp.ShipToLabExpRate" Role="ShipToLabExpRates" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_CustomerDocsSHes_Erp_CustomerDocsSH_ShipToes">
+        <End Type="Erp.CustomerDocsSH" Role="CustomerDocsSHes" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToDiscPriceLsts_Erp_ShipToDiscPriceLst_ShipToes">
+        <End Type="Erp.ShipToDiscPriceLst" Role="ShipToDiscPriceLsts" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToMFBills_Erp_ShipToMFBill_ShipToes">
+        <End Type="Erp.ShipToMFBill" Role="ShipToMFBills" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToPriceLsts_Erp_ShipToPriceLst_ShipToes">
+        <End Type="Erp.ShipToPriceLst" Role="ShipToPriceLsts" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToUPSEmls_Erp_ShipToUPSEml_ShipToes">
+        <End Type="Erp.ShipToUPSEml" Role="ShipToUPSEmls" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_ShipTo_ShipToAttches_Erp_ShipToAttch_ShipToes">
+        <End Type="Erp.ShipToAttch" Role="ShipToAttches" Multiplicity="*" />
+        <End Type="Erp.ShipTo" Role="ShipToes" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

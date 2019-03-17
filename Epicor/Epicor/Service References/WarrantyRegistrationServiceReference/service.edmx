@@ -1,0 +1,279 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="Epicor" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="RestApi">
+        <EntitySet Name="UD01s" EntityType="Ice.UD01" />
+        <EntitySet Name="UD01Attchs" EntityType="Ice.UD01Attch" />
+        <EntitySet Name="List" EntityType="Ice.UD01ListItem" />
+        <FunctionImport Name="GetaNewUD01" />
+        <FunctionImport Name="GetNewUD01" />
+        <FunctionImport Name="GetNewUD01Attch" />
+        <FunctionImport Name="DeleteByID" />
+        <FunctionImport Name="GetByID" />
+        <FunctionImport Name="GetList" />
+        <FunctionImport Name="GetRows" />
+        <FunctionImport Name="GetBySysRowID" />
+        <FunctionImport Name="GetBySysRowIDs" />
+        <FunctionImport Name="Update" />
+        <FunctionImport Name="UpdateExt" />
+        <AssociationSet Name="Ice_UD01_UD01Attchs_Ice_UD01Attch_UD01sSet" Association="Ice.Ice_UD01_UD01Attchs_Ice_UD01Attch_UD01s">
+          <End Role="UD01s" EntitySet="UD01s" />
+          <End Role="UD01Attchs" EntitySet="UD01Attchs" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+    <Schema Namespace="Ice" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="UD01">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="Key3" />
+          <PropertyRef Name="Key4" />
+          <PropertyRef Name="Key5" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="Key3" Type="Edm.String" Nullable="false" />
+        <Property Name="Key4" Type="Edm.String" Nullable="false" />
+        <Property Name="Key5" Type="Edm.String" Nullable="false" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Character02" Type="Edm.String" />
+        <Property Name="Character03" Type="Edm.String" />
+        <Property Name="Character04" Type="Edm.String" />
+        <Property Name="Character05" Type="Edm.String" />
+        <Property Name="Character06" Type="Edm.String" />
+        <Property Name="Character07" Type="Edm.String" />
+        <Property Name="Character08" Type="Edm.String" />
+        <Property Name="Character09" Type="Edm.String" />
+        <Property Name="Character10" Type="Edm.String" />
+        <Property Name="Number01" Type="Edm.Decimal" />
+        <Property Name="Number02" Type="Edm.Decimal" />
+        <Property Name="Number03" Type="Edm.Decimal" />
+        <Property Name="Number04" Type="Edm.Decimal" />
+        <Property Name="Number05" Type="Edm.Decimal" />
+        <Property Name="Number06" Type="Edm.Decimal" />
+        <Property Name="Number07" Type="Edm.Decimal" />
+        <Property Name="Number08" Type="Edm.Decimal" />
+        <Property Name="Number09" Type="Edm.Decimal" />
+        <Property Name="Number10" Type="Edm.Decimal" />
+        <Property Name="Number11" Type="Edm.Decimal" />
+        <Property Name="Number12" Type="Edm.Decimal" />
+        <Property Name="Number13" Type="Edm.Decimal" />
+        <Property Name="Number14" Type="Edm.Decimal" />
+        <Property Name="Number15" Type="Edm.Decimal" />
+        <Property Name="Number16" Type="Edm.Decimal" />
+        <Property Name="Number17" Type="Edm.Decimal" />
+        <Property Name="Number18" Type="Edm.Decimal" />
+        <Property Name="Number19" Type="Edm.Decimal" />
+        <Property Name="Number20" Type="Edm.Decimal" />
+        <Property Name="Date01" Type="Edm.DateTime" />
+        <Property Name="Date02" Type="Edm.DateTime" />
+        <Property Name="Date03" Type="Edm.DateTime" />
+        <Property Name="Date04" Type="Edm.DateTime" />
+        <Property Name="Date05" Type="Edm.DateTime" />
+        <Property Name="Date06" Type="Edm.DateTime" />
+        <Property Name="Date07" Type="Edm.DateTime" />
+        <Property Name="Date08" Type="Edm.DateTime" />
+        <Property Name="Date09" Type="Edm.DateTime" />
+        <Property Name="Date10" Type="Edm.DateTime" />
+        <Property Name="Date11" Type="Edm.DateTime" />
+        <Property Name="Date12" Type="Edm.DateTime" />
+        <Property Name="Date13" Type="Edm.DateTime" />
+        <Property Name="Date14" Type="Edm.DateTime" />
+        <Property Name="Date15" Type="Edm.DateTime" />
+        <Property Name="Date16" Type="Edm.DateTime" />
+        <Property Name="Date17" Type="Edm.DateTime" />
+        <Property Name="Date18" Type="Edm.DateTime" />
+        <Property Name="Date19" Type="Edm.DateTime" />
+        <Property Name="Date20" Type="Edm.DateTime" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox03" Type="Edm.Boolean" />
+        <Property Name="CheckBox04" Type="Edm.Boolean" />
+        <Property Name="CheckBox05" Type="Edm.Boolean" />
+        <Property Name="CheckBox06" Type="Edm.Boolean" />
+        <Property Name="CheckBox07" Type="Edm.Boolean" />
+        <Property Name="CheckBox08" Type="Edm.Boolean" />
+        <Property Name="CheckBox09" Type="Edm.Boolean" />
+        <Property Name="CheckBox10" Type="Edm.Boolean" />
+        <Property Name="CheckBox11" Type="Edm.Boolean" />
+        <Property Name="CheckBox12" Type="Edm.Boolean" />
+        <Property Name="CheckBox13" Type="Edm.Boolean" />
+        <Property Name="CheckBox14" Type="Edm.Boolean" />
+        <Property Name="CheckBox15" Type="Edm.Boolean" />
+        <Property Name="CheckBox16" Type="Edm.Boolean" />
+        <Property Name="CheckBox17" Type="Edm.Boolean" />
+        <Property Name="CheckBox18" Type="Edm.Boolean" />
+        <Property Name="CheckBox19" Type="Edm.Boolean" />
+        <Property Name="CheckBox20" Type="Edm.Boolean" />
+        <Property Name="ShortChar01" Type="Edm.String" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+        <Property Name="ShortChar03" Type="Edm.String" />
+        <Property Name="ShortChar04" Type="Edm.String" />
+        <Property Name="ShortChar05" Type="Edm.String" />
+        <Property Name="ShortChar06" Type="Edm.String" />
+        <Property Name="ShortChar07" Type="Edm.String" />
+        <Property Name="ShortChar08" Type="Edm.String" />
+        <Property Name="ShortChar09" Type="Edm.String" />
+        <Property Name="ShortChar10" Type="Edm.String" />
+        <Property Name="ShortChar11" Type="Edm.String" />
+        <Property Name="ShortChar12" Type="Edm.String" />
+        <Property Name="ShortChar13" Type="Edm.String" />
+        <Property Name="ShortChar14" Type="Edm.String" />
+        <Property Name="ShortChar15" Type="Edm.String" />
+        <Property Name="ShortChar16" Type="Edm.String" />
+        <Property Name="ShortChar17" Type="Edm.String" />
+        <Property Name="ShortChar18" Type="Edm.String" />
+        <Property Name="ShortChar19" Type="Edm.String" />
+        <Property Name="ShortChar20" Type="Edm.String" />
+        <Property Name="GlobalUD01" Type="Edm.Boolean" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="UD01Attchs" Relationship="Ice.Ice_UD01_UD01Attchs_Ice_UD01Attch_UD01s" ToRole="UD01Attchs" FromRole="UD01s" />
+      </EntityType>
+      <EntityType Name="UD01Attch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="Key3" />
+          <PropertyRef Name="Key4" />
+          <PropertyRef Name="Key5" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="Key3" Type="Edm.String" Nullable="false" />
+        <Property Name="Key4" Type="Edm.String" Nullable="false" />
+        <Property Name="Key5" Type="Edm.String" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="UD01ListItem">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="Key1" Type="Edm.String" />
+        <Property Name="Key2" Type="Edm.String" />
+        <Property Name="Key3" Type="Edm.String" />
+        <Property Name="Key4" Type="Edm.String" />
+        <Property Name="Key5" Type="Edm.String" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Character02" Type="Edm.String" />
+        <Property Name="Character03" Type="Edm.String" />
+        <Property Name="Character04" Type="Edm.String" />
+        <Property Name="Character05" Type="Edm.String" />
+        <Property Name="Character06" Type="Edm.String" />
+        <Property Name="Character07" Type="Edm.String" />
+        <Property Name="Character08" Type="Edm.String" />
+        <Property Name="Character09" Type="Edm.String" />
+        <Property Name="Character10" Type="Edm.String" />
+        <Property Name="Number01" Type="Edm.Decimal" />
+        <Property Name="Number02" Type="Edm.Decimal" />
+        <Property Name="Number03" Type="Edm.Decimal" />
+        <Property Name="Number04" Type="Edm.Decimal" />
+        <Property Name="Number05" Type="Edm.Decimal" />
+        <Property Name="Number06" Type="Edm.Decimal" />
+        <Property Name="Number07" Type="Edm.Decimal" />
+        <Property Name="Number08" Type="Edm.Decimal" />
+        <Property Name="Number09" Type="Edm.Decimal" />
+        <Property Name="Number10" Type="Edm.Decimal" />
+        <Property Name="Number11" Type="Edm.Decimal" />
+        <Property Name="Number12" Type="Edm.Decimal" />
+        <Property Name="Number13" Type="Edm.Decimal" />
+        <Property Name="Number14" Type="Edm.Decimal" />
+        <Property Name="Number15" Type="Edm.Decimal" />
+        <Property Name="Number16" Type="Edm.Decimal" />
+        <Property Name="Number17" Type="Edm.Decimal" />
+        <Property Name="Number18" Type="Edm.Decimal" />
+        <Property Name="Number19" Type="Edm.Decimal" />
+        <Property Name="Number20" Type="Edm.Decimal" />
+        <Property Name="Date01" Type="Edm.DateTime" />
+        <Property Name="Date02" Type="Edm.DateTime" />
+        <Property Name="Date03" Type="Edm.DateTime" />
+        <Property Name="Date04" Type="Edm.DateTime" />
+        <Property Name="Date05" Type="Edm.DateTime" />
+        <Property Name="Date06" Type="Edm.DateTime" />
+        <Property Name="Date07" Type="Edm.DateTime" />
+        <Property Name="Date08" Type="Edm.DateTime" />
+        <Property Name="Date09" Type="Edm.DateTime" />
+        <Property Name="Date10" Type="Edm.DateTime" />
+        <Property Name="Date11" Type="Edm.DateTime" />
+        <Property Name="Date12" Type="Edm.DateTime" />
+        <Property Name="Date13" Type="Edm.DateTime" />
+        <Property Name="Date14" Type="Edm.DateTime" />
+        <Property Name="Date15" Type="Edm.DateTime" />
+        <Property Name="Date16" Type="Edm.DateTime" />
+        <Property Name="Date17" Type="Edm.DateTime" />
+        <Property Name="Date18" Type="Edm.DateTime" />
+        <Property Name="Date19" Type="Edm.DateTime" />
+        <Property Name="Date20" Type="Edm.DateTime" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox03" Type="Edm.Boolean" />
+        <Property Name="CheckBox04" Type="Edm.Boolean" />
+        <Property Name="CheckBox05" Type="Edm.Boolean" />
+        <Property Name="CheckBox06" Type="Edm.Boolean" />
+        <Property Name="CheckBox07" Type="Edm.Boolean" />
+        <Property Name="CheckBox08" Type="Edm.Boolean" />
+        <Property Name="CheckBox09" Type="Edm.Boolean" />
+        <Property Name="CheckBox10" Type="Edm.Boolean" />
+        <Property Name="CheckBox11" Type="Edm.Boolean" />
+        <Property Name="CheckBox12" Type="Edm.Boolean" />
+        <Property Name="CheckBox13" Type="Edm.Boolean" />
+        <Property Name="CheckBox14" Type="Edm.Boolean" />
+        <Property Name="CheckBox15" Type="Edm.Boolean" />
+        <Property Name="CheckBox16" Type="Edm.Boolean" />
+        <Property Name="CheckBox17" Type="Edm.Boolean" />
+        <Property Name="CheckBox18" Type="Edm.Boolean" />
+        <Property Name="CheckBox19" Type="Edm.Boolean" />
+        <Property Name="CheckBox20" Type="Edm.Boolean" />
+        <Property Name="ShortChar01" Type="Edm.String" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+        <Property Name="ShortChar03" Type="Edm.String" />
+        <Property Name="ShortChar04" Type="Edm.String" />
+        <Property Name="ShortChar05" Type="Edm.String" />
+        <Property Name="ShortChar06" Type="Edm.String" />
+        <Property Name="ShortChar07" Type="Edm.String" />
+        <Property Name="ShortChar08" Type="Edm.String" />
+        <Property Name="ShortChar09" Type="Edm.String" />
+        <Property Name="ShortChar10" Type="Edm.String" />
+        <Property Name="ShortChar11" Type="Edm.String" />
+        <Property Name="ShortChar12" Type="Edm.String" />
+        <Property Name="ShortChar13" Type="Edm.String" />
+        <Property Name="ShortChar14" Type="Edm.String" />
+        <Property Name="ShortChar15" Type="Edm.String" />
+        <Property Name="ShortChar16" Type="Edm.String" />
+        <Property Name="ShortChar17" Type="Edm.String" />
+        <Property Name="ShortChar18" Type="Edm.String" />
+        <Property Name="ShortChar19" Type="Edm.String" />
+        <Property Name="ShortChar20" Type="Edm.String" />
+        <Property Name="GlobalUD01" Type="Edm.Boolean" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <Association Name="Ice_UD01_UD01Attchs_Ice_UD01Attch_UD01s">
+        <End Type="Ice.UD01Attch" Role="UD01Attchs" Multiplicity="*" />
+        <End Type="Ice.UD01" Role="UD01s" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

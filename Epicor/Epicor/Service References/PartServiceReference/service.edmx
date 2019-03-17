@@ -1,0 +1,1654 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="Epicor" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="RestApi">
+        <EntitySet Name="Parts" EntityType="Erp.Part" />
+        <EntitySet Name="EntityGLCs" EntityType="Erp.EntityGLC" />
+        <EntitySet Name="TaxExempts" EntityType="Erp.TaxExempt" />
+        <EntitySet Name="PartCOOs" EntityType="Erp.PartCOO" />
+        <EntitySet Name="PartDims" EntityType="Erp.PartDim" />
+        <EntitySet Name="PartLangDescs" EntityType="Erp.PartLangDesc" />
+        <EntitySet Name="PartPlants" EntityType="Erp.PartPlant" />
+        <EntitySet Name="PartRestrictions" EntityType="Erp.PartRestriction" />
+        <EntitySet Name="PartRestrictSubsts" EntityType="Erp.PartRestrictSubst" />
+        <EntitySet Name="PartRevs" EntityType="Erp.PartRev" />
+        <EntitySet Name="PartAudits" EntityType="Erp.PartAudit" />
+        <EntitySet Name="PartCOParts" EntityType="Erp.PartCOPart" />
+        <EntitySet Name="PartRevInspPlans" EntityType="Erp.PartRevInspPlan" />
+        <EntitySet Name="PartRevInspPlanAttches" EntityType="Erp.PartRevInspPlanAttch" />
+        <EntitySet Name="PartRevInspVends" EntityType="Erp.PartRevInspVend" />
+        <EntitySet Name="PartRevAttches" EntityType="Erp.PartRevAttch" />
+        <EntitySet Name="PartSubs" EntityType="Erp.PartSub" />
+        <EntitySet Name="PartBinInfoes" EntityType="Erp.PartBinInfo" />
+        <EntitySet Name="PartPCs" EntityType="Erp.PartPC" />
+        <EntitySet Name="PartWhses" EntityType="Erp.PartWhse" />
+        <EntitySet Name="PartUOMs" EntityType="Erp.PartUOM" />
+        <EntitySet Name="PartAttches" EntityType="Erp.PartAttch" />
+        <EntitySet Name="List" EntityType="Erp.PartListItem" />
+        <FunctionImport Name="GetPartGlobalFields" />
+        <FunctionImport Name="AllowDimensionMaintenance" />
+        <FunctionImport Name="AllowInventoryInfo" />
+        <FunctionImport Name="AllowLotMaintenance" />
+        <FunctionImport Name="AllowPurchasingInfo" />
+        <FunctionImport Name="AllowViewLotCosts" />
+        <FunctionImport Name="ChangeMRPWarning" />
+        <FunctionImport Name="ChangePartBinInfoKBCode" />
+        <FunctionImport Name="ChangePartBuyToOrder" />
+        <FunctionImport Name="ChangePartCommodityCode" />
+        <FunctionImport Name="ChangePartNonStock" />
+        <FunctionImport Name="ChangePartGlobalPart" />
+        <FunctionImport Name="ChangePartNum" />
+        <FunctionImport Name="ChangePartPlantBuyToOrder" />
+        <FunctionImport Name="ChangePartPlantSourceType" />
+        <FunctionImport Name="ChangePartPlantUrgentVendorID" />
+        <FunctionImport Name="ChangePartPlantVendorID" />
+        <FunctionImport Name="ChangePartProdCode" />
+        <FunctionImport Name="ChangePartRestrictionManual" />
+        <FunctionImport Name="ChangePartRestrictionType" />
+        <FunctionImport Name="ChangePartRestrictSubstance" />
+        <FunctionImport Name="ChangePartRevApproved" />
+        <FunctionImport Name="ChangePartSNBaseDataType" />
+        <FunctionImport Name="ChangePartSNMaskPrefixSuffix" />
+        <FunctionImport Name="ChangePartSubsPartNum" />
+        <FunctionImport Name="ChangePartTrackDimension" />
+        <FunctionImport Name="ChangePartTrackLots" />
+        <FunctionImport Name="ChangePartUnitPrice" />
+        <FunctionImport Name="ChangePartInternalUnitPrice" />
+        <FunctionImport Name="ChangePartTrackSerialNum" />
+        <FunctionImport Name="ChangePartTypeCode" />
+        <FunctionImport Name="ChangePartUOMConvOverride" />
+        <FunctionImport Name="ChangePartWhseKBCode" />
+        <FunctionImport Name="ChangePlantSNBaseDataType" />
+        <FunctionImport Name="ChangePlantSNMaskPrefixSuffix" />
+        <FunctionImport Name="ChangeQtyBearing" />
+        <FunctionImport Name="ChangeLinkToContract" />
+        <FunctionImport Name="ChangeCostMethod" />
+        <FunctionImport Name="ChangeSNMask" />
+        <FunctionImport Name="ChangeUOMClassID" />
+        <FunctionImport Name="ChangeUOMCode" />
+        <FunctionImport Name="ChanginPartRestrictSubs" />
+        <FunctionImport Name="CheckAltMethodForDelete" />
+        <FunctionImport Name="CheckCOOPercents" />
+        <FunctionImport Name="CheckDuplicateCOO" />
+        <FunctionImport Name="CheckPartChanges" />
+        <FunctionImport Name="DeleteMRPJobs" />
+        <FunctionImport Name="DeleteMultiLevelRules" />
+        <FunctionImport Name="DuplicatePart" />
+        <FunctionImport Name="GetGlbPartList" />
+        <FunctionImport Name="GetListByConfigID" />
+        <FunctionImport Name="GetListByWarehouseBin" />
+        <FunctionImport Name="GetListFilterPlants" />
+        <FunctionImport Name="GetListFromSelectedKeys" />
+        <FunctionImport Name="GetPartForLink" />
+        <FunctionImport Name="GetPartWhereUsed" />
+        <FunctionImport Name="GetPartXRefInfo" />
+        <FunctionImport Name="GetDMRListSearch" />
+        <FunctionImport Name="GlbPartsExist" />
+        <FunctionImport Name="HasIntrastat" />
+        <FunctionImport Name="IsRunOutOnHand" />
+        <FunctionImport Name="LinkGlbPart" />
+        <FunctionImport Name="OnChangePkgCode" />
+        <FunctionImport Name="OnChangePESUNAT" />
+        <FunctionImport Name="OnChangePlant" />
+        <FunctionImport Name="CalcACWDays" />
+        <FunctionImport Name="PreLinkGlbPart" />
+        <FunctionImport Name="PromptForPassword" />
+        <FunctionImport Name="SetMRPRecalcFlag" />
+        <FunctionImport Name="SetNextGeneratedLotNum" />
+        <FunctionImport Name="SkipGlbPart" />
+        <FunctionImport Name="UnlinkGlbPart" />
+        <FunctionImport Name="ValidateInspection" />
+        <FunctionImport Name="ValidateInspVendor" />
+        <FunctionImport Name="ValidateUOMconvChange" />
+        <FunctionImport Name="ValidateUOMConvTrans" />
+        <FunctionImport Name="GetSNFormat" />
+        <FunctionImport Name="PartExists" />
+        <FunctionImport Name="PartIsActive" />
+        <FunctionImport Name="PartIsSalesKit" />
+        <FunctionImport Name="GetCodeDescList" />
+        <FunctionImport Name="FindPart" />
+        <FunctionImport Name="GetPartFromRowID" />
+        <FunctionImport Name="OnChangeSNLastUsedSeq" />
+        <FunctionImport Name="GetDupPartConfigID" />
+        <FunctionImport Name="ConfigIDChanging" />
+        <FunctionImport Name="OnChangedConfigID" />
+        <FunctionImport Name="CheckConfigForDelete" />
+        <FunctionImport Name="GetIfCurrentSiteHasExternalMES" />
+        <FunctionImport Name="GetIfCurrentRevIsSiteExternalMES" />
+        <FunctionImport Name="GetSendToFSAChange" />
+        <FunctionImport Name="RequestNoRevWithExternalMESForSiteValidation" />
+        <FunctionImport Name="GetExternalCRMIntegrationIsEnabled" />
+        <FunctionImport Name="ChangeMXProdServCode" />
+        <FunctionImport Name="GetNewPart" />
+        <FunctionImport Name="GetNewPartAttch" />
+        <FunctionImport Name="GetNewPartCOO" />
+        <FunctionImport Name="GetNewPartDim" />
+        <FunctionImport Name="GetNewPartLangDesc" />
+        <FunctionImport Name="GetNewPartPlant" />
+        <FunctionImport Name="GetNewPartRestriction" />
+        <FunctionImport Name="GetNewPartRestrictSubst" />
+        <FunctionImport Name="GetNewPartRev" />
+        <FunctionImport Name="GetNewPartRevAttch" />
+        <FunctionImport Name="GetNewPartAudit" />
+        <FunctionImport Name="GetNewPartCOPart" />
+        <FunctionImport Name="GetNewPartRevInspPlan" />
+        <FunctionImport Name="GetNewPartRevInspPlanAttch" />
+        <FunctionImport Name="GetNewPartRevInspVend" />
+        <FunctionImport Name="GetNewPartSubs" />
+        <FunctionImport Name="GetNewPartPC" />
+        <FunctionImport Name="GetNewPartWhse" />
+        <FunctionImport Name="GetNewPartBinInfo" />
+        <FunctionImport Name="GetNewPartUOM" />
+        <FunctionImport Name="GetNewEntityGLC" />
+        <FunctionImport Name="GetNewTaxExempt" />
+        <FunctionImport Name="DeleteByID" />
+        <FunctionImport Name="GetByID" />
+        <FunctionImport Name="GetList" />
+        <FunctionImport Name="GetRows" />
+        <FunctionImport Name="GetBySysRowID" />
+        <FunctionImport Name="GetBySysRowIDs" />
+        <FunctionImport Name="Update" />
+        <FunctionImport Name="UpdateExt" />
+        <AssociationSet Name="Erp_Part_EntityGLCs_Erp_EntityGLC_PartsSet" Association="Erp.Erp_Part_EntityGLCs_Erp_EntityGLC_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="EntityGLCs" EntitySet="EntityGLCs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_TaxExempt_Parts_Erp_Part_TaxExemptsSet" Association="Erp.Erp_TaxExempt_Parts_Erp_Part_TaxExempts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="TaxExempts" EntitySet="TaxExempts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartCOOs_Erp_PartCOO_PartsSet" Association="Erp.Erp_Part_PartCOOs_Erp_PartCOO_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartCOOs" EntitySet="PartCOOs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartDims_Erp_PartDim_PartsSet" Association="Erp.Erp_Part_PartDims_Erp_PartDim_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartDims" EntitySet="PartDims" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartLangDescs_Erp_PartLangDesc_PartsSet" Association="Erp.Erp_Part_PartLangDescs_Erp_PartLangDesc_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartLangDescs" EntitySet="PartLangDescs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartPlants_Erp_PartPlant_PartsSet" Association="Erp.Erp_Part_PartPlants_Erp_PartPlant_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartPlants" EntitySet="PartPlants" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartRestrictions_Erp_PartRestriction_PartsSet" Association="Erp.Erp_Part_PartRestrictions_Erp_PartRestriction_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartRestrictions" EntitySet="PartRestrictions" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartRevs_Erp_PartRev_PartsSet" Association="Erp.Erp_Part_PartRevs_Erp_PartRev_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartRevs" EntitySet="PartRevs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartSubs_Erp_PartSub_PartsSet" Association="Erp.Erp_Part_PartSubs_Erp_PartSub_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartSubs" EntitySet="PartSubs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartBinInfoes_Erp_PartBinInfo_PartsSet" Association="Erp.Erp_Part_PartBinInfoes_Erp_PartBinInfo_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartBinInfoes" EntitySet="PartBinInfoes" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartPCs_Erp_PartPC_PartsSet" Association="Erp.Erp_Part_PartPCs_Erp_PartPC_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartPCs" EntitySet="PartPCs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartWhses_Erp_PartWhse_PartsSet" Association="Erp.Erp_Part_PartWhses_Erp_PartWhse_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartWhses" EntitySet="PartWhses" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartUOMs_Erp_PartUOM_PartsSet" Association="Erp.Erp_Part_PartUOMs_Erp_PartUOM_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartUOMs" EntitySet="PartUOMs" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_Part_PartAttches_Erp_PartAttch_PartsSet" Association="Erp.Erp_Part_PartAttches_Erp_PartAttch_Parts">
+          <End Role="Parts" EntitySet="Parts" />
+          <End Role="PartAttches" EntitySet="PartAttches" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRestriction_PartRestrictSubsts_Erp_PartRestrictSubst_PartRestrictionsSet" Association="Erp.Erp_PartRestriction_PartRestrictSubsts_Erp_PartRestrictSubst_PartRestrictions">
+          <End Role="PartRestrictions" EntitySet="PartRestrictions" />
+          <End Role="PartRestrictSubsts" EntitySet="PartRestrictSubsts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRev_PartAudits_Erp_PartAudit_PartRevsSet" Association="Erp.Erp_PartRev_PartAudits_Erp_PartAudit_PartRevs">
+          <End Role="PartRevs" EntitySet="PartRevs" />
+          <End Role="PartAudits" EntitySet="PartAudits" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRev_PartCOParts_Erp_PartCOPart_PartRevsSet" Association="Erp.Erp_PartRev_PartCOParts_Erp_PartCOPart_PartRevs">
+          <End Role="PartRevs" EntitySet="PartRevs" />
+          <End Role="PartCOParts" EntitySet="PartCOParts" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRev_PartRevInspPlans_Erp_PartRevInspPlan_PartRevsSet" Association="Erp.Erp_PartRev_PartRevInspPlans_Erp_PartRevInspPlan_PartRevs">
+          <End Role="PartRevs" EntitySet="PartRevs" />
+          <End Role="PartRevInspPlans" EntitySet="PartRevInspPlans" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRev_PartRevInspVends_Erp_PartRevInspVend_PartRevsSet" Association="Erp.Erp_PartRev_PartRevInspVends_Erp_PartRevInspVend_PartRevs">
+          <End Role="PartRevs" EntitySet="PartRevs" />
+          <End Role="PartRevInspVends" EntitySet="PartRevInspVends" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRev_PartRevAttches_Erp_PartRevAttch_PartRevsSet" Association="Erp.Erp_PartRev_PartRevAttches_Erp_PartRevAttch_PartRevs">
+          <End Role="PartRevs" EntitySet="PartRevs" />
+          <End Role="PartRevAttches" EntitySet="PartRevAttches" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_PartRevInspPlan_PartRevInspPlanAttches_Erp_PartRevInspPlanAttch_PartRevInspPlansSet" Association="Erp.Erp_PartRevInspPlan_PartRevInspPlanAttches_Erp_PartRevInspPlanAttch_PartRevInspPlans">
+          <End Role="PartRevInspPlans" EntitySet="PartRevInspPlans" />
+          <End Role="PartRevInspPlanAttches" EntitySet="PartRevInspPlanAttches" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+    <Schema Namespace="Erp" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="Part">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SearchWord" Type="Edm.String" />
+        <Property Name="PartDescription" Type="Edm.String" />
+        <Property Name="ClassID" Type="Edm.String" />
+        <Property Name="IUM" Type="Edm.String" />
+        <Property Name="PUM" Type="Edm.String" />
+        <Property Name="TypeCode" Type="Edm.String" />
+        <Property Name="NonStock" Type="Edm.Boolean" />
+        <Property Name="PurchasingFactor" Type="Edm.Decimal" />
+        <Property Name="UnitPrice" Type="Edm.Decimal" />
+        <Property Name="PricePerCode" Type="Edm.String" />
+        <Property Name="InternalUnitPrice" Type="Edm.Decimal" />
+        <Property Name="InternalPricePerCode" Type="Edm.String" />
+        <Property Name="ProdCode" Type="Edm.String" />
+        <Property Name="MfgComment" Type="Edm.String" />
+        <Property Name="PurComment" Type="Edm.String" />
+        <Property Name="CostMethod" Type="Edm.String" />
+        <Property Name="UserChar1" Type="Edm.String" />
+        <Property Name="UserChar2" Type="Edm.String" />
+        <Property Name="UserChar3" Type="Edm.String" />
+        <Property Name="UserChar4" Type="Edm.String" />
+        <Property Name="UserDate1" Type="Edm.DateTime" />
+        <Property Name="UserDate2" Type="Edm.DateTime" />
+        <Property Name="UserDate3" Type="Edm.DateTime" />
+        <Property Name="UserDate4" Type="Edm.DateTime" />
+        <Property Name="UserDecimal1" Type="Edm.Decimal" />
+        <Property Name="UserDecimal2" Type="Edm.Decimal" />
+        <Property Name="UserDecimal3" Type="Edm.Decimal" />
+        <Property Name="UserDecimal4" Type="Edm.Decimal" />
+        <Property Name="UserInteger1" Type="Edm.Int32" />
+        <Property Name="UserInteger2" Type="Edm.Int32" />
+        <Property Name="TaxCatID" Type="Edm.String" />
+        <Property Name="InActive" Type="Edm.Boolean" />
+        <Property Name="LowLevelCode" Type="Edm.Int32" />
+        <Property Name="Method" Type="Edm.Boolean" />
+        <Property Name="TrackLots" Type="Edm.Boolean" />
+        <Property Name="TrackDimension" Type="Edm.Boolean" />
+        <Property Name="DefaultDim" Type="Edm.String" />
+        <Property Name="TrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="CommodityCode" Type="Edm.String" />
+        <Property Name="WarrantyCode" Type="Edm.String" />
+        <Property Name="PhantomBOM" Type="Edm.Boolean" />
+        <Property Name="SalesUM" Type="Edm.String" />
+        <Property Name="SellingFactor" Type="Edm.Decimal" />
+        <Property Name="MtlBurRate" Type="Edm.Decimal" />
+        <Property Name="NetWeight" Type="Edm.Decimal" />
+        <Property Name="UsePartRev" Type="Edm.Boolean" />
+        <Property Name="PartsPerContainer" Type="Edm.Int32" />
+        <Property Name="PartLength" Type="Edm.Decimal" />
+        <Property Name="PartWidth" Type="Edm.Decimal" />
+        <Property Name="PartHeight" Type="Edm.Decimal" />
+        <Property Name="LotShelfLife" Type="Edm.Int32" />
+        <Property Name="WebPart" Type="Edm.Boolean" />
+        <Property Name="RunOut" Type="Edm.Boolean" />
+        <Property Name="SubPart" Type="Edm.String" />
+        <Property Name="Diameter" Type="Edm.Decimal" />
+        <Property Name="Gravity" Type="Edm.Decimal" />
+        <Property Name="OnHold" Type="Edm.Boolean" />
+        <Property Name="OnHoldDate" Type="Edm.DateTime" />
+        <Property Name="OnHoldReasonCode" Type="Edm.String" />
+        <Property Name="AnalysisCode" Type="Edm.String" />
+        <Property Name="GlobalPart" Type="Edm.Boolean" />
+        <Property Name="MtlAnalysisCode" Type="Edm.String" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="ISSuppUnitsFactor" Type="Edm.Decimal" />
+        <Property Name="PDMObjID" Type="Edm.String" />
+        <Property Name="ImageFileName" Type="Edm.String" />
+        <Property Name="ISOrigCountry" Type="Edm.String" />
+        <Property Name="SNPrefix" Type="Edm.String" />
+        <Property Name="SNFormat" Type="Edm.String" />
+        <Property Name="SNBaseDataType" Type="Edm.String" />
+        <Property Name="Constrained" Type="Edm.Boolean" />
+        <Property Name="UPCCode1" Type="Edm.String" />
+        <Property Name="UPCCode2" Type="Edm.String" />
+        <Property Name="UPCCode3" Type="Edm.String" />
+        <Property Name="EDICode" Type="Edm.String" />
+        <Property Name="WebInStock" Type="Edm.Boolean" />
+        <Property Name="ConsolidatedPurchasing" Type="Edm.Boolean" />
+        <Property Name="PurchasingFactorDirection" Type="Edm.String" />
+        <Property Name="SellingFactorDirection" Type="Edm.String" />
+        <Property Name="RecDocReq" Type="Edm.Boolean" />
+        <Property Name="MDPV" Type="Edm.Int32" />
+        <Property Name="ShipDocReq" Type="Edm.Boolean" />
+        <Property Name="ReturnableContainer" Type="Edm.String" />
+        <Property Name="NetVolume" Type="Edm.Decimal" />
+        <Property Name="QtyBearing" Type="Edm.Boolean" />
+        <Property Name="NAFTAOrigCountry" Type="Edm.String" />
+        <Property Name="NAFTAProd" Type="Edm.String" />
+        <Property Name="NAFTAPref" Type="Edm.String" />
+        <Property Name="ExpLicType" Type="Edm.String" />
+        <Property Name="ExpLicNumber" Type="Edm.String" />
+        <Property Name="ECCNNumber" Type="Edm.String" />
+        <Property Name="AESExp" Type="Edm.String" />
+        <Property Name="HTS" Type="Edm.String" />
+        <Property Name="UseHTSDesc" Type="Edm.Boolean" />
+        <Property Name="SchedBcode" Type="Edm.String" />
+        <Property Name="HazItem" Type="Edm.Boolean" />
+        <Property Name="HazTechName" Type="Edm.String" />
+        <Property Name="HazClass" Type="Edm.String" />
+        <Property Name="HazSub" Type="Edm.String" />
+        <Property Name="HazGvrnmtID" Type="Edm.String" />
+        <Property Name="HazPackInstr" Type="Edm.String" />
+        <Property Name="RevChargeMethod" Type="Edm.String" />
+        <Property Name="RCUnderThreshold" Type="Edm.Decimal" />
+        <Property Name="RCOverThreshold" Type="Edm.Decimal" />
+        <Property Name="OwnershipStatus" Type="Edm.String" />
+        <Property Name="UOMClassID" Type="Edm.String" />
+        <Property Name="SNMask" Type="Edm.String" />
+        <Property Name="SNMaskExample" Type="Edm.String" />
+        <Property Name="SNMaskSuffix" Type="Edm.String" />
+        <Property Name="SNMaskPrefix" Type="Edm.String" />
+        <Property Name="SNLastUsedSeq" Type="Edm.String" />
+        <Property Name="UseMaskSeq" Type="Edm.Boolean" />
+        <Property Name="NetWeightUOM" Type="Edm.String" />
+        <Property Name="NetVolumeUOM" Type="Edm.String" />
+        <Property Name="LotBatch" Type="Edm.Boolean" />
+        <Property Name="LotMfgBatch" Type="Edm.Boolean" />
+        <Property Name="LotMfgLot" Type="Edm.Boolean" />
+        <Property Name="LotHeat" Type="Edm.Boolean" />
+        <Property Name="LotFirmware" Type="Edm.Boolean" />
+        <Property Name="LotBeforeDt" Type="Edm.Boolean" />
+        <Property Name="LotMfgDt" Type="Edm.Boolean" />
+        <Property Name="LotCureDt" Type="Edm.Boolean" />
+        <Property Name="LotExpDt" Type="Edm.Boolean" />
+        <Property Name="LotPrefix" Type="Edm.String" />
+        <Property Name="LotUseGlobalSeq" Type="Edm.Boolean" />
+        <Property Name="LotSeqID" Type="Edm.String" />
+        <Property Name="LotNxtNum" Type="Edm.Int32" />
+        <Property Name="LotDigits" Type="Edm.Int32" />
+        <Property Name="LotLeadingZeros" Type="Edm.Boolean" />
+        <Property Name="LotAppendDate" Type="Edm.String" />
+        <Property Name="BuyToOrder" Type="Edm.Boolean" />
+        <Property Name="DropShip" Type="Edm.Boolean" />
+        <Property Name="IsConfigured" Type="Edm.Boolean" />
+        <Property Name="ExtConfig" Type="Edm.Boolean" />
+        <Property Name="RefCategory" Type="Edm.String" />
+        <Property Name="CSFCJ5" Type="Edm.Boolean" />
+        <Property Name="CSFLMW" Type="Edm.Boolean" />
+        <Property Name="GrossWeight" Type="Edm.Decimal" />
+        <Property Name="GrossWeightUOM" Type="Edm.String" />
+        <Property Name="BasePartNum" Type="Edm.String" />
+        <Property Name="FSAssetClassCode" Type="Edm.String" />
+        <Property Name="FSSalesUnitPrice" Type="Edm.Decimal" />
+        <Property Name="FSPricePerCode" Type="Edm.String" />
+        <Property Name="RcvInspectionReq" Type="Edm.Boolean" />
+        <Property Name="EstimateID" Type="Edm.String" />
+        <Property Name="EstimateOrPlan" Type="Edm.String" />
+        <Property Name="DiffPrc2PrchUOM" Type="Edm.Boolean" />
+        <Property Name="DupOnJobCrt" Type="Edm.Boolean" />
+        <Property Name="PricingFactor" Type="Edm.Decimal" />
+        <Property Name="PricingUOM" Type="Edm.String" />
+        <Property Name="MobilePart" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="AGUseGoodMark" Type="Edm.Boolean" />
+        <Property Name="AGProductMark" Type="Edm.Boolean" />
+        <Property Name="ISRegion" Type="Edm.String" />
+        <Property Name="INChapterID" Type="Edm.String" />
+        <Property Name="PESUNATType" Type="Edm.String" />
+        <Property Name="PESUNATUOM" Type="Edm.String" />
+        <Property Name="DEIsServices" Type="Edm.Boolean" />
+        <Property Name="DEIsSecurityFinancialDerivative" Type="Edm.Boolean" />
+        <Property Name="DEInternationalSecuritiesID" Type="Edm.String" />
+        <Property Name="LinkToContract" Type="Edm.Boolean" />
+        <Property Name="DEIsInvestment" Type="Edm.Boolean" />
+        <Property Name="DEPayStatCode" Type="Edm.String" />
+        <Property Name="DEDenomination" Type="Edm.String" />
+        <Property Name="PartLengthWidthHeightUM" Type="Edm.String" />
+        <Property Name="DiameterUM" Type="Edm.String" />
+        <Property Name="DiameterInside" Type="Edm.Decimal" />
+        <Property Name="DiameterOutside" Type="Edm.Decimal" />
+        <Property Name="ThicknessUM" Type="Edm.String" />
+        <Property Name="Thickness" Type="Edm.Decimal" />
+        <Property Name="ThicknessMax" Type="Edm.Decimal" />
+        <Property Name="Durometer" Type="Edm.String" />
+        <Property Name="Specification" Type="Edm.String" />
+        <Property Name="EngineeringAlert" Type="Edm.String" />
+        <Property Name="Condition" Type="Edm.String" />
+        <Property Name="IsCompliant" Type="Edm.Boolean" />
+        <Property Name="IsRestricted" Type="Edm.Boolean" />
+        <Property Name="IsSafetyItem" Type="Edm.Boolean" />
+        <Property Name="CommercialBrand" Type="Edm.String" />
+        <Property Name="CommercialSubBrand" Type="Edm.String" />
+        <Property Name="CommercialCategory" Type="Edm.String" />
+        <Property Name="CommercialSubCategory" Type="Edm.String" />
+        <Property Name="CommercialStyle" Type="Edm.String" />
+        <Property Name="CommercialSize1" Type="Edm.String" />
+        <Property Name="CommercialSize2" Type="Edm.String" />
+        <Property Name="CommercialColor" Type="Edm.String" />
+        <Property Name="IsGiftCard" Type="Edm.Boolean" />
+        <Property Name="PhotoFile" Type="Edm.String" />
+        <Property Name="PartPhotoExists" Type="Edm.Boolean" />
+        <Property Name="CommentText" Type="Edm.String" />
+        <Property Name="PartSpecificPackingUOM" Type="Edm.Boolean" />
+        <Property Name="ImageID" Type="Edm.String" />
+        <Property Name="CNSpecification" Type="Edm.String" />
+        <Property Name="SyncToExternalCRM" Type="Edm.Boolean" />
+        <Property Name="ExternalCRMPartID" Type="Edm.String" />
+        <Property Name="ExternalCRMLastSync" Type="Edm.DateTime" />
+        <Property Name="ExternalCRMSyncRequired" Type="Edm.Boolean" />
+        <Property Name="PESUNATTypeCode" Type="Edm.String" />
+        <Property Name="PESUNATUOMCode" Type="Edm.String" />
+        <Property Name="CNCodeVersion" Type="Edm.String" />
+        <Property Name="CNTaxCategoryCode" Type="Edm.String" />
+        <Property Name="CNHasPreferentialTreatment" Type="Edm.Boolean" />
+        <Property Name="CNPreferentialTreatmentContent" Type="Edm.String" />
+        <Property Name="CNZeroTaxRateMark" Type="Edm.String" />
+        <Property Name="SubLevelCode" Type="Edm.Int32" />
+        <Property Name="CreatedBy" Type="Edm.String" />
+        <Property Name="CreatedOn" Type="Edm.DateTime" />
+        <Property Name="AttBatch" Type="Edm.String" />
+        <Property Name="AttMfgBatch" Type="Edm.String" />
+        <Property Name="AttMfgLot" Type="Edm.String" />
+        <Property Name="AttHeat" Type="Edm.String" />
+        <Property Name="AttFirmware" Type="Edm.String" />
+        <Property Name="AttBeforeDt" Type="Edm.String" />
+        <Property Name="AttMfgDt" Type="Edm.String" />
+        <Property Name="AttCureDt" Type="Edm.String" />
+        <Property Name="AttExpDt" Type="Edm.String" />
+        <Property Name="DeferManualEntry" Type="Edm.Boolean" />
+        <Property Name="DeferPurchaseReceipt" Type="Edm.Boolean" />
+        <Property Name="DeferJobReceipt" Type="Edm.Boolean" />
+        <Property Name="DeferInspection" Type="Edm.Boolean" />
+        <Property Name="DeferQtyAdjustment" Type="Edm.Boolean" />
+        <Property Name="DeferInventoryMove" Type="Edm.Boolean" />
+        <Property Name="DeferShipments" Type="Edm.Boolean" />
+        <Property Name="DeferInventoryCounts" Type="Edm.Boolean" />
+        <Property Name="DeferAssetDisposal" Type="Edm.Boolean" />
+        <Property Name="DeferReturnMaterials" Type="Edm.Boolean" />
+        <Property Name="MXProdServCode" Type="Edm.String" />
+        <Property Name="ChangedOn" Type="Edm.DateTime" />
+        <Property Name="MXCustomsDuty" Type="Edm.String" />
+        <Property Name="SendToFSA" Type="Edm.Boolean" />
+        <Property Name="ExternalMESSyncRequired" Type="Edm.Boolean" />
+        <Property Name="ExternalMESLastSync" Type="Edm.DateTime" />
+        <Property Name="FSAItem" Type="Edm.Boolean" />
+        <Property Name="FSAEquipment" Type="Edm.Boolean" />
+        <Property Name="BOLClass" Type="Edm.String" />
+        <Property Name="FairMarketValue" Type="Edm.Decimal" />
+        <Property Name="COASegReferences" Type="Edm.String" />
+        <Property Name="CountryNumDescription" Type="Edm.String" />
+        <Property Name="EnableGlobalPart" Type="Edm.Boolean" />
+        <Property Name="EnableInActive" Type="Edm.Boolean" />
+        <Property Name="EnableSerialNum" Type="Edm.Boolean" />
+        <Property Name="EnableTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="EnableUOMClass" Type="Edm.Boolean" />
+        <Property Name="ExtCoExist" Type="Edm.Boolean" />
+        <Property Name="GlbFlag" Type="Edm.Boolean" />
+        <Property Name="GlbLink" Type="Edm.String" />
+        <Property Name="GlbTableAllowUpdTrackDim" Type="Edm.Boolean" />
+        <Property Name="GlbTableAllowUpdTrackLots" Type="Edm.Boolean" />
+        <Property Name="GlbTableAllowUpdTrackSerial" Type="Edm.Boolean" />
+        <Property Name="HasOnHandQty" Type="Edm.Boolean" />
+        <Property Name="IsComponent" Type="Edm.Boolean" />
+        <Property Name="IsCoPart" Type="Edm.Boolean" />
+        <Property Name="ISOrigCountryNum" Type="Edm.Int32" />
+        <Property Name="NextGeneratedLotNum" Type="Edm.String" />
+        <Property Name="PLM" Type="Edm.Boolean" />
+        <Property Name="PLMEnabled" Type="Edm.Boolean" />
+        <Property Name="Revision" Type="Edm.Boolean" />
+        <Property Name="SalesUMDisp" Type="Edm.String" />
+        <Property Name="SNLeadingZeros" Type="Edm.Boolean" />
+        <Property Name="SNMaskPrefixLength" Type="Edm.Int32" />
+        <Property Name="SNMaskSuffixLength" Type="Edm.Int32" />
+        <Property Name="SNNumODigits" Type="Edm.Int32" />
+        <Property Name="UpdatePartPlant" Type="Edm.Boolean" />
+        <Property Name="UpdateSNPartPlant" Type="Edm.Boolean" />
+        <Property Name="EnableExpressCheckOut" Type="Edm.Boolean" />
+        <Property Name="EnableGlobalLock" Type="Edm.Boolean" />
+        <Property Name="EnableIUM" Type="Edm.Boolean" />
+        <Property Name="EnableRevCharge" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="AnalysisCdDescription" Type="Edm.String" />
+        <Property Name="ClassDescription" Type="Edm.String" />
+        <Property Name="CommodityCodeSuppUnitsUOM" Type="Edm.String" />
+        <Property Name="CommodityCodeDescription" Type="Edm.String" />
+        <Property Name="CompanySendToFSA" Type="Edm.Boolean" />
+        <Property Name="FSAssetClassCodeFSAssetClassDesc" Type="Edm.String" />
+        <Property Name="Mtl_AnalysisCdDescription" Type="Edm.String" />
+        <Property Name="MXProdServCodeDesc" Type="Edm.String" />
+        <Property Name="OnHoldReasonCodeDescription" Type="Edm.String" />
+        <Property Name="ProdCodeDescription" Type="Edm.String" />
+        <Property Name="RefCategoryDescription" Type="Edm.String" />
+        <Property Name="SerialMaskMaskType" Type="Edm.Int32" />
+        <Property Name="SerialMaskDescription" Type="Edm.String" />
+        <Property Name="TaxCatIDDescription" Type="Edm.String" />
+        <Property Name="UOMClassIDDescription" Type="Edm.String" />
+        <Property Name="WarrantyCodeWarrDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Character03" Type="Edm.String" />
+        <Property Name="Character04" Type="Edm.String" />
+        <Property Name="Character05" Type="Edm.String" />
+        <Property Name="Number01" Type="Edm.Decimal" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox06" Type="Edm.Boolean" />
+        <Property Name="CheckBox07" Type="Edm.Boolean" />
+        <Property Name="CheckBox08" Type="Edm.Boolean" />
+        <Property Name="CheckBox09" Type="Edm.Boolean" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+        <NavigationProperty Name="EntityGLCs" Relationship="Erp.Erp_Part_EntityGLCs_Erp_EntityGLC_Parts" ToRole="EntityGLCs" FromRole="Parts" />
+        <NavigationProperty Name="TaxExempts" Relationship="Erp.Erp_TaxExempt_Parts_Erp_Part_TaxExempts" ToRole="TaxExempts" FromRole="Parts" />
+        <NavigationProperty Name="PartCOOs" Relationship="Erp.Erp_Part_PartCOOs_Erp_PartCOO_Parts" ToRole="PartCOOs" FromRole="Parts" />
+        <NavigationProperty Name="PartDims" Relationship="Erp.Erp_Part_PartDims_Erp_PartDim_Parts" ToRole="PartDims" FromRole="Parts" />
+        <NavigationProperty Name="PartLangDescs" Relationship="Erp.Erp_Part_PartLangDescs_Erp_PartLangDesc_Parts" ToRole="PartLangDescs" FromRole="Parts" />
+        <NavigationProperty Name="PartPlants" Relationship="Erp.Erp_Part_PartPlants_Erp_PartPlant_Parts" ToRole="PartPlants" FromRole="Parts" />
+        <NavigationProperty Name="PartRestrictions" Relationship="Erp.Erp_Part_PartRestrictions_Erp_PartRestriction_Parts" ToRole="PartRestrictions" FromRole="Parts" />
+        <NavigationProperty Name="PartRevs" Relationship="Erp.Erp_Part_PartRevs_Erp_PartRev_Parts" ToRole="PartRevs" FromRole="Parts" />
+        <NavigationProperty Name="PartSubs" Relationship="Erp.Erp_Part_PartSubs_Erp_PartSub_Parts" ToRole="PartSubs" FromRole="Parts" />
+        <NavigationProperty Name="PartBinInfoes" Relationship="Erp.Erp_Part_PartBinInfoes_Erp_PartBinInfo_Parts" ToRole="PartBinInfoes" FromRole="Parts" />
+        <NavigationProperty Name="PartPCs" Relationship="Erp.Erp_Part_PartPCs_Erp_PartPC_Parts" ToRole="PartPCs" FromRole="Parts" />
+        <NavigationProperty Name="PartWhses" Relationship="Erp.Erp_Part_PartWhses_Erp_PartWhse_Parts" ToRole="PartWhses" FromRole="Parts" />
+        <NavigationProperty Name="PartUOMs" Relationship="Erp.Erp_Part_PartUOMs_Erp_PartUOM_Parts" ToRole="PartUOMs" FromRole="Parts" />
+        <NavigationProperty Name="PartAttches" Relationship="Erp.Erp_Part_PartAttches_Erp_PartAttch_Parts" ToRole="PartAttches" FromRole="Parts" />
+      </EntityType>
+      <EntityType Name="EntityGLC">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="RelatedToFile" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="Key3" />
+          <PropertyRef Name="Key4" />
+          <PropertyRef Name="Key5" />
+          <PropertyRef Name="Key6" />
+          <PropertyRef Name="GLControlType" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="RelatedToFile" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="Key3" Type="Edm.String" Nullable="false" />
+        <Property Name="Key4" Type="Edm.String" Nullable="false" />
+        <Property Name="Key5" Type="Edm.String" Nullable="false" />
+        <Property Name="Key6" Type="Edm.String" Nullable="false" />
+        <Property Name="GLControlType" Type="Edm.String" Nullable="false" />
+        <Property Name="GLControlCode" Type="Edm.String" />
+        <Property Name="BusinessEntity" Type="Edm.String" />
+        <Property Name="ExtCompanyID" Type="Edm.String" />
+        <Property Name="IsExternalCompany" Type="Edm.Boolean" />
+        <Property Name="GlobalEntityGLC" Type="Edm.Boolean" />
+        <Property Name="GlobalLock" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BankAcctID" Type="Edm.String" />
+        <Property Name="BankFeeID" Type="Edm.String" />
+        <Property Name="CallCode" Type="Edm.String" />
+        <Property Name="ChargeCode" Type="Edm.String" />
+        <Property Name="ClassCode" Type="Edm.String" />
+        <Property Name="ClassID" Type="Edm.String" />
+        <Property Name="ContractCode" Type="Edm.String" />
+        <Property Name="CurrencyCode" Type="Edm.String" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="DeductionID" Type="Edm.String" />
+        <Property Name="EmpID" Type="Edm.String" />
+        <Property Name="ExpenseCode" Type="Edm.String" />
+        <Property Name="ExtSystemID" Type="Edm.String" />
+        <Property Name="FromPlant" Type="Edm.String" />
+        <Property Name="GroupCode" Type="Edm.String" />
+        <Property Name="GroupID" Type="Edm.String" />
+        <Property Name="HeadNum" Type="Edm.Int32" />
+        <Property Name="InvoiceNum" Type="Edm.String" />
+        <Property Name="JCDept" Type="Edm.String" />
+        <Property Name="MiscCode" Type="Edm.String" />
+        <Property Name="PartNum" Type="Edm.String" />
+        <Property Name="PayTypeID" Type="Edm.String" />
+        <Property Name="PerConName" Type="Edm.String" />
+        <Property Name="PIStatus" Type="Edm.String" />
+        <Property Name="Plant" Type="Edm.String" />
+        <Property Name="ProdCode" Type="Edm.String" />
+        <Property Name="ProjectID" Type="Edm.String" />
+        <Property Name="PurchCode" Type="Edm.String" />
+        <Property Name="RateCode" Type="Edm.String" />
+        <Property Name="ReasonCode" Type="Edm.String" />
+        <Property Name="ReasonType" Type="Edm.String" />
+        <Property Name="SalesCatID" Type="Edm.String" />
+        <Property Name="Shift" Type="Edm.Int32" />
+        <Property Name="TaxCode" Type="Edm.String" />
+        <Property Name="TaxTblID" Type="Edm.String" />
+        <Property Name="ToPlant" Type="Edm.String" />
+        <Property Name="TransferMethod" Type="Edm.String" />
+        <Property Name="TypeID" Type="Edm.String" />
+        <Property Name="VendorNum" Type="Edm.Int32" />
+        <Property Name="WarehouseCode" Type="Edm.String" />
+        <Property Name="ExpenseTypeCode" Type="Edm.String" />
+        <Property Name="IsFiltered" Type="Edm.Boolean" />
+        <Property Name="OprTypeCode" Type="Edm.String" />
+        <Property Name="CashDeskID" Type="Edm.String" />
+        <Property Name="TIN" Type="Edm.String" />
+        <Property Name="ReclassCodeID" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="GLCntrlDescription" Type="Edm.String" />
+        <Property Name="GLCntrlTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="TaxExempt">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="RelatedToFile" />
+          <PropertyRef Name="Key1" />
+          <PropertyRef Name="Key2" />
+          <PropertyRef Name="TaxCode" />
+          <PropertyRef Name="RateCode" />
+          <PropertyRef Name="EffectiveFrom" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="RelatedToFile" Type="Edm.String" Nullable="false" />
+        <Property Name="Key1" Type="Edm.String" Nullable="false" />
+        <Property Name="Key2" Type="Edm.String" Nullable="false" />
+        <Property Name="TaxCode" Type="Edm.String" Nullable="false" />
+        <Property Name="RateCode" Type="Edm.String" Nullable="false" />
+        <Property Name="EffectiveFrom" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="EffectiveTo" Type="Edm.DateTime" />
+        <Property Name="ExemptType" Type="Edm.Int32" />
+        <Property Name="ExemptPercent" Type="Edm.Decimal" />
+        <Property Name="TextCode" Type="Edm.String" />
+        <Property Name="ResolutionNum" Type="Edm.String" />
+        <Property Name="ResolutionDate" Type="Edm.DateTime" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="CustNum" Type="Edm.Int32" />
+        <Property Name="PartNum" Type="Edm.String" />
+        <Property Name="VendorNum" Type="Edm.Int32" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="SalesTaxDescription" Type="Edm.String" />
+        <Property Name="SalesTRCDescription" Type="Edm.String" />
+        <Property Name="TaxTextDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartCOO">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="OrigCountry" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="OrigCountry" Type="Edm.Int32" Nullable="false" />
+        <Property Name="QtyPerc" Type="Edm.Int32" />
+        <Property Name="ValuePerc" Type="Edm.Int32" />
+        <Property Name="Primary" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CountryDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartDim">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="DimCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="DimCode" Type="Edm.String" Nullable="false" />
+        <Property Name="DimCodeDescription" Type="Edm.String" />
+        <Property Name="DUM" Type="Edm.String" />
+        <Property Name="DimConvFactor" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="DefaultDim" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartLangDesc">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="LangNameID" />
+        </Key>
+        <Property Name="LangNameID" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="LangNameIDDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartPlant">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="Plant" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="Plant" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="PrimWhse" Type="Edm.String" />
+        <Property Name="MinimumQty" Type="Edm.Decimal" />
+        <Property Name="MaximumQty" Type="Edm.Decimal" />
+        <Property Name="SafetyQty" Type="Edm.Decimal" />
+        <Property Name="MinOrderQty" Type="Edm.Decimal" />
+        <Property Name="LeadTime" Type="Edm.Int32" />
+        <Property Name="VendorNum" Type="Edm.Int32" />
+        <Property Name="PurPoint" Type="Edm.String" />
+        <Property Name="BackFlush" Type="Edm.Boolean" />
+        <Property Name="MfgLotSize" Type="Edm.Decimal" />
+        <Property Name="MinMfgLotSize" Type="Edm.Decimal" />
+        <Property Name="MaxMfgLotSize" Type="Edm.Decimal" />
+        <Property Name="MfgLotMultiple" Type="Edm.Decimal" />
+        <Property Name="DaysOfSupply" Type="Edm.Int32" />
+        <Property Name="ReOrderLevel" Type="Edm.Boolean" />
+        <Property Name="MRPRecalcNeeded" Type="Edm.Boolean" />
+        <Property Name="ProcessMRP" Type="Edm.Boolean" />
+        <Property Name="GenerateSugg" Type="Edm.Boolean" />
+        <Property Name="GetFromLocalWhse" Type="Edm.Boolean" />
+        <Property Name="ForecastTime" Type="Edm.Int32" />
+        <Property Name="TransferPlant" Type="Edm.String" />
+        <Property Name="SourceType" Type="Edm.String" />
+        <Property Name="TransferLeadTime" Type="Edm.Int32" />
+        <Property Name="PrepTime" Type="Edm.Int32" />
+        <Property Name="ReceiveTime" Type="Edm.Int32" />
+        <Property Name="PlanTimeFence" Type="Edm.Int32" />
+        <Property Name="ReschedOutDelta" Type="Edm.Int32" />
+        <Property Name="ReschedInDelta" Type="Edm.Int32" />
+        <Property Name="NonStock" Type="Edm.Boolean" />
+        <Property Name="PhantomBOM" Type="Edm.Boolean" />
+        <Property Name="BuyerID" Type="Edm.String" />
+        <Property Name="PersonID" Type="Edm.String" />
+        <Property Name="CostMethod" Type="Edm.String" />
+        <Property Name="AltMethod" Type="Edm.String" />
+        <Property Name="KitTime" Type="Edm.Int32" />
+        <Property Name="KitAllowUpdate" Type="Edm.Boolean" />
+        <Property Name="KitShipComplete" Type="Edm.Boolean" />
+        <Property Name="KitAllowChangeParms" Type="Edm.Boolean" />
+        <Property Name="KitBackFlush" Type="Edm.Boolean" />
+        <Property Name="KitPricing" Type="Edm.String" />
+        <Property Name="KitPrintCompsPS" Type="Edm.Boolean" />
+        <Property Name="KitPrintCompsInv" Type="Edm.Boolean" />
+        <Property Name="ShortHorizonDays" Type="Edm.Int32" />
+        <Property Name="ShortHorizonMinMfgLotSize" Type="Edm.Decimal" />
+        <Property Name="ShortHorizonMaxMfgLotSize" Type="Edm.Decimal" />
+        <Property Name="LimitProdYldRecalc" Type="Edm.Boolean" />
+        <Property Name="QtyBearing" Type="Edm.Boolean" />
+        <Property Name="MRPLastRunDate" Type="Edm.DateTime" />
+        <Property Name="MRPLastRunTime" Type="Edm.Int32" />
+        <Property Name="MRPLastScheduledDate" Type="Edm.DateTime" />
+        <Property Name="MRPLastCutOffDate" Type="Edm.DateTime" />
+        <Property Name="ShortHorizonDaysSupp" Type="Edm.Int32" />
+        <Property Name="SNMask" Type="Edm.String" />
+        <Property Name="SNMaskExample" Type="Edm.String" />
+        <Property Name="SNBaseDataType" Type="Edm.String" />
+        <Property Name="SNFormat" Type="Edm.String" />
+        <Property Name="SNPrefix" Type="Edm.String" />
+        <Property Name="SNMaskSuffix" Type="Edm.String" />
+        <Property Name="SNMaskPrefix" Type="Edm.String" />
+        <Property Name="SNLastUsedSeq" Type="Edm.String" />
+        <Property Name="UseMaskSeq" Type="Edm.Boolean" />
+        <Property Name="BuyToOrder" Type="Edm.Boolean" />
+        <Property Name="DropShip" Type="Edm.Boolean" />
+        <Property Name="PcntTolerance" Type="Edm.Decimal" />
+        <Property Name="CalcPcnt" Type="Edm.Boolean" />
+        <Property Name="CalcQty" Type="Edm.Boolean" />
+        <Property Name="CalcValue" Type="Edm.Boolean" />
+        <Property Name="QtyAdjTolerance" Type="Edm.Decimal" />
+        <Property Name="QtyTolerance" Type="Edm.Decimal" />
+        <Property Name="ValueTolerance" Type="Edm.Decimal" />
+        <Property Name="DemandQty" Type="Edm.Decimal" />
+        <Property Name="ReservedQty" Type="Edm.Decimal" />
+        <Property Name="AllocatedQty" Type="Edm.Decimal" />
+        <Property Name="XRefPartNum" Type="Edm.String" />
+        <Property Name="XRefPartType" Type="Edm.String" />
+        <Property Name="NeverReuseMRPJob" Type="Edm.Boolean" />
+        <Property Name="DeleteMRPJobs" Type="Edm.Boolean" />
+        <Property Name="TotMfgLeadTimeSys" Type="Edm.Int32" />
+        <Property Name="TotMfgLeadTimeMnl" Type="Edm.Int32" />
+        <Property Name="LvlMfgLeadTimeSys" Type="Edm.Int32" />
+        <Property Name="LvlMfgLeadTimeMnl" Type="Edm.Int32" />
+        <Property Name="MfgLeadTimeCalcDate" Type="Edm.DateTime" />
+        <Property Name="MfgLeadTimeMnlDate" Type="Edm.DateTime" />
+        <Property Name="AutoConsumeStock" Type="Edm.Boolean" />
+        <Property Name="StartMinLotQty" Type="Edm.Boolean" />
+        <Property Name="MinLotLeadTime" Type="Edm.Int32" />
+        <Property Name="MfgLeadTimeMnl" Type="Edm.Boolean" />
+        <Property Name="MfgLeadTimeEnteredBy" Type="Edm.String" />
+        <Property Name="MinStartQty" Type="Edm.Decimal" />
+        <Property Name="RawMaterial" Type="Edm.Boolean" />
+        <Property Name="MultiLevelCTP" Type="Edm.Boolean" />
+        <Property Name="RcvInspectionReq" Type="Edm.Boolean" />
+        <Property Name="ConsumeSafety" Type="Edm.Boolean" />
+        <Property Name="SLTVendorNum" Type="Edm.Int32" />
+        <Property Name="SLTPurPoint" Type="Edm.String" />
+        <Property Name="ShortLeadTime" Type="Edm.Int32" />
+        <Property Name="ExternalMES" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="UrgentLeadTime" Type="Edm.Int32" />
+        <Property Name="UrgentMinOrdQty" Type="Edm.Decimal" />
+        <Property Name="UrgentMultQty" Type="Edm.Decimal" />
+        <Property Name="UrgentPurPoint" Type="Edm.String" />
+        <Property Name="UrgentVendorNum" Type="Edm.Int32" />
+        <Property Name="PartRunMRP" Type="Edm.Boolean" />
+        <Property Name="LinkToContract" Type="Edm.Boolean" />
+        <Property Name="MMSExclude" Type="Edm.Boolean" />
+        <Property Name="MMSSales" Type="Edm.Boolean" />
+        <Property Name="MMSIssue" Type="Edm.Boolean" />
+        <Property Name="MMSHistory" Type="Edm.Int32" />
+        <Property Name="MMSSafetyFactor" Type="Edm.Int32" />
+        <Property Name="MMSMaxFactor" Type="Edm.Decimal" />
+        <Property Name="SavedMinimumQty" Type="Edm.Decimal" />
+        <Property Name="SavedMaximumQty" Type="Edm.Decimal" />
+        <Property Name="SavedSafetyQty" Type="Edm.Decimal" />
+        <Property Name="SavedCalculatedUsageQty" Type="Edm.Decimal" />
+        <Property Name="SavedOnDateTime" Type="Edm.DateTime" />
+        <Property Name="ACWPercentage" Type="Edm.Int32" />
+        <Property Name="ACWDays" Type="Edm.Int32" />
+        <Property Name="GenNewPCIDDelaySeconds" Type="Edm.Int32" />
+        <Property Name="GenNewPCIDLimitDays" Type="Edm.Int32" />
+        <Property Name="TopLvlMfgLeadTimeSys" Type="Edm.Int32" />
+        <Property Name="TopLvlMfgLeadTimeMnl" Type="Edm.Int32" />
+        <Property Name="BaseUOMCode" Type="Edm.String" />
+        <Property Name="CalculatedLeadTime" Type="Edm.Int32" />
+        <Property Name="ExtLeadTime" Type="Edm.Int32" />
+        <Property Name="SNNumODigits" Type="Edm.Int32" />
+        <Property Name="UrgentVendorName" Type="Edm.String" />
+        <Property Name="UrgentVendorVendorID" Type="Edm.String" />
+        <Property Name="DisableQtyBrng" Type="Edm.Boolean" />
+        <Property Name="EnableSerialNum" Type="Edm.Boolean" />
+        <Property Name="ICTrader" Type="Edm.Boolean" />
+        <Property Name="InActive" Type="Edm.Boolean" />
+        <Property Name="OnHandQty" Type="Edm.Decimal" />
+        <Property Name="PlantConfCtrlSerialTracking" Type="Edm.Int32" />
+        <Property Name="SNLeadingZeros" Type="Edm.Boolean" />
+        <Property Name="HasOnHandQty" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="BuyerIDName" Type="Edm.String" />
+        <Property Name="PartSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartTrackDimension" Type="Edm.Boolean" />
+        <Property Name="PartIUM" Type="Edm.String" />
+        <Property Name="PartPricePerCode" Type="Edm.String" />
+        <Property Name="PartPartDescription" Type="Edm.String" />
+        <Property Name="PartSalesUM" Type="Edm.String" />
+        <Property Name="PersonName" Type="Edm.String" />
+        <Property Name="PlantName" Type="Edm.String" />
+        <Property Name="PrimWhseDescription" Type="Edm.String" />
+        <Property Name="SerialMaskMaskType" Type="Edm.Int32" />
+        <Property Name="SerialMaskDescription" Type="Edm.String" />
+        <Property Name="TransferPlantName" Type="Edm.String" />
+        <Property Name="VendorNumAddress1" Type="Edm.String" />
+        <Property Name="VendorNumState" Type="Edm.String" />
+        <Property Name="VendorNumCountry" Type="Edm.String" />
+        <Property Name="VendorNumCity" Type="Edm.String" />
+        <Property Name="VendorNumCurrencyCode" Type="Edm.String" />
+        <Property Name="VendorNumDefaultFOB" Type="Edm.String" />
+        <Property Name="VendorNumAddress2" Type="Edm.String" />
+        <Property Name="VendorNumZIP" Type="Edm.String" />
+        <Property Name="VendorNumTermsCode" Type="Edm.String" />
+        <Property Name="VendorNumAddress3" Type="Edm.String" />
+        <Property Name="VendorNumName" Type="Edm.String" />
+        <Property Name="VendorNumVendorID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Number05" Type="Edm.Decimal" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+      </EntityType>
+      <EntityType Name="PartRestriction">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RestrictionTypeID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RestrictionTypeID" Type="Edm.String" Nullable="false" />
+        <Property Name="Manual" Type="Edm.Boolean" />
+        <Property Name="RollupType" Type="Edm.String" />
+        <Property Name="Compliance" Type="Edm.String" />
+        <Property Name="ComplianceDate" Type="Edm.DateTime" />
+        <Property Name="LastRollUp" Type="Edm.DateTime" />
+        <Property Name="Inactive" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="Weight" Type="Edm.Boolean" />
+        <Property Name="EnableRollUpType" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="RestrictionTypeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="PartRestrictSubsts" Relationship="Erp.Erp_PartRestriction_PartRestrictSubsts_Erp_PartRestrictSubst_PartRestrictions" ToRole="PartRestrictSubsts" FromRole="PartRestrictions" />
+      </EntityType>
+      <EntityType Name="PartRestrictSubst">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RestrictionTypeID" />
+          <PropertyRef Name="SubstanceID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RestrictionTypeID" Type="Edm.String" Nullable="false" />
+        <Property Name="SubstanceID" Type="Edm.String" Nullable="false" />
+        <Property Name="Weight" Type="Edm.Decimal" />
+        <Property Name="WeightUOM" Type="Edm.String" />
+        <Property Name="Manual" Type="Edm.Boolean" />
+        <Property Name="ExemptDate" Type="Edm.DateTime" />
+        <Property Name="ExemptCertificate" Type="Edm.String" />
+        <Property Name="Inactive" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="Exempt" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="RestrictionTypeDescription" Type="Edm.String" />
+        <Property Name="SubstanceDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartRev">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevShortDesc" Type="Edm.String" />
+        <Property Name="RevDescription" Type="Edm.String" />
+        <Property Name="Approved" Type="Edm.Boolean" />
+        <Property Name="ApprovedDate" Type="Edm.DateTime" />
+        <Property Name="ApprovedBy" Type="Edm.String" />
+        <Property Name="EffectiveDate" Type="Edm.DateTime" />
+        <Property Name="TLRLaborCost" Type="Edm.Decimal" />
+        <Property Name="TLRBurdenCost" Type="Edm.Decimal" />
+        <Property Name="TLRMaterialCost" Type="Edm.Decimal" />
+        <Property Name="TLRSubcontractCost" Type="Edm.Decimal" />
+        <Property Name="TLRMtlBurCost" Type="Edm.Decimal" />
+        <Property Name="TLRSetupLaborCost" Type="Edm.Decimal" />
+        <Property Name="TLRSetupBurdenCost" Type="Edm.Decimal" />
+        <Property Name="LLRLaborCost" Type="Edm.Decimal" />
+        <Property Name="LLRBurdenCost" Type="Edm.Decimal" />
+        <Property Name="LLRMaterialCost" Type="Edm.Decimal" />
+        <Property Name="LLRSubcontractCost" Type="Edm.Decimal" />
+        <Property Name="LLRMtlBurCost" Type="Edm.Decimal" />
+        <Property Name="LLRSetupLaborCost" Type="Edm.Decimal" />
+        <Property Name="LLRSetupBurdenCost" Type="Edm.Decimal" />
+        <Property Name="RollupDate" Type="Edm.DateTime" />
+        <Property Name="DrawNum" Type="Edm.String" />
+        <Property Name="ECO" Type="Edm.String" />
+        <Property Name="Method" Type="Edm.Boolean" />
+        <Property Name="AutoRecOpr" Type="Edm.Int32" />
+        <Property Name="FinalOpr" Type="Edm.Int32" />
+        <Property Name="PDMObjID" Type="Edm.String" />
+        <Property Name="Configured" Type="Edm.Boolean" />
+        <Property Name="WebConfigured" Type="Edm.Boolean" />
+        <Property Name="ShowInputPrice" Type="Edm.Boolean" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="AltMethodDesc" Type="Edm.String" />
+        <Property Name="Plant" Type="Edm.String" />
+        <Property Name="ParentAltMethod" Type="Edm.String" />
+        <Property Name="UseStaging" Type="Edm.Boolean" />
+        <Property Name="UseAltRevForParts" Type="Edm.Boolean" />
+        <Property Name="OwnershipStatus" Type="Edm.String" />
+        <Property Name="ExtConfig" Type="Edm.Boolean" />
+        <Property Name="ValRefDes" Type="Edm.Boolean" />
+        <Property Name="PcGlobalPart" Type="Edm.Boolean" />
+        <Property Name="PcEntprsConf" Type="Edm.Boolean" />
+        <Property Name="GlobalRev" Type="Edm.Boolean" />
+        <Property Name="RoughCutCode" Type="Edm.String" />
+        <Property Name="RMAInspPlan" Type="Edm.String" />
+        <Property Name="RMASpecID" Type="Edm.String" />
+        <Property Name="RMASampleSize" Type="Edm.Decimal" />
+        <Property Name="RMASampleSizePct" Type="Edm.Decimal" />
+        <Property Name="BasePartNum" Type="Edm.String" />
+        <Property Name="BaseRevisionNum" Type="Edm.String" />
+        <Property Name="ConfigID" Type="Edm.String" />
+        <Property Name="RegenConfig" Type="Edm.Boolean" />
+        <Property Name="SIValuesGroupSeq" Type="Edm.Int32" />
+        <Property Name="SIValuesHeadNum" Type="Edm.Int32" />
+        <Property Name="ExternalMES" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ProcessMode" Type="Edm.String" />
+        <Property Name="DefaultConfigPart" Type="Edm.Boolean" />
+        <Property Name="CoPartsReqQty" Type="Edm.Decimal" />
+        <Property Name="MtlCostPct" Type="Edm.Decimal" />
+        <Property Name="LaborCostPct" Type="Edm.Decimal" />
+        <Property Name="CoPartsPerOp" Type="Edm.Int32" />
+        <Property Name="CreatedBy" Type="Edm.String" />
+        <Property Name="CreatedOn" Type="Edm.DateTime" />
+        <Property Name="ChangedBy" Type="Edm.String" />
+        <Property Name="ChangedOn" Type="Edm.DateTime" />
+        <Property Name="ExternalMESSyncRequired" Type="Edm.Boolean" />
+        <Property Name="ExternalMESLastSync" Type="Edm.DateTime" />
+        <Property Name="Class" Type="Edm.String" />
+        <Property Name="NonStock" Type="Edm.Boolean" />
+        <Property Name="ParentAltMethodDesc" Type="Edm.String" />
+        <Property Name="ParentRevisionNum" Type="Edm.String" />
+        <Property Name="ProdCode" Type="Edm.String" />
+        <Property Name="RevStatusAsOfDate" Type="Edm.Int32" />
+        <Property Name="SpecHedDescription" Type="Edm.String" />
+        <Property Name="vDate" Type="Edm.DateTime" />
+        <Property Name="vQty" Type="Edm.Decimal" />
+        <Property Name="DisableApproved" Type="Edm.Boolean" />
+        <Property Name="ECOGroup" Type="Edm.String" />
+        <Property Name="HasCoParts" Type="Edm.Boolean" />
+        <Property Name="ParentPartNum" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="InspPlanDescription" Type="Edm.String" />
+        <Property Name="PartDescriptionTrackDimension" Type="Edm.Boolean" />
+        <Property Name="PartDescriptionSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartDescriptionPartDescription" Type="Edm.String" />
+        <Property Name="PartDescriptionIUM" Type="Edm.String" />
+        <Property Name="PartDescriptionTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartDescriptionPricePerCode" Type="Edm.String" />
+        <Property Name="PartDescriptionSalesUM" Type="Edm.String" />
+        <Property Name="PartDescriptionTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PcStatusConfigType" Type="Edm.String" />
+        <Property Name="PlantName" Type="Edm.String" />
+        <Property Name="RoughCutParamDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="PartAudits" Relationship="Erp.Erp_PartRev_PartAudits_Erp_PartAudit_PartRevs" ToRole="PartAudits" FromRole="PartRevs" />
+        <NavigationProperty Name="PartCOParts" Relationship="Erp.Erp_PartRev_PartCOParts_Erp_PartCOPart_PartRevs" ToRole="PartCOParts" FromRole="PartRevs" />
+        <NavigationProperty Name="PartRevInspPlans" Relationship="Erp.Erp_PartRev_PartRevInspPlans_Erp_PartRevInspPlan_PartRevs" ToRole="PartRevInspPlans" FromRole="PartRevs" />
+        <NavigationProperty Name="PartRevInspVends" Relationship="Erp.Erp_PartRev_PartRevInspVends_Erp_PartRevInspVend_PartRevs" ToRole="PartRevInspVends" FromRole="PartRevs" />
+        <NavigationProperty Name="PartRevAttches" Relationship="Erp.Erp_PartRev_PartRevAttches_Erp_PartRevAttch_PartRevs" ToRole="PartRevAttches" FromRole="PartRevs" />
+      </EntityType>
+      <EntityType Name="PartAudit">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="ChangeDate" />
+          <PropertyRef Name="ChangeTime" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="ChangeDate" Type="Edm.DateTime" Nullable="false" />
+        <Property Name="ChangeTime" Type="Edm.Int32" Nullable="false" />
+        <Property Name="ChangedBy" Type="Edm.String" />
+        <Property Name="ChangeDescription" Type="Edm.String" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="DspChangeTime" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="RevisionNumRevDescription" Type="Edm.String" />
+        <Property Name="RevisionNumRevShortDesc" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartCOPart">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="CoPartNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="CoPartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="CoRevisionNum" Type="Edm.String" />
+        <Property Name="PartsPerOp" Type="Edm.Int32" />
+        <Property Name="LbrCostBase" Type="Edm.Int32" />
+        <Property Name="MtlCostBase" Type="Edm.Int32" />
+        <Property Name="PartDescription" Type="Edm.String" />
+        <Property Name="IUM" Type="Edm.String" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="PreventSugg" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="PrimaryCost" Type="Edm.Boolean" />
+        <Property Name="EnablePreventSugg" Type="Edm.Boolean" />
+        <Property Name="PartMasterPart" Type="Edm.Boolean" />
+        <Property Name="ProcessMode" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartRevInspPlan">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="SeqPlan" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqPlan" Type="Edm.Int32" Nullable="false" />
+        <Property Name="InspPlanPartNum" Type="Edm.String" />
+        <Property Name="SpecID" Type="Edm.String" />
+        <Property Name="Plant" Type="Edm.String" />
+        <Property Name="SampleSize" Type="Edm.Int32" />
+        <Property Name="SampleSizePct" Type="Edm.Decimal" />
+        <Property Name="IsDefault" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="SpecHedDescription" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="InspPlanDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="PartRevInspPlanAttches" Relationship="Erp.Erp_PartRevInspPlan_PartRevInspPlanAttches_Erp_PartRevInspPlanAttch_PartRevInspPlans" ToRole="PartRevInspPlanAttches" FromRole="PartRevInspPlans" />
+      </EntityType>
+      <EntityType Name="PartRevInspPlanAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="SeqPlan" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="SeqPlan" Type="Edm.Int32" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartRevInspVend">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="VendorID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="VendorID" Type="Edm.String" Nullable="false" />
+        <Property Name="Plant" Type="Edm.String" />
+        <Property Name="SkipLotCtl" Type="Edm.Boolean" />
+        <Property Name="SkipLotCtlCode" Type="Edm.String" />
+        <Property Name="InspCnt" Type="Edm.Int32" />
+        <Property Name="SkipCnt" Type="Edm.Int32" />
+        <Property Name="RptCycles" Type="Edm.Int32" />
+        <Property Name="RejectCnt" Type="Edm.Int32" />
+        <Property Name="RejectCntBy" Type="Edm.String" />
+        <Property Name="SampleSize" Type="Edm.Int32" />
+        <Property Name="SampleSizePct" Type="Edm.Decimal" />
+        <Property Name="ForceInsp" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="VendorName" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartRevAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="RevisionNum" />
+          <PropertyRef Name="AltMethod" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="RevisionNum" Type="Edm.String" Nullable="false" />
+        <Property Name="AltMethod" Type="Edm.String" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartSub">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="SubPart" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="SubPart" Type="Edm.String" Nullable="false" />
+        <Property Name="RecType" Type="Edm.String" />
+        <Property Name="SubType" Type="Edm.String" />
+        <Property Name="QtyPer" Type="Edm.Decimal" />
+        <Property Name="SalesUM" Type="Edm.String" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="DefaultSub" Type="Edm.Boolean" />
+        <Property Name="Price" Type="Edm.Decimal" />
+        <Property Name="SuggestedQty" Type="Edm.Decimal" />
+        <Property Name="Selected" Type="Edm.Boolean" />
+        <Property Name="SugOrderQty" Type="Edm.Decimal" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="SubPartSellingFactor" Type="Edm.Decimal" />
+        <Property Name="SubPartTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="SubPartTrackDimension" Type="Edm.Boolean" />
+        <Property Name="SubPartPartDescription" Type="Edm.String" />
+        <Property Name="SubPartIUM" Type="Edm.String" />
+        <Property Name="SubPartSalesUM" Type="Edm.String" />
+        <Property Name="SubPartTrackLots" Type="Edm.Boolean" />
+        <Property Name="SubPartPricePerCode" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartBinInfo">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="Plant" />
+          <PropertyRef Name="WarehouseCode" />
+          <PropertyRef Name="BinNum" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="WarehouseCode" Type="Edm.String" Nullable="false" />
+        <Property Name="BinNum" Type="Edm.String" Nullable="false" />
+        <Property Name="MinimumQty" Type="Edm.Decimal" />
+        <Property Name="MaximumQty" Type="Edm.Decimal" />
+        <Property Name="SafetyQty" Type="Edm.Decimal" />
+        <Property Name="KBCode" Type="Edm.String" />
+        <Property Name="KBPONUM" Type="Edm.Int32" />
+        <Property Name="KBPOLine" Type="Edm.Int32" />
+        <Property Name="KBWarehouseCode" Type="Edm.String" />
+        <Property Name="KBBinNum" Type="Edm.String" />
+        <Property Name="KBPlant" Type="Edm.String" />
+        <Property Name="OnhandQty" Type="Edm.Decimal" />
+        <Property Name="KBQty" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="Plant" Type="Edm.String" Nullable="false" />
+        <Property Name="MaxQtyUOM" Type="Edm.String" />
+        <Property Name="MinQtyUOM" Type="Edm.String" />
+        <Property Name="SafetyQtyUOM" Type="Edm.String" />
+        <Property Name="KBActionCode" Type="Edm.String" />
+        <Property Name="KBActionDesc" Type="Edm.String" />
+        <Property Name="PlantOwner" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="BinNumDescription" Type="Edm.String" />
+        <Property Name="BinNumNonNettable" Type="Edm.Boolean" />
+        <Property Name="KBBinNumDescription" Type="Edm.String" />
+        <Property Name="KBCodeKBDescription" Type="Edm.String" />
+        <Property Name="KBCodeKBActionCode" Type="Edm.String" />
+        <Property Name="KBPlantName" Type="Edm.String" />
+        <Property Name="KBWarehouseCodeDescription" Type="Edm.String" />
+        <Property Name="WarehouseCodeDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartPC">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="PCType" />
+          <PropertyRef Name="ProdCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="PCType" Type="Edm.String" Nullable="false" />
+        <Property Name="ProdCode" Type="Edm.String" Nullable="false" />
+        <Property Name="UOMCode" Type="Edm.String" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartWhse">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="Plant" />
+          <PropertyRef Name="WarehouseCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="WarehouseCode" Type="Edm.String" Nullable="false" />
+        <Property Name="DemandQty" Type="Edm.Decimal" />
+        <Property Name="ReservedQty" Type="Edm.Decimal" />
+        <Property Name="AllocatedQty" Type="Edm.Decimal" />
+        <Property Name="PickingQty" Type="Edm.Decimal" />
+        <Property Name="PickedQty" Type="Edm.Decimal" />
+        <Property Name="CountedDate" Type="Edm.DateTime" />
+        <Property Name="OnHandQty" Type="Edm.Decimal" />
+        <Property Name="NonNettableQty" Type="Edm.Decimal" />
+        <Property Name="BuyToOrderQty" Type="Edm.Decimal" />
+        <Property Name="SalesDemandQty" Type="Edm.Decimal" />
+        <Property Name="SalesReservedQty" Type="Edm.Decimal" />
+        <Property Name="SalesAllocatedQty" Type="Edm.Decimal" />
+        <Property Name="SalesPickingQty" Type="Edm.Decimal" />
+        <Property Name="SalesPickedQty" Type="Edm.Decimal" />
+        <Property Name="JobDemandQty" Type="Edm.Decimal" />
+        <Property Name="JobReservedQty" Type="Edm.Decimal" />
+        <Property Name="JobAllocatedQty" Type="Edm.Decimal" />
+        <Property Name="JobPickingQty" Type="Edm.Decimal" />
+        <Property Name="JobPickedQty" Type="Edm.Decimal" />
+        <Property Name="UnfirmJobDemandQty" Type="Edm.Decimal" />
+        <Property Name="TFOrdDemandQty" Type="Edm.Decimal" />
+        <Property Name="TFOrdReservedQty" Type="Edm.Decimal" />
+        <Property Name="TFOrdAllocatedQty" Type="Edm.Decimal" />
+        <Property Name="TFOrdPickingQty" Type="Edm.Decimal" />
+        <Property Name="TFOrdPickedQty" Type="Edm.Decimal" />
+        <Property Name="KBCode" Type="Edm.String" />
+        <Property Name="MinimumQty" Type="Edm.Decimal" />
+        <Property Name="MaximumQty" Type="Edm.Decimal" />
+        <Property Name="SafetyQty" Type="Edm.Decimal" />
+        <Property Name="KBPONUM" Type="Edm.Int32" />
+        <Property Name="KBPOLine" Type="Edm.Int32" />
+        <Property Name="KBWarehouseCode" Type="Edm.String" />
+        <Property Name="KBBinNum" Type="Edm.String" />
+        <Property Name="KBPlant" Type="Edm.String" />
+        <Property Name="KBQty" Type="Edm.Decimal" />
+        <Property Name="PcntTolerance" Type="Edm.Decimal" />
+        <Property Name="CalcPcnt" Type="Edm.Boolean" />
+        <Property Name="CalcQty" Type="Edm.Boolean" />
+        <Property Name="CalcValue" Type="Edm.Boolean" />
+        <Property Name="QtyAdjTolerance" Type="Edm.Decimal" />
+        <Property Name="CalcQtyAdj" Type="Edm.Boolean" />
+        <Property Name="MinAbc" Type="Edm.String" />
+        <Property Name="SystemAbc" Type="Edm.String" />
+        <Property Name="ManualABC" Type="Edm.Boolean" />
+        <Property Name="LastCCDate" Type="Edm.DateTime" />
+        <Property Name="OvrrideCountFreq" Type="Edm.Boolean" />
+        <Property Name="CountFreq" Type="Edm.Int32" />
+        <Property Name="QtyTolerance" Type="Edm.Decimal" />
+        <Property Name="ValueTolerance" Type="Edm.Decimal" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="Plant" Type="Edm.String" Nullable="false" />
+        <Property Name="DefaultWhse" Type="Edm.Boolean" />
+        <Property Name="PrimBinNum" Type="Edm.String" />
+        <Property Name="TotalDemand" Type="Edm.Decimal" />
+        <Property Name="PrimBinNumDescription" Type="Edm.String" />
+        <Property Name="KBActionCode" Type="Edm.String" />
+        <Property Name="KBActionDesc" Type="Edm.String" />
+        <Property Name="PlantOwner" Type="Edm.String" />
+        <Property Name="MaxQtyUOM" Type="Edm.String" />
+        <Property Name="MinQtyUOM" Type="Edm.String" />
+        <Property Name="SafetyQtyUOM" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="KBBinNumDescription" Type="Edm.String" />
+        <Property Name="KBCodeKBActionCode" Type="Edm.String" />
+        <Property Name="KBCodeKBDescription" Type="Edm.String" />
+        <Property Name="KBPlantName" Type="Edm.String" />
+        <Property Name="KBWarehouseCodeDescription" Type="Edm.String" />
+        <Property Name="PartNumIUM" Type="Edm.String" />
+        <Property Name="PartNumPricePerCode" Type="Edm.String" />
+        <Property Name="PartNumTrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PartNumSalesUM" Type="Edm.String" />
+        <Property Name="PartNumSellingFactor" Type="Edm.Decimal" />
+        <Property Name="PartNumTrackLots" Type="Edm.Boolean" />
+        <Property Name="PartNumPartDescription" Type="Edm.String" />
+        <Property Name="PartNumTrackDimension" Type="Edm.Boolean" />
+        <Property Name="WarehouseDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Number01" Type="Edm.Decimal" />
+        <Property Name="Number02" Type="Edm.Decimal" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+      </EntityType>
+      <EntityType Name="PartUOM">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="UOMCode" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="UOMCode" Type="Edm.String" Nullable="false" />
+        <Property Name="ConvFactor" Type="Edm.Decimal" />
+        <Property Name="Active" Type="Edm.Boolean" />
+        <Property Name="TrackOnHand" Type="Edm.Boolean" />
+        <Property Name="NetVolume" Type="Edm.Decimal" />
+        <Property Name="NetVolumeUOM" Type="Edm.String" />
+        <Property Name="HasBeenUsed" Type="Edm.Boolean" />
+        <Property Name="ConvOperator" Type="Edm.String" />
+        <Property Name="WebUOM" Type="Edm.Boolean" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ConvFromUOM" Type="Edm.String" />
+        <Property Name="ConvOverrride" Type="Edm.Boolean" />
+        <Property Name="ConvToUOM" Type="Edm.String" />
+        <Property Name="EAN13" Type="Edm.String" />
+        <Property Name="EAN14" Type="Edm.String" />
+        <Property Name="EAN8" Type="Edm.String" />
+        <Property Name="EnableConvFactor" Type="Edm.Boolean" />
+        <Property Name="EnableTrackOnHand" Type="Edm.Boolean" />
+        <Property Name="GTIN14" Type="Edm.String" />
+        <Property Name="HIBC" Type="Edm.String" />
+        <Property Name="PartSpecific" Type="Edm.Boolean" />
+        <Property Name="UOMDesc" Type="Edm.String" />
+        <Property Name="UPC12" Type="Edm.String" />
+        <Property Name="BaseUOMCode" Type="Edm.String" />
+        <Property Name="DispPkgCode" Type="Edm.String" />
+        <Property Name="DispPkgCodeDesc" Type="Edm.String" />
+        <Property Name="DispPkgDisplaySeq" Type="Edm.Int32" />
+        <Property Name="DispPkgIsDefault" Type="Edm.Boolean" />
+        <Property Name="PartSpecificPkgCode" Type="Edm.Boolean" />
+        <Property Name="DispPkgDisplayHidden" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="PartNum" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="PartNum" Type="Edm.String" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="PartListItem">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="PartNum" Type="Edm.String" />
+        <Property Name="SearchWord" Type="Edm.String" />
+        <Property Name="PartDescription" Type="Edm.String" />
+        <Property Name="ClassID" Type="Edm.String" />
+        <Property Name="IUM" Type="Edm.String" />
+        <Property Name="PUM" Type="Edm.String" />
+        <Property Name="TypeCode" Type="Edm.String" />
+        <Property Name="NonStock" Type="Edm.Boolean" />
+        <Property Name="ProdCode" Type="Edm.String" />
+        <Property Name="InActive" Type="Edm.Boolean" />
+        <Property Name="Method" Type="Edm.Boolean" />
+        <Property Name="TrackLots" Type="Edm.Boolean" />
+        <Property Name="TrackDimension" Type="Edm.Boolean" />
+        <Property Name="TrackSerialNum" Type="Edm.Boolean" />
+        <Property Name="PhantomBOM" Type="Edm.Boolean" />
+        <Property Name="OnHold" Type="Edm.Boolean" />
+        <Property Name="QtyBearing" Type="Edm.Boolean" />
+        <Property Name="LotBatch" Type="Edm.Boolean" />
+        <Property Name="LotMfgBatch" Type="Edm.Boolean" />
+        <Property Name="LotMfgLot" Type="Edm.Boolean" />
+        <Property Name="LotHeat" Type="Edm.Boolean" />
+        <Property Name="LotFirmware" Type="Edm.Boolean" />
+        <Property Name="LotBeforeDt" Type="Edm.Boolean" />
+        <Property Name="LotMfgDt" Type="Edm.Boolean" />
+        <Property Name="LotCureDt" Type="Edm.Boolean" />
+        <Property Name="LotExpDt" Type="Edm.Boolean" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="AttBatch" Type="Edm.String" />
+        <Property Name="AttMfgBatch" Type="Edm.String" />
+        <Property Name="AttMfgLot" Type="Edm.String" />
+        <Property Name="AttHeat" Type="Edm.String" />
+        <Property Name="AttFirmware" Type="Edm.String" />
+        <Property Name="AttBeforeDt" Type="Edm.String" />
+        <Property Name="AttMfgDt" Type="Edm.String" />
+        <Property Name="AttCureDt" Type="Edm.String" />
+        <Property Name="AttExpDt" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <Property Name="Character01" Type="Edm.String" />
+        <Property Name="Character03" Type="Edm.String" />
+        <Property Name="Character04" Type="Edm.String" />
+        <Property Name="Character05" Type="Edm.String" />
+        <Property Name="Number01" Type="Edm.Decimal" />
+        <Property Name="CheckBox01" Type="Edm.Boolean" />
+        <Property Name="CheckBox02" Type="Edm.Boolean" />
+        <Property Name="CheckBox06" Type="Edm.Boolean" />
+        <Property Name="CheckBox07" Type="Edm.Boolean" />
+        <Property Name="CheckBox08" Type="Edm.Boolean" />
+        <Property Name="CheckBox09" Type="Edm.Boolean" />
+        <Property Name="ShortChar02" Type="Edm.String" />
+        <Property Name="UD_SysRevID" Type="Edm.Binary" />
+      </EntityType>
+      <Association Name="Erp_Part_EntityGLCs_Erp_EntityGLC_Parts">
+        <End Type="Erp.EntityGLC" Role="EntityGLCs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_TaxExempt_Parts_Erp_Part_TaxExempts">
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+        <End Type="Erp.TaxExempt" Role="TaxExempts" Multiplicity="*" />
+      </Association>
+      <Association Name="Erp_Part_PartCOOs_Erp_PartCOO_Parts">
+        <End Type="Erp.PartCOO" Role="PartCOOs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartDims_Erp_PartDim_Parts">
+        <End Type="Erp.PartDim" Role="PartDims" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartLangDescs_Erp_PartLangDesc_Parts">
+        <End Type="Erp.PartLangDesc" Role="PartLangDescs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartPlants_Erp_PartPlant_Parts">
+        <End Type="Erp.PartPlant" Role="PartPlants" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartRestrictions_Erp_PartRestriction_Parts">
+        <End Type="Erp.PartRestriction" Role="PartRestrictions" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartRevs_Erp_PartRev_Parts">
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartSubs_Erp_PartSub_Parts">
+        <End Type="Erp.PartSub" Role="PartSubs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartBinInfoes_Erp_PartBinInfo_Parts">
+        <End Type="Erp.PartBinInfo" Role="PartBinInfoes" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartPCs_Erp_PartPC_Parts">
+        <End Type="Erp.PartPC" Role="PartPCs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartWhses_Erp_PartWhse_Parts">
+        <End Type="Erp.PartWhse" Role="PartWhses" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartUOMs_Erp_PartUOM_Parts">
+        <End Type="Erp.PartUOM" Role="PartUOMs" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_Part_PartAttches_Erp_PartAttch_Parts">
+        <End Type="Erp.PartAttch" Role="PartAttches" Multiplicity="*" />
+        <End Type="Erp.Part" Role="Parts" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRestriction_PartRestrictSubsts_Erp_PartRestrictSubst_PartRestrictions">
+        <End Type="Erp.PartRestrictSubst" Role="PartRestrictSubsts" Multiplicity="*" />
+        <End Type="Erp.PartRestriction" Role="PartRestrictions" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRev_PartAudits_Erp_PartAudit_PartRevs">
+        <End Type="Erp.PartAudit" Role="PartAudits" Multiplicity="*" />
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRev_PartCOParts_Erp_PartCOPart_PartRevs">
+        <End Type="Erp.PartCOPart" Role="PartCOParts" Multiplicity="*" />
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRev_PartRevInspPlans_Erp_PartRevInspPlan_PartRevs">
+        <End Type="Erp.PartRevInspPlan" Role="PartRevInspPlans" Multiplicity="*" />
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRev_PartRevInspVends_Erp_PartRevInspVend_PartRevs">
+        <End Type="Erp.PartRevInspVend" Role="PartRevInspVends" Multiplicity="*" />
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRev_PartRevAttches_Erp_PartRevAttch_PartRevs">
+        <End Type="Erp.PartRevAttch" Role="PartRevAttches" Multiplicity="*" />
+        <End Type="Erp.PartRev" Role="PartRevs" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_PartRevInspPlan_PartRevInspPlanAttches_Erp_PartRevInspPlanAttch_PartRevInspPlans">
+        <End Type="Erp.PartRevInspPlanAttch" Role="PartRevInspPlanAttches" Multiplicity="*" />
+        <End Type="Erp.PartRevInspPlan" Role="PartRevInspPlans" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

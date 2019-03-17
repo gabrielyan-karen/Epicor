@@ -1,0 +1,157 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="3.0" m:MaxDataServiceVersion="3.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="Epicor" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityContainer Name="RestApi">
+        <EntitySet Name="SalesReps" EntityType="Erp.SalesRep" />
+        <EntitySet Name="SaleAuths" EntityType="Erp.SaleAuth" />
+        <EntitySet Name="SalesRepAttches" EntityType="Erp.SalesRepAttch" />
+        <EntitySet Name="List" EntityType="Erp.SalesRepListItem" />
+        <FunctionImport Name="DefaultDefaultUser" />
+        <FunctionImport Name="GetPerConData" />
+        <FunctionImport Name="OnChangeUserID" />
+        <FunctionImport Name="GetNewSalesRep" />
+        <FunctionImport Name="GetNewSalesRepAttch" />
+        <FunctionImport Name="GetNewSaleAuth" />
+        <FunctionImport Name="DeleteByID" />
+        <FunctionImport Name="GetByID" />
+        <FunctionImport Name="GetList" />
+        <FunctionImport Name="GetRows" />
+        <FunctionImport Name="GetBySysRowID" />
+        <FunctionImport Name="GetBySysRowIDs" />
+        <FunctionImport Name="Update" />
+        <FunctionImport Name="UpdateExt" />
+        <AssociationSet Name="Erp_SalesRep_SaleAuths_Erp_SaleAuth_SalesRepsSet" Association="Erp.Erp_SalesRep_SaleAuths_Erp_SaleAuth_SalesReps">
+          <End Role="SalesReps" EntitySet="SalesReps" />
+          <End Role="SaleAuths" EntitySet="SaleAuths" />
+        </AssociationSet>
+        <AssociationSet Name="Erp_SalesRep_SalesRepAttches_Erp_SalesRepAttch_SalesRepsSet" Association="Erp.Erp_SalesRep_SalesRepAttches_Erp_SalesRepAttch_SalesReps">
+          <End Role="SalesReps" EntitySet="SalesReps" />
+          <End Role="SalesRepAttches" EntitySet="SalesRepAttches" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+    <Schema Namespace="Erp" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <EntityType Name="SalesRep">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="SalesRepCode" />
+        </Key>
+        <Property Name="InActive" Type="Edm.Boolean" />
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="SalesRepCode" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="CommissionPercent" Type="Edm.Decimal" />
+        <Property Name="CommissionEarnedAt" Type="Edm.Boolean" />
+        <Property Name="AlertFlag" Type="Edm.Boolean" />
+        <Property Name="Address1" Type="Edm.String" />
+        <Property Name="Address2" Type="Edm.String" />
+        <Property Name="Address3" Type="Edm.String" />
+        <Property Name="City" Type="Edm.String" />
+        <Property Name="State" Type="Edm.String" />
+        <Property Name="Zip" Type="Edm.String" />
+        <Property Name="Country" Type="Edm.String" />
+        <Property Name="CountryNum" Type="Edm.Int32" />
+        <Property Name="OfficePhoneNum" Type="Edm.String" />
+        <Property Name="FaxPhoneNum" Type="Edm.String" />
+        <Property Name="CellPhoneNum" Type="Edm.String" />
+        <Property Name="PagerNum" Type="Edm.String" />
+        <Property Name="HomePhoneNum" Type="Edm.String" />
+        <Property Name="EMailAddress" Type="Edm.String" />
+        <Property Name="SalesRepTitle" Type="Edm.String" />
+        <Property Name="RepReportsTo" Type="Edm.String" />
+        <Property Name="Comment" Type="Edm.String" />
+        <Property Name="SalesMgrConfidence" Type="Edm.Int32" />
+        <Property Name="RoleCode" Type="Edm.String" />
+        <Property Name="ViewAllTer" Type="Edm.Boolean" />
+        <Property Name="ViewCompPipe" Type="Edm.Boolean" />
+        <Property Name="WebSaleGetsCommission" Type="Edm.Boolean" />
+        <Property Name="CnvEmpID" Type="Edm.String" />
+        <Property Name="PerConID" Type="Edm.Int32" />
+        <Property Name="SyncNameToPerCon" Type="Edm.Boolean" />
+        <Property Name="SyncAddressToPerCon" Type="Edm.Boolean" />
+        <Property Name="SyncPhoneToPerCon" Type="Edm.Boolean" />
+        <Property Name="SyncEmailToPerCon" Type="Edm.Boolean" />
+        <Property Name="SyncLinksToPerCon" Type="Edm.Boolean" />
+        <Property Name="WebSite" Type="Edm.String" />
+        <Property Name="IM" Type="Edm.String" />
+        <Property Name="Twitter" Type="Edm.String" />
+        <Property Name="LinkedIn" Type="Edm.String" />
+        <Property Name="FaceBook" Type="Edm.String" />
+        <Property Name="WebLink1" Type="Edm.String" />
+        <Property Name="WebLink2" Type="Edm.String" />
+        <Property Name="WebLink3" Type="Edm.String" />
+        <Property Name="WebLink4" Type="Edm.String" />
+        <Property Name="WebLink5" Type="Edm.String" />
+        <Property Name="MgrWorstCsPct" Type="Edm.Int32" />
+        <Property Name="MgrBestCsPct" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="WebSalesRep" Type="Edm.Boolean" />
+        <Property Name="ECCSalesRepCode" Type="Edm.String" />
+        <Property Name="PerConName" Type="Edm.String" />
+        <Property Name="RepReportsToName" Type="Edm.String" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="CountryNumDescription" Type="Edm.String" />
+        <Property Name="RoleCodeRoleDescription" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+        <NavigationProperty Name="SaleAuths" Relationship="Erp.Erp_SalesRep_SaleAuths_Erp_SaleAuth_SalesReps" ToRole="SaleAuths" FromRole="SalesReps" />
+        <NavigationProperty Name="SalesRepAttches" Relationship="Erp.Erp_SalesRep_SalesRepAttches_Erp_SalesRepAttch_SalesReps" ToRole="SalesRepAttches" FromRole="SalesReps" />
+      </EntityType>
+      <EntityType Name="SaleAuth">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="SalesRepCode" />
+          <PropertyRef Name="DcdUserID" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="SalesRepCode" Type="Edm.String" Nullable="false" />
+        <Property Name="DcdUserID" Type="Edm.String" Nullable="false" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="DefaultUser" Type="Edm.Boolean" />
+        <Property Name="BitFlag" Type="Edm.Int32" />
+        <Property Name="SalesRepCodeName" Type="Edm.String" />
+        <Property Name="UserIDName" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SalesRepAttch">
+        <Key>
+          <PropertyRef Name="Company" />
+          <PropertyRef Name="SalesRepCode" />
+          <PropertyRef Name="DrawingSeq" />
+        </Key>
+        <Property Name="Company" Type="Edm.String" Nullable="false" />
+        <Property Name="SalesRepCode" Type="Edm.String" Nullable="false" />
+        <Property Name="DrawingSeq" Type="Edm.Int32" Nullable="false" />
+        <Property Name="XFileRefNum" Type="Edm.Int32" />
+        <Property Name="SysRevID" Type="Edm.Int64" />
+        <Property Name="SysRowID" Type="Edm.Guid" />
+        <Property Name="ForeignSysRowID" Type="Edm.Guid" />
+        <Property Name="DrawDesc" Type="Edm.String" />
+        <Property Name="FileName" Type="Edm.String" />
+        <Property Name="PDMDocID" Type="Edm.String" />
+        <Property Name="DocTypeID" Type="Edm.String" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <EntityType Name="SalesRepListItem">
+        <Key>
+          <PropertyRef Name="SysRowID" />
+        </Key>
+        <Property Name="InActive" Type="Edm.Boolean" />
+        <Property Name="Company" Type="Edm.String" />
+        <Property Name="SalesRepCode" Type="Edm.String" />
+        <Property Name="Name" Type="Edm.String" />
+        <Property Name="SysRowID" Type="Edm.Guid" Nullable="false" />
+        <Property Name="RowMod" Type="Edm.String" />
+      </EntityType>
+      <Association Name="Erp_SalesRep_SaleAuths_Erp_SaleAuth_SalesReps">
+        <End Type="Erp.SaleAuth" Role="SaleAuths" Multiplicity="*" />
+        <End Type="Erp.SalesRep" Role="SalesReps" Multiplicity="0..1" />
+      </Association>
+      <Association Name="Erp_SalesRep_SalesRepAttches_Erp_SalesRepAttch_SalesReps">
+        <End Type="Erp.SalesRepAttch" Role="SalesRepAttches" Multiplicity="*" />
+        <End Type="Erp.SalesRep" Role="SalesReps" Multiplicity="0..1" />
+      </Association>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

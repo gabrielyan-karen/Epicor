@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Epicor.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebServiceCompanyID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">VTLB</Value>
+    </Setting>
+    <Setting Name="CustomerServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">customerservice.asmx</Value>
+    </Setting>
+    <Setting Name="PartServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">partservice.asmx</Value>
+    </Setting>
+    <Setting Name="WarrantyRegistrationServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ud01service.asmx</Value>
+    </Setting>
+    <Setting Name="WarrantyClaimServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ud100service.asmx</Value>
+    </Setting>
+    <Setting Name="SalesRepServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">salesrepservice.asmx</Value>
+    </Setting>
+    <Setting Name="AttachmentServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ud03service.asmx</Value>
+    </Setting>
+    <Setting Name="CampaignServicePage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ud02service.asmx</Value>
+    </Setting>
+    <Setting Name="EpicorAPIUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://erpappserv001.leeboy.com/EpicorERP10/api/v1/{0}/</Value>
+    </Setting>
+    <Setting Name="EpicorAPIUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">manager</Value>
+    </Setting>
+    <Setting Name="EpicorAPIPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">wh1sk3y</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
